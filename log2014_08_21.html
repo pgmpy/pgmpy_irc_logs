@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 21-08-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 21-08-2014 </h3><br/><br/>
+                <br/>
+<kbd>[16:07:10]</kbd> <strong>[connected at Thu Aug 21 16:07:10 2014]</strong><br/>
+<kbd>[16:07:22]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:09:14]</kbd> <code>&lt;ankurankan&gt;</code> Hi<br/>
+<kbd>[16:10:53]</kbd> <em>jasrpeet is now known as jaspreet</em><br/>
+<kbd>[16:12:23]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, You there?<br/>
+<kbd>[16:12:27]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I had a conversation with Soumya Kundu today.<br/>
+<kbd>[16:12:41]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: yes.<br/>
+<kbd>[16:12:55]</kbd> <code>&lt;ankurankan&gt;</code> What conversation?<br/>
+<kbd>[16:13:44]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: About my project. He told me to complete the rest and I told him I will.<br/>
+<kbd>[16:13:57]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[16:14:17]</kbd> <code>&lt;ankurankan&gt;</code> So how are you gonna proceed with your project now<br/>
+<kbd>[16:15:43]</kbd> <code>&lt;abinash_panda&gt;</code> hey all<br/>
+<kbd>[16:15:44]</kbd> <code>&lt;abinash_panda&gt;</code> :)<br/>
+<kbd>[16:15:54]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I am learnig to parse small snippets of the DNET module. This is what I aim for first http://pastebin.com/FztwiABM .<br/>
+<kbd>[16:15:55]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Hi<br/>
+<kbd>[16:16:02]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: Hi!<br/>
+<kbd>[16:16:05]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: Hi !<br/>
+<kbd>[16:16:42]</kbd> <code>&lt;ankurankan&gt;</code> So you are going to use pyparsing ?<br/>
+<kbd>[16:17:00]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I will be writing the grammar first and show it to you.<br/>
+<kbd>[16:17:48]</kbd> <code>&lt;jaspreet&gt;</code> The function that you explained in mail -> leteral_eval . Is it part of pyparsing?<br/>
+<kbd>[16:18:09]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I mean this one.  literal_eval("(((0.8, 0.2), (0.8, 0.2)), ((0.8, 0.2), (0.05, 0.95)))")<br/>
+<kbd>[16:18:33]</kbd> <code>&lt;ankurankan&gt;</code> No. It's part of the ast module<br/>
+<kbd>[16:18:53]</kbd> <code>&lt;ankurankan&gt;</code> so import ast and the ast.literal_eval<br/>
+<kbd>[16:19:33]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: Ok.<br/>
+<kbd>[16:20:42]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: is DNET parsing your part of GSoC project?<br/>
+<kbd>[16:21:19]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: I am actually having on idea about your project<br/>
+<kbd>[16:21:56]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: Actually XMLBIF  was part of the project but it has already been done. So I picked up DNET<br/>
+<kbd>[16:22:06]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: okay. cool<br/>
+<kbd>[16:22:15]</kbd> <code>&lt;abinash_panda&gt;</code> so whats the status about it?<br/>
+<kbd>[16:23:46]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: I am writing the grammar first for parsing each smaller element. For example in the case of probs field in http://pastebin.com/FztwiABM, I will use the literal_eval function as suggested by ankurankan<br/>
+<kbd>[16:24:06]</kbd> <code>&lt;abinash_panda&gt;</code> okay<br/>
+<kbd>[16:24:14]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, Have you started writing the grammar ?<br/>
+<kbd>[16:25:07]</kbd> <code>&lt;jaspreet&gt;</code> When all smaller components of the file format are complete. then I will combine them . For example there are many node type fields for which I will use the ZeroOrMore(node) function provided by pyparsing.<br/>
+<kbd>[16:26:05]</kbd> <code>&lt;ankurankan&gt;</code> Can you show us what have you done till now?<br/>
+<kbd>[16:26:41]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I can not make out how to parse the whole file at once. I have till now tried all the pyparsing string parsing on python interpreter which does not contain any delimiters.<br/>
+<kbd>[16:27:07]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: all/only<br/>
+<kbd>[16:27:51]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[16:28:07]</kbd> <code>&lt;ankurankan&gt;</code> I will have to look into pyparsing to help you.<br/>
+<kbd>[16:28:18]</kbd> <code>&lt;jaspreet&gt;</code> the pyparsing functions are defined on strings. I need to make out how to parse the whole file at once<br/>
+<kbd>[16:28:47]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[16:29:01]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: Okay<br/>
+<kbd>[16:29:13]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: Keep us updated on what are you working<br/>
+<kbd>[16:29:26]</kbd> <code>&lt;ankurankan&gt;</code> I would like to get a detailed report from you every 2-3 days<br/>
+<kbd>[16:29:43]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: sure.<br/>
+<kbd>[16:29:54]</kbd> <code>&lt;ankurankan&gt;</code> Detailed means you should be mentioning what you have tried<br/>
+<kbd>[16:30:01]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: One more thing, try to make some good commit messages<br/>
+<kbd>[16:30:40]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: ok. I will report my progress every 2-3 days with all what I have tried or what I am aiming to do<br/>
+<kbd>[16:31:02]</kbd> <code>&lt;abinash_panda&gt;</code> if you want some good tutorial for commit messages, ping me<br/>
+<kbd>[16:31:12]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: should I make some standard commit messages?<br/>
+<kbd>[16:31:27]</kbd> <code>&lt;ankurankan&gt;</code> I have asked you to do that twice till now and you have never done that.<br/>
+<kbd>[16:31:35]</kbd> <code>&lt;abinash_panda&gt;</code> I couldn't get you.<br/>
+<kbd>[16:32:27]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: I mean should I include a timestamp and the name of file format then the actual message which conveys what I have done<br/>
+<kbd>[16:33:13]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I used to stop when I faced some difficulty. This time I will report it to you at once.<br/>
+<kbd>[16:33:14]</kbd> <code>&lt;abinash_panda&gt;</code> No, not that. I mean your commit messages are too vague. For example one of your commit message was "improved doc-strings"<br/>
+<kbd>[16:33:24]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: So what doc-strings you have changed??<br/>
+<kbd>[16:34:32]</kbd> <code>&lt;ankurankan&gt;</code> google about writing good commit messages. You will get some good links<br/>
+<kbd>[16:34:34]</kbd> <code>&lt;abinash_panda&gt;</code> Follow this tutorial https://wiki.openstack.org/wiki/GitCommitMessages<br/>
+<kbd>[16:34:38]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: ok. I get it . I will be more specific in these cases. For example in the above case I will report the functions which have now the docstrings.<br/>
+<kbd>[16:34:40]</kbd> <code>&lt;abinash_panda&gt;</code> This is a very good tutorial<br/>
+<kbd>[16:35:46]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: I will go through this before making any more commits. Thanks for the link.<br/>
+<kbd>[16:36:37]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, Okay I think that's it for now. Make sure to send a detailed report before the coming Monday.<br/>
+<kbd>[16:37:10]</kbd> <code>&lt;abinash_panda&gt;</code> Remember its always not about coding, its about creating beautiful and good codes with proper commits.<br/>
+<kbd>[16:37:54]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: Ok. Thanks for your guidance<br/>
+<kbd>[16:38:22]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Anything else you wanna add ?<br/>
+<kbd>[16:38:35]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: One more thing. See this is your second chance. So make the full out of it. Don't do something again that you have again apologize. :)<br/>
+<kbd>[16:39:38]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: I will not disappoint you. Thanks for believing me<br/>
+<kbd>[16:40:04]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: So anything else you want to discuss?<br/>
+<kbd>[16:41:10]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda: nothing for now. I will get back to you or Ankur Ankan in case of any difficulty<br/>
+<kbd>[16:41:19]</kbd> <code>&lt;abinash_panda&gt;</code> okay. cool. :)<br/>
+<kbd>[16:41:59]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Could you have a look on our travis build<br/>
+<kbd>[16:42:11]</kbd> <code>&lt;ankurankan&gt;</code> I am unable to figure out what's wrong<br/>
+<kbd>[16:42:20]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah sure. I am on it ;)<br/>
+<kbd>[16:42:34]</kbd> <code>&lt;ankurankan&gt;</code> Thanks<br/>
+<kbd>[16:34:26]</kbd> <strong>[disconnected at Fri Aug 22 16:34:26 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

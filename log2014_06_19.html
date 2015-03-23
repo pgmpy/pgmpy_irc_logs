@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 19-06-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 19-06-2014 </h3><br/><br/>
+                <br/>
+<kbd>[06:43:11]</kbd> <strong>[connected at Thu Jun 19 06:43:11 2014]</strong><br/>
+<kbd>[06:43:26]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[06:43:28]</kbd> <code>&lt;ankurankan&gt;</code> Great!!<br/>
+<kbd>[06:43:37]</kbd> <code>&lt;debangshu&gt;</code> but what is the func of analysis mode<br/>
+<kbd>[06:43:55]</kbd> <code>&lt;ankurankan&gt;</code> We will be using analysis mode to run some algos on the graph<br/>
+<kbd>[06:44:29]</kbd> <code>&lt;ankurankan&gt;</code> But we are  focusing on draw mode right now<br/>
+<kbd>[06:44:41]</kbd> <code>&lt;ankurankan&gt;</code> Because algo are still not implemented in the pgmpy<br/>
+<kbd>[06:45:10]</kbd> <code>&lt;debangshu&gt;</code> ok<br/>
+<kbd>[06:45:41]</kbd> <code>&lt;debangshu&gt;</code> pgmpy_viz is running without pgmpy<br/>
+<kbd>[06:46:00]</kbd> <code>&lt;ankurankan&gt;</code> Yeah right now its not connected with the backend<br/>
+<kbd>[06:46:09]</kbd> <code>&lt;ankurankan&gt;</code> Its just JS that's working now<br/>
+<kbd>[06:46:38]</kbd> <code>&lt;debangshu&gt;</code> yes..i checked.<br/>
+<kbd>[06:47:22]</kbd> <code>&lt;debangshu&gt;</code> backend will provide RESTful end points.i guess?<br/>
+<kbd>[06:47:22]</kbd> <code>&lt;ankurankan&gt;</code> So just try to play with things and tell us something that you think can be improved<br/>
+<kbd>[06:47:34]</kbd> <code>&lt;ankurankan&gt;</code> Yeah<br/>
+<kbd>[06:49:40]</kbd> <code>&lt;debangshu&gt;</code> ok. and about a node. i think some probability parameter is needed to be stored<br/>
+<kbd>[06:50:29]</kbd> <code>&lt;ankurankan&gt;</code> Yeah<br/>
+<kbd>[06:50:50]</kbd> <code>&lt;ankurankan&gt;</code> Basically it won't be just one probability value<br/>
+<kbd>[06:50:58]</kbd> <code>&lt;ankurankan&gt;</code> It will be a table<br/>
+<kbd>[06:51:20]</kbd> <code>&lt;ankurankan&gt;</code> And this table size would be variable for each node<br/>
+<kbd>[06:52:19]</kbd> <code>&lt;ankurankan&gt;</code> we will need to compute the size of the table in the frontend only<br/>
+<kbd>[06:54:06]</kbd> <code>&lt;debangshu&gt;</code> ok<br/>
+<kbd>[06:55:03]</kbd> <code>&lt;debangshu&gt;</code> tell me something about the table. Is it about storing probability w.r.t. other nodes<br/>
+<kbd>[06:55:05]</kbd> <code>&lt;debangshu&gt;</code> ?<br/>
+<kbd>[06:57:25]</kbd> <code>&lt;ankurankan&gt;</code> Yeah. If you saw PGM, each node has a Conditional Probability Distribution (CPD) which is a table of probabilities<br/>
+<kbd>[06:58:07]</kbd> <code>&lt;ankurankan&gt;</code> And this table size depends on the parents of the node<br/>
+<kbd>[07:58:33]</kbd> <code>&lt;debangshu&gt;</code> i have seen an issue stating size of cy should not be fixed.<br/>
+<kbd>[07:59:08]</kbd> <code>&lt;debangshu&gt;</code> then why we are not using col-md-12 etc as in bootstrap?<br/>
+<kbd>[17:19:20]</kbd> <code>&lt;shashankg&gt;</code> harsh11: Hi<br/>
+<kbd>[17:19:41]</kbd> <code>&lt;harsh11&gt;</code> shashankg :hi<br/>
+<kbd>[17:20:06]</kbd> <code>&lt;shashankg&gt;</code> Let's wait for ankur, then we'll commence the meeting.<br/>
+<kbd>[17:20:19]</kbd> <code>&lt;harsh11&gt;</code> sure<br/>
+<kbd>[17:20:23]</kbd> <code>&lt;shashankg&gt;</code> Till then let's introduce ourselves.<br/>
+<kbd>[17:20:41]</kbd> <code>&lt;harsh11&gt;</code> ok . I am Harsh Rawat<br/>
+<kbd>[17:21:07]</kbd> <code>&lt;harsh11&gt;</code> I am a student in ECE at IIT(BHU)<br/>
+<kbd>[17:21:50]</kbd> <code>&lt;shashankg&gt;</code> cool.<br/>
+<kbd>[17:22:11]</kbd> <code>&lt;shashankg&gt;</code> I am Shashank Garg, I was a student of ECE IIT(BHU)<br/>
+<kbd>[17:22:30]</kbd> <code>&lt;shashankg&gt;</code> You are from which year?<br/>
+<kbd>[17:22:48]</kbd> <code>&lt;harsh11&gt;</code> i am a 3rd yearite<br/>
+<kbd>[17:23:45]</kbd> <code>&lt;shashankg&gt;</code> Okay<br/>
+<kbd>[17:24:59]</kbd> <code>&lt;shashankg&gt;</code> have you been through our github repo and the document I linked on Facebook comment?<br/>
+<kbd>[17:25:58]</kbd> <code>&lt;harsh11&gt;</code> yeah i saw through it superficially.<br/>
+<kbd>[17:27:20]</kbd> <code>&lt;shashankg&gt;</code> would you like to work in a python+js task or js only task.<br/>
+<kbd>[17:28:54]</kbd> <code>&lt;harsh11&gt;</code> python +js task would be better .... Though i have somewhat less knowledge of js..<br/>
+<kbd>[17:30:27]</kbd> <code>&lt;shashankg&gt;</code> ok. The first two tasks are mainly python. JS would be required at only some points.<br/>
+<kbd>[17:31:19]</kbd> <code>&lt;harsh11&gt;</code> yes that would be better as i can pick up js in that time .<br/>
+<kbd>[17:34:40]</kbd> <code>&lt;shashankg&gt;</code> Ankur will not be able to join us today.<br/>
+<kbd>[17:34:47]</kbd> <code>&lt;shashankg&gt;</code> Let's continue on our own.<br/>
+<kbd>[17:35:09]</kbd> <code>&lt;harsh11&gt;</code> Sure<br/>
+<kbd>[17:35:24]</kbd> <code>&lt;shashankg&gt;</code> I think you don't have any knowledge of pgm<br/>
+<kbd>[17:36:06]</kbd> <code>&lt;shashankg&gt;</code> Probabilistic graphical models<br/>
+<kbd>[17:36:06]</kbd> <code>&lt;harsh11&gt;</code> Yes i dont have knowledge of pgm right now.<br/>
+<kbd>[17:36:31]</kbd> <code>&lt;shashankg&gt;</code> It's ok, you won't be needing any knowledge for now.<br/>
+<kbd>[17:37:03]</kbd> <code>&lt;harsh11&gt;</code> ok.. so what would be the priliminary work<br/>
+<kbd>[17:37:37]</kbd> <code>&lt;shashankg&gt;</code> The definition will suffice for now. Basically pgm  represents the probabilistic relationship between some variables using graphs.<br/>
+<kbd>[17:38:21]</kbd> <code>&lt;harsh11&gt;</code> for pgm i had downloaded coursera videos.<br/>
+<kbd>[17:38:47]</kbd> <code>&lt;harsh11&gt;</code> Will they be suffice for the project?<br/>
+<kbd>[17:38:53]</kbd> <code>&lt;shashankg&gt;</code> ok. They are a great source. You can also read the book by koller.<br/>
+<kbd>[17:39:31]</kbd> <code>&lt;shashankg&gt;</code> Yeah, they will suffice. For the initial few tasks you won't be needing any pgm.<br/>
+<kbd>[17:39:59]</kbd> <code>&lt;shashankg&gt;</code> pgmpy currently has two parts. pgmpy and pgmpy_viz.<br/>
+<kbd>[17:40:27]</kbd> <code>&lt;harsh11&gt;</code> Yes ankur bhaiya mentioned it<br/>
+<kbd>[17:40:54]</kbd> <code>&lt;shashankg&gt;</code> pgmpy models the graphs and implements the pgm algorithms on these graphs. viz works for vizualisation in a browser.<br/>
+<kbd>[17:41:08]</kbd> <code>&lt;shashankg&gt;</code> Right now we are working on integrating them.<br/>
+<kbd>[17:41:32]</kbd> <code>&lt;shashankg&gt;</code> We are using json to communicate with the browser.<br/>
+<kbd>[17:41:52]</kbd> <code>&lt;harsh11&gt;</code> ok.<br/>
+<kbd>[17:42:23]</kbd> <code>&lt;shashankg&gt;</code> Since python is your forte, I'll explain the first two tasks to you, you can pick any of them.<br/>
+<kbd>[17:42:31]</kbd> <code>&lt;shashankg&gt;</code> task#1<br/>
+<kbd>[17:43:13]</kbd> <code>&lt;shashankg&gt;</code> There are some standard file formats for representing a graphical mode.<br/>
+<kbd>[17:43:20]</kbd> <code>&lt;harsh11&gt;</code> yes<br/>
+<kbd>[17:43:32]</kbd> <code>&lt;shashankg&gt;</code> The list of these models is in the task doc.<br/>
+<kbd>[17:44:07]</kbd> <code>&lt;shashankg&gt;</code> So what you need to do is, you have to accept the file from user, in a browser.<br/>
+<kbd>[17:44:07]</kbd> <code>&lt;harsh11&gt;</code> yes<br/>
+<kbd>[17:45:18]</kbd> <code>&lt;shashankg&gt;</code> I think the it would be fairly easy to create a uploading framework.<br/>
+<kbd>[17:45:48]</kbd> <code>&lt;shashankg&gt;</code> The library already has code to parse these file formats.<br/>
+<kbd>[17:46:01]</kbd> <code>&lt;harsh11&gt;</code> yes i would be able to do that<br/>
+<kbd>[17:46:43]</kbd> <code>&lt;shashankg&gt;</code> You have to parse the file, you got from browser and from the retrieved information you have to create a json<br/>
+<kbd>[17:47:01]</kbd> <code>&lt;shashankg&gt;</code> The format of json is also defined, and linked in task doc.<br/>
+<kbd>[17:47:16]</kbd> <code>&lt;harsh11&gt;</code> ok<br/>
+<kbd>[17:47:51]</kbd> <code>&lt;shashankg&gt;</code> Now JS comes into the scene.<br/>
+<kbd>[17:48:36]</kbd> <code>&lt;shashankg&gt;</code> You have to draw the graph using JS and cytoscape in the browser using the information in json.<br/>
+<kbd>[17:49:28]</kbd> <code>&lt;harsh11&gt;</code> ok .<br/>
+<kbd>[17:49:52]</kbd> <code>&lt;shashankg&gt;</code> Figuring out, how to create the graph will not be tricky.<br/>
+<kbd>[17:50:28]</kbd> <code>&lt;shashankg&gt;</code> viz already has the graph drawing functionality, all you have to do is automate the process for your json.<br/>
+<kbd>[17:50:30]</kbd> <code>&lt;harsh11&gt;</code> yes, i libraries can be used for that<br/>
+<kbd>[17:50:45]</kbd> <code>&lt;shashankg&gt;</code> So how do you find the task?<br/>
+<kbd>[17:51:32]</kbd> <code>&lt;harsh11&gt;</code> Its good and i think i can complete it with some reading<br/>
+<kbd>[17:51:42]</kbd> <code>&lt;shashankg&gt;</code> cool :)<br/>
+<kbd>[17:52:11]</kbd> <code>&lt;shashankg&gt;</code> Now task#2<br/>
+<kbd>[17:52:15]</kbd> <code>&lt;harsh11&gt;</code>  task<br/>
+<kbd>[17:53:05]</kbd> <code>&lt;shashankg&gt;</code> user can manually draw graphs in browser using viz.<br/>
+<kbd>[17:53:41]</kbd> <code>&lt;shashankg&gt;</code> When the user creates the graph, the graph information is stored in a json and then sent to backend.<br/>
+<kbd>[17:54:41]</kbd> <code>&lt;shashankg&gt;</code> what you have to do is: you have to send the json from browser, and accept it at backend<br/>
+<kbd>[17:55:05]</kbd> <code>&lt;harsh11&gt;</code> ok<br/>
+<kbd>[17:55:10]</kbd> <code>&lt;shashankg&gt;</code> now you have to parse the graph using python, and create a graph in pgmpy.<br/>
+<kbd>[17:56:00]</kbd> <code>&lt;shashankg&gt;</code> pgmpy already has functions for creating the graph, you just have to figure out certain library functions and use them for it.<br/>
+<kbd>[17:56:09]</kbd> <code>&lt;harsh11&gt;</code> ok ..<br/>
+<kbd>[17:56:42]</kbd> <code>&lt;shashankg&gt;</code> Do you have any knowledge of git or any other vcs(version control system)?<br/>
+<kbd>[17:57:15]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: Hi<br/>
+<kbd>[17:57:41]</kbd> <code>&lt;harsh11&gt;</code> Nope. Ithis is my first time with Open SOurce and related tools<br/>
+<kbd>[17:58:32]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[17:58:46]</kbd> <code>&lt;shashankg&gt;</code> git is very east to learn.<br/>
+<kbd>[17:59:13]</kbd> <code>&lt;shashankg&gt;</code> So for starting, create a github account.<br/>
+<kbd>[17:59:37]</kbd> <code>&lt;shashankg&gt;</code> fork and clone the repo.<br/>
+<kbd>[17:59:46]</kbd> <code>&lt;harsh11&gt;</code> Done that<br/>
+<kbd>[18:00:02]</kbd> <code>&lt;shashankg&gt;</code> cool<br/>
+<kbd>[18:00:41]</kbd> <code>&lt;shashankg&gt;</code> first three chapters of progit will suffice for all the git we need.<br/>
+<kbd>[18:00:57]</kbd> <code>&lt;harsh11&gt;</code> ok<br/>
+<kbd>[18:01:39]</kbd> <code>&lt;shashankg&gt;</code> which task would you prefer for the beginning?<br/>
+<kbd>[18:02:01]</kbd> <code>&lt;shashankg&gt;</code> you can also decide later after going through the code<br/>
+<kbd>[18:02:02]</kbd> <code>&lt;harsh11&gt;</code> First task would be better suited to me.<br/>
+<kbd>[18:02:06]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[18:03:25]</kbd> <code>&lt;shashankg&gt;</code> If you want to go through this conversation again<br/>
+<kbd>[18:03:25]</kbd> <code>&lt;harsh11&gt;</code> :)<br/>
+<kbd>[18:03:40]</kbd> <code>&lt;shashankg&gt;</code> you can read the logs at bit.ly/1jLjsHf<br/>
+<kbd>[18:04:11]</kbd> <code>&lt;harsh11&gt;</code> Ok .. I understood the work to be done<br/>
+<kbd>[18:04:21]</kbd> <code>&lt;shashankg&gt;</code> If you have any questions, you can ask<br/>
+<kbd>[18:05:10]</kbd> <code>&lt;harsh11&gt;</code> Can i have your e-mail address so that i can ask any doubts later<br/>
+<kbd>[18:05:50]</kbd> <code>&lt;shashankg&gt;</code> If you have any doubts you can mail them at pgmpy@googlegroups.com<br/>
+<kbd>[18:06:28]</kbd> <code>&lt;harsh11&gt;</code> ok<br/>
+<kbd>[18:06:44]</kbd> <code>&lt;shashankg&gt;</code> my mail id is garg.shashank.5@gmail.com but it would be better if you mail it on group, If I am busy someone else will answer you doubt..<br/>
+<kbd>[18:07:02]</kbd> <code>&lt;ankurankan_&gt;</code> harsh11, Also you can join this irc channel any time<br/>
+<kbd>[18:07:11]</kbd> <code>&lt;ankurankan_&gt;</code> I am mostly available here<br/>
+<kbd>[18:07:32]</kbd> <code>&lt;harsh11&gt;</code> ok.Will do if i have to ask something<br/>
+<kbd>[18:07:58]</kbd> <code>&lt;harsh11&gt;</code> What would be the deadline for the work?<br/>
+<kbd>[18:08:19]</kbd> <code>&lt;ankurankan_&gt;</code> harsh11, This is open source. There are no deadlines :)<br/>
+<kbd>[18:08:26]</kbd> <code>&lt;harsh11&gt;</code> :)<br/>
+<kbd>[18:08:50]</kbd> <code>&lt;ankurankan_&gt;</code> harsh11, Work whenever you are free.<br/>
+<kbd>[18:09:00]</kbd> <code>&lt;ankurankan_&gt;</code> harsh11, But if you are working on a feature try to complete it as soon as possible<br/>
+<kbd>[18:09:01]</kbd> <code>&lt;harsh11&gt;</code> Ok. I'll try to complete this work soon<br/>
+<kbd>[18:09:06]</kbd> <code>&lt;shashankg&gt;</code> read the docs of the project at http://pgmpy.readthedocs.org/en/latest/ for better understanding.<br/>
+<kbd>[18:09:21]</kbd> <code>&lt;ankurankan_&gt;</code> harsh11, So that if you couldn't do it, someone else will try.<br/>
+<kbd>[18:09:44]</kbd> <code>&lt;harsh11&gt;</code> Yes, I understand.<br/>
+<kbd>[18:10:13]</kbd> <code>&lt;shashankg&gt;</code> And go through the wikis on github. They will help you with git and some other important issues.<br/>
+<kbd>[18:10:58]</kbd> <code>&lt;harsh11&gt;</code> Yes will do.<br/>
+<kbd>[18:11:00]</kbd> <code>&lt;ankurankan_&gt;</code> harsh11, And if you get stuck anywhere just ask it<br/>
+<kbd>[18:11:02]</kbd> <code>&lt;shashankg&gt;</code> https://github.com/pgmpy/pgmpy_viz/wiki<br/>
+<kbd>[18:12:05]</kbd> <code>&lt;shashankg&gt;</code> So, I think we are done for today.<br/>
+<kbd>[18:12:26]</kbd> <code>&lt;harsh11&gt;</code> Ok. I'll be in touch.<br/>
+<kbd>[18:12:36]</kbd> <code>&lt;ankurankan_&gt;</code> shashankg, Didn't anyone else join the meeting today?<br/>
+<kbd>[18:12:50]</kbd> <code>&lt;shashankg&gt;</code> No<br/>
+<kbd>[18:13:12]</kbd> <code>&lt;ankurankan_&gt;</code> Okay..<br/>
+<kbd>[18:13:18]</kbd> <code>&lt;ankurankan_&gt;</code> I will try to contact them<br/>
+<kbd>[18:14:21]</kbd> <code>&lt;shashankg&gt;</code> ok. Tell them to read the logs. We can also have a meeting for new people.<br/>
+<kbd>[18:14:29]</kbd> <code>&lt;ankurankan_&gt;</code> okay..<br/>
+<kbd>[14:29:08]</kbd> <strong>[disconnected at Sat Jun 21 14:29:08 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

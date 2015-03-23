@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 09-09-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 09-09-2014 </h3><br/><br/>
+                <br/>
+<kbd>[15:57:16]</kbd> <strong>[connected at Tue Sep  9 15:57:16 2014]</strong><br/>
+<kbd>[15:57:28]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[15:57:37]</kbd> <code>&lt;skundu&gt;</code> firstly, what about semester of code?<br/>
+<kbd>[15:57:47]</kbd> <code>&lt;ankurankan&gt;</code> we are participating<br/>
+<kbd>[15:57:56]</kbd> <code>&lt;ankurankan&gt;</code> But for the ideas we need to discuss viz first<br/>
+<kbd>[15:58:01]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[15:58:03]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[15:58:39]</kbd> <code>&lt;shashankg&gt;</code> first lets discuss what exactly we want from viz<br/>
+<kbd>[15:58:42]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, You want to know what's going on with pgmpy ?<br/>
+<kbd>[15:59:08]</kbd> <code>&lt;shashankg&gt;</code> yeah, but we'll discuss it later<br/>
+<kbd>[15:59:14]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[15:59:40]</kbd> <code>&lt;skundu&gt;</code> i think we should start with what we want from viz<br/>
+<kbd>[16:00:00]</kbd> <code>&lt;ankurankan&gt;</code> So we want viz to be a simple tool for students or teachers which would help in learning pgm<br/>
+<kbd>[16:00:33]</kbd> <code>&lt;ankurankan&gt;</code> That is why we went for a web app so that anybody could simple go the webpage and start experimenting<br/>
+<kbd>[16:01:19]</kbd> <code>&lt;shashankg&gt;</code> do we want to host it on a server and make it accessible for other people?<br/>
+<kbd>[16:01:44]</kbd> <code>&lt;ankurankan&gt;</code> Yeah. When viz has that much functionality I would like to do that<br/>
+<kbd>[16:01:57]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[16:02:11]</kbd> <code>&lt;ankurankan&gt;</code> What do you guys think?<br/>
+<kbd>[16:02:26]</kbd> <code>&lt;skundu&gt;</code> the basic layout part of viz is done excluding visualization enhancements<br/>
+<kbd>[16:02:50]</kbd> <code>&lt;shashankg&gt;</code> I would also like to add that feature.<br/>
+<kbd>[16:02:56]</kbd> <code>&lt;ankurankan&gt;</code> skundu, No actually we need to change a lot. I was thinking about that today.<br/>
+<kbd>[16:02:59]</kbd> <code>&lt;shashankg&gt;</code> skundu: please elaborate<br/>
+<kbd>[16:03:19]</kbd> <code>&lt;skundu&gt;</code> enhancements like beautification of the app<br/>
+<kbd>[16:03:41]</kbd> <code>&lt;skundu&gt;</code> we could have a facebook like notification column at the right side of the page<br/>
+<kbd>[16:03:47]</kbd> <code>&lt;ankurankan&gt;</code> We should focus on the functionality right now. We can always style things later.<br/>
+<kbd>[16:04:17]</kbd> <code>&lt;skundu&gt;</code> so what i am saying is firstly we need to discuss two things<br/>
+<kbd>[16:04:17]</kbd> <code>&lt;shashankg&gt;</code> skundu: what basic layout has been implemented<br/>
+<kbd>[16:04:32]</kbd> <code>&lt;skundu&gt;</code> post model analysis and how are we going to handle the data<br/>
+<kbd>[16:05:02]</kbd> <code>&lt;skundu&gt;</code> by basic layout i was referring to visualization of the graph and editing it<br/>
+<kbd>[16:05:31]</kbd> <code>&lt;ankurankan&gt;</code> Let's go through step by step. We still don't have the functionality of creating the models. So, right now our main focus should be model creation.<br/>
+<kbd>[16:05:48]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[16:06:13]</kbd> <code>&lt;ankurankan&gt;</code> And also since inference algo have not been implemented in pgmpy yet, we don't really know what data we would be dealing with.<br/>
+<kbd>[16:06:48]</kbd> <code>&lt;shashankg&gt;</code> now regarding creating the model<br/>
+<kbd>[16:06:59]</kbd> <code>&lt;skundu&gt;</code> but without actual data how do you suggest we create the model<br/>
+<kbd>[16:07:06]</kbd> <code>&lt;ankurankan&gt;</code> I might be able to start implementing the algos from next week, then we will get better idea about that.<br/>
+<kbd>[16:07:18]</kbd> <code>&lt;ankurankan&gt;</code> skundu, explain<br/>
+<kbd>[16:07:20]</kbd> <code>&lt;shashankg&gt;</code> do we need the ability to read model from file in viz?<br/>
+<kbd>[16:08:01]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, I think that feature should come later on. We should just focus on a very basic thing. Just enough functionality to make everything work<br/>
+<kbd>[16:08:09]</kbd> <code>&lt;skundu&gt;</code> to actually start building the model we need some source for data which we could edit or visualize through the graph<br/>
+<kbd>[16:08:11]</kbd> <code>&lt;ankurankan&gt;</code> We can add features later on.<br/>
+<kbd>[16:08:40]</kbd> <code>&lt;ankurankan&gt;</code> skundu, People will be adding them manually<br/>
+<kbd>[16:08:57]</kbd> <code>&lt;shashankg&gt;</code> I think we should have the following in viz: 1) creating a model in viz and sending it to server for analysis 2) creating a model in backend and visualizing it in viz<br/>
+<kbd>[16:09:33]</kbd> <code>&lt;skundu&gt;</code> so shall i just create a json object within basic.js and maintain it as the users edit it?<br/>
+<kbd>[16:10:12]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Let's discuss features first. Then we will come to implementation details.<br/>
+<kbd>[16:10:18]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[16:10:33]</kbd> <code>&lt;shashankg&gt;</code> skundu: lets discuss what do we want to achive, we can focus on the how part later<br/>
+<kbd>[16:10:46]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Yeah. That is what I am thinking<br/>
+<kbd>[16:11:05]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, We also need to change the way we were creating graphs.<br/>
+<kbd>[16:11:27]</kbd> <code>&lt;shashankg&gt;</code> later we can have better integration of front and backend<br/>
+<kbd>[16:11:43]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: what do you have in mind about creating graphs?<br/>
+<kbd>[16:12:23]</kbd> <code>&lt;ankurankan&gt;</code> Till now we were thinking of clicking on the node to open a table where the user enters the values<br/>
+<kbd>[16:12:49]</kbd> <code>&lt;ankurankan&gt;</code> But with markov model the problem is that the factor would be associated with edges<br/>
+<kbd>[16:12:50]</kbd> <code>&lt;shashankg&gt;</code> are we ok with cytoscape.js or something else is needed<br/>
+<kbd>[16:13:05]</kbd> <code>&lt;ankurankan&gt;</code> I really don't know right now..<br/>
+<kbd>[16:13:43]</kbd> <code>&lt;ankurankan&gt;</code> Also it's now necessary that the user gives the factor for each edge.<br/>
+<kbd>[16:13:48]</kbd> <code>&lt;skundu&gt;</code> cyto is just for creating and visualizing the graph i dont think there would be an issue with the models<br/>
+<kbd>[16:13:50]</kbd> <code>&lt;shashankg&gt;</code> we can associate a table with all edges and nodes. And keep table of edge hidden in bayesian<br/>
+<kbd>[16:14:20]</kbd> <code>&lt;ankurankan&gt;</code> Maybe he has a factor over multiple variable and would like to input the values as such.<br/>
+<kbd>[16:14:42]</kbd> <code>&lt;ankurankan&gt;</code> What I was thinking was to separate the model creation and adding values<br/>
+<kbd>[16:14:52]</kbd> <code>&lt;shashankg&gt;</code> I don't  have any idea about factor table of edge<br/>
+<kbd>[16:15:22]</kbd> <code>&lt;ankurankan&gt;</code> Just think of it as a table over some variables<br/>
+<kbd>[16:15:23]</kbd> <code>&lt;shashankg&gt;</code> abinash_panda: please throw some light on how will the factor table of a edge look like<br/>
+<kbd>[16:16:06]</kbd> <code>&lt;skundu&gt;</code> shashankg, we can have separate js files for each model<br/>
+<kbd>[16:16:14]</kbd> <code>&lt;shashankg&gt;</code> The shape and size of node table depends on child nodes, for edge table it will depend on?<br/>
+<kbd>[16:16:23]</kbd> <code>&lt;ankurankan&gt;</code> https://github.com/pgmpy/pgmpy/blob/dev/pgmpy/Factor/Factor.py#L35<br/>
+<kbd>[16:16:24]</kbd> <code>&lt;skundu&gt;</code> based on the one user chooses to work on, we will switch<br/>
+<kbd>[16:16:42]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, On the number of states of the variables<br/>
+<kbd>[16:16:48]</kbd> <code>&lt;abinash_panda&gt;</code> shashankg: I am also thinking on the same thing. We can't have hierarchy just like we had for Bayesian Models.<br/>
+<kbd>[16:17:18]</kbd> <code>&lt;abinash_panda&gt;</code> We can check how SAMIAM does.<br/>
+<kbd>[16:17:40]</kbd> <code>&lt;shashankg&gt;</code> abinash_panda: can you check it now<br/>
+<kbd>[16:17:47]</kbd> <code>&lt;ankurankan&gt;</code> AFAIK SAMIAM was doing the same thing for bayesian models<br/>
+<kbd>[16:18:04]</kbd> <code>&lt;abinash_panda&gt;</code> Give me some time. I have to install it.<br/>
+<kbd>[16:18:17]</kbd> <code>&lt;abinash_panda&gt;</code> If anybody has already installed it?<br/>
+<kbd>[16:18:38]</kbd> <code>&lt;ankurankan&gt;</code> I haven't<br/>
+<kbd>[16:18:44]</kbd> <code>&lt;shashankg&gt;</code> does the rows and columns of edge table depends on neighbouring edges?<br/>
+<kbd>[16:19:02]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, In markov or bayesian?<br/>
+<kbd>[16:19:35]</kbd> <code>&lt;shashankg&gt;</code> in markov, I have mentioned edge table<br/>
+<kbd>[16:20:23]</kbd> <code>&lt;ankurankan&gt;</code> Depends on how we want to represent it.<br/>
+<kbd>[16:20:35]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Did you have a look on the link that I sent?<br/>
+<kbd>[16:20:52]</kbd> <code>&lt;shashankg&gt;</code> yes.<br/>
+<kbd>[16:21:15]</kbd> <code>&lt;shashankg&gt;</code> But I can't figure out shit by looking at that<br/>
+<kbd>[16:21:26]</kbd> <code>&lt;ankurankan&gt;</code> So, basically if we represent the whole table then the columns would vary on the number of variables<br/>
+<kbd>[16:21:42]</kbd> <code>&lt;ankurankan&gt;</code> Okay so each combination of variables have a value associated with it<br/>
+<kbd>[16:22:19]</kbd> <code>&lt;ankurankan&gt;</code> So if you show the combination of variables to user and ask him to enter the values there the no of columns would depend on the number of variables<br/>
+<kbd>[16:23:44]</kbd> <code>&lt;shashankg&gt;</code> So it is a pretty long table.<br/>
+<kbd>[16:23:47]</kbd> <code>&lt;ankurankan&gt;</code> So for showing the table to the user we will have to ask him the variables on which he wants to define the Factor and how many states does each variable have<br/>
+<kbd>[16:24:20]</kbd> <code>&lt;ankurankan&gt;</code> It might be. No of rows will be equal to the product of no of states of each variable<br/>
+<kbd>[16:24:34]</kbd> <code>&lt;shashankg&gt;</code> Do the table of each edge depend on all variables, or only few(only children or only parents)<br/>
+<kbd>[16:25:32]</kbd> <code>&lt;shashankg&gt;</code> Does the edge joining intelligence and grade depend on difficulry?<br/>
+<kbd>[16:26:04]</kbd> <code>&lt;ankurankan&gt;</code> Table actually depends on what the user want to give. In the simplest form the table would just have 2 variables (the nodes which the edge connects)<br/>
+<kbd>[16:26:40]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[16:26:44]</kbd> <code>&lt;ankurankan&gt;</code> But the user might want to give the table on larger set of variables. Then we will have to compute the smaller tables from that<br/>
+<kbd>[16:27:01]</kbd> <code>&lt;shashankg&gt;</code> So there is no definded structure for table as in the case of bayesian.<br/>
+<kbd>[16:27:12]</kbd> <code>&lt;ankurankan&gt;</code> I don't think so<br/>
+<kbd>[16:27:31]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[16:27:45]</kbd> <code>&lt;shashankg&gt;</code> so let's continue our discussion<br/>
+<kbd>[16:28:06]</kbd> <code>&lt;ankurankan&gt;</code> So, this is why I was thinking to separate the model creation and data entering<br/>
+<kbd>[16:28:24]</kbd> <code>&lt;ankurankan&gt;</code> So the user will first create the model and then there can be buttons for adding cpd or factors<br/>
+<kbd>[16:28:50]</kbd> <code>&lt;ankurankan&gt;</code> and we will ask the variable on which he wants to give the cpd or factor<br/>
+<kbd>[16:28:58]</kbd> <code>&lt;ankurankan&gt;</code> and show him the table according to that<br/>
+<kbd>[16:29:02]</kbd> <code>&lt;ankurankan&gt;</code> What do you think?<br/>
+<kbd>[16:29:42]</kbd> <code>&lt;shashankg&gt;</code> user will be on a different screen, containing only the table while he is adding values?<br/>
+<kbd>[16:30:14]</kbd> <code>&lt;ankurankan&gt;</code> No. just partition the screen in two parts<br/>
+<kbd>[16:30:40]</kbd> <code>&lt;ankurankan&gt;</code> Like show the model in half of the screen and show the table things in other half<br/>
+<kbd>[16:31:10]</kbd> <code>&lt;shashankg&gt;</code> I think it is ok<br/>
+<kbd>[16:31:20]</kbd> <code>&lt;ankurankan&gt;</code> skundu, What do you think<br/>
+<kbd>[16:31:21]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[16:31:33]</kbd> <code>&lt;shashankg&gt;</code> If we could have a hover screen, like facebook photos it will be better<br/>
+<kbd>[16:31:51]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Please explain?<br/>
+<kbd>[16:33:36]</kbd> <code>&lt;shashankg&gt;</code> Keep the created model in background. pop a blurred type screen,(like the one which pops when we view facebook or quora photos) and keep all the table making stuff there<br/>
+<kbd>[16:34:31]</kbd> <code>&lt;ankurankan&gt;</code> I think this would be good for people working on smaller screens<br/>
+<kbd>[16:35:04]</kbd> <code>&lt;ankurankan&gt;</code> But I don't know if a form or something can be populated in such a screen (I don't even know what it's called :P)<br/>
+<kbd>[16:35:20]</kbd> <code>&lt;shashankg&gt;</code> skundu: will it be jsically feasible?<br/>
+<kbd>[16:35:35]</kbd> <code>&lt;skundu&gt;</code> ankurankan, if you want to spit screen for the table and the graph, wont the table be very large to fit in there<br/>
+<kbd>[16:35:45]</kbd> <code>&lt;skundu&gt;</code> srry spli screen<br/>
+<kbd>[16:35:49]</kbd> <code>&lt;skundu&gt;</code> split<br/>
+<kbd>[16:36:11]</kbd> <code>&lt;skundu&gt;</code> shashankg, yes it is very possible<br/>
+<kbd>[16:36:24]</kbd> <code>&lt;ankurankan&gt;</code> skundu, I think splitting shoud be fine<br/>
+<kbd>[16:36:42]</kbd> <code>&lt;ankurankan&gt;</code> People wont we working on large graphs on viz<br/>
+<kbd>[16:36:55]</kbd> <code>&lt;shashankg&gt;</code> splitting will leave very less space on screen and we need space for table.<br/>
+<kbd>[16:37:17]</kbd> <code>&lt;shashankg&gt;</code> Well it is a implementataion issue and can be discussed later<br/>
+<kbd>[16:37:31]</kbd> <code>&lt;shashankg&gt;</code> lets stick to the curent topic<br/>
+<kbd>[16:37:32]</kbd> <code>&lt;skundu&gt;</code> what would be the issue if we were to diplay the table on click on the node<br/>
+<kbd>[16:38:01]</kbd> <code>&lt;shashankg&gt;</code> skundu: table is associated with nodes only in bayesian models<br/>
+<kbd>[16:38:03]</kbd> <code>&lt;ankurankan&gt;</code> None that I can think of<br/>
+<kbd>[16:38:09]</kbd> <code>&lt;shashankg&gt;</code> it is not the case in markov<br/>
+<kbd>[16:38:29]</kbd> <code>&lt;skundu&gt;</code> it can be displayded on click on the edge too<br/>
+<kbd>[16:38:36]</kbd> <code>&lt;shashankg&gt;</code> markov has table for edges and they don't have any heirchical structure.<br/>
+<kbd>[16:38:39]</kbd> <code>&lt;skundu&gt;</code> as you want in markov<br/>
+<kbd>[16:39:39]</kbd> <code>&lt;skundu&gt;</code> we just need a form to displayed on the fly which can be edited, right<br/>
+<kbd>[16:39:49]</kbd> <code>&lt;skundu&gt;</code> that can be done anywhere<br/>
+<kbd>[16:40:01]</kbd> <code>&lt;ankurankan&gt;</code> skundu, I would like to go on separate buttons "add factor" instead of clickin on edges<br/>
+<kbd>[16:40:02]</kbd> <code>&lt;skundu&gt;</code> you wont be needing any tabular structure'<br/>
+<kbd>[16:40:35]</kbd> <code>&lt;skundu&gt;</code> so can we have dropdowns for cpd or factors<br/>
+<kbd>[16:41:00]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: how do you intend to associate the table with a particular object (edge or node) if you have a add factor button<br/>
+<kbd>[16:41:36]</kbd> <code>&lt;ankurankan&gt;</code> No we might have separate pages for markov and bayesian because markov is undirected and bayesian is directed'<br/>
+<kbd>[16:41:56]</kbd> <code>&lt;skundu&gt;</code> ankurankan, please clarify<br/>
+<kbd>[16:42:27]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, User will put in the variable name with which he wants it to be associated<br/>
+<kbd>[16:42:36]</kbd> <code>&lt;skundu&gt;</code> shashankg, it would be better to have separate js files for markov bayesian<br/>
+<kbd>[16:42:49]</kbd> <code>&lt;skundu&gt;</code> we could hava dropdown for the user to select<br/>
+<kbd>[16:43:29]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: even if we have separate pages for markov and bayesian. If the user clicks on add factor button, how will we know that this table relates to which edge<br/>
+<kbd>[16:44:50]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, So when the user clicks on add factor we pop up a form.<br/>
+<kbd>[16:45:08]</kbd> <code>&lt;ankurankan&gt;</code> There we ask for the variables on which he wants to define the factor on<br/>
+<kbd>[16:45:19]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[16:45:36]</kbd> <code>&lt;ankurankan&gt;</code> And the number of states of each variable if he has not put it somewhere in some other factor<br/>
+<kbd>[16:45:51]</kbd> <code>&lt;ankurankan&gt;</code> Then based on these information we generate the table there<br/>
+<kbd>[16:46:04]</kbd> <code>&lt;shashankg&gt;</code> okk.<br/>
+<kbd>[16:46:08]</kbd> <code>&lt;ankurankan&gt;</code> Then the user will put values<br/>
+<kbd>[16:46:13]</kbd> <code>&lt;ankurankan&gt;</code> What do you think?<br/>
+<kbd>[16:47:49]</kbd> <code>&lt;shashankg&gt;</code> sorry but I am a bit confused about markov models. In markov models every edge has a table and rows and coulumns both depend on what user wants. In Bayesian every node has a table and rows are fixed, depending on parents<br/>
+<kbd>[16:48:09]</kbd> <code>&lt;skundu&gt;</code> ankurankan, i think we should first complete bayesian model, worry about markov later<br/>
+<kbd>[16:48:30]</kbd> <code>&lt;skundu&gt;</code> shashankg, lets complete bayesian first<br/>
+<kbd>[16:48:50]</kbd> <code>&lt;skundu&gt;</code> we can handle markov later, by creating a separate js file<br/>
+<kbd>[16:49:35]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Think of the simplest factor to be dependent on two variables. The user can but give the factor on more than two variables and we would then compute the simple factors on each two variables<br/>
+<kbd>[16:49:44]</kbd> <code>&lt;shashankg&gt;</code> skundu: we need same structure for  both models. If table is created by clicking nodes in bayesian and made by add factor i markov, it is not at all intiuitive<br/>
+<kbd>[16:50:02]</kbd> <code>&lt;ankurankan&gt;</code> +1<br/>
+<kbd>[16:50:23]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Both are very much related so we should get this clear<br/>
+<kbd>[16:50:30]</kbd> <code>&lt;skundu&gt;</code> kk<br/>
+<kbd>[16:51:01]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: ok, I will watch the markov intor video for it to make more sense :p<br/>
+<kbd>[16:51:38]</kbd> <code>&lt;shashankg&gt;</code> *introductory<br/>
+<kbd>[16:51:46]</kbd> <code>&lt;ankurankan&gt;</code> Okay :D<br/>
+<kbd>[16:52:07]</kbd> <code>&lt;shashankg&gt;</code> For now let's discuss about creating models<br/>
+<kbd>[16:52:26]</kbd> <code>&lt;shashankg&gt;</code> We need the add node and add edge button.<br/>
+<kbd>[16:53:13]</kbd> <code>&lt;ankurankan&gt;</code> Now I think having those two buttons makes no sense<br/>
+<kbd>[16:53:24]</kbd> <code>&lt;shashankg&gt;</code> We dont' need to save anything about these as they are already stored by cytoscape.js. and can be accessed by using cytoscape.js functions<br/>
+<kbd>[16:53:37]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: why so<br/>
+<kbd>[16:53:54]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Why do you think those buttons are needed?<br/>
+<kbd>[16:54:45]</kbd> <code>&lt;ankurankan&gt;</code> We can create models without them<br/>
+<kbd>[16:55:00]</kbd> <code>&lt;shashankg&gt;</code> I agree,  we don't need them<br/>
+<kbd>[16:55:17]</kbd> <code>&lt;ankurankan&gt;</code> So, better have two button namely Bayesian and Markov<br/>
+<kbd>[16:55:45]</kbd> <code>&lt;shashankg&gt;</code> But what about having names for nodes and edges (I don't know weather nameing edges is required)<br/>
+<kbd>[16:55:47]</kbd> <code>&lt;skundu&gt;</code> ankurankan, we can have that as a dropdown<br/>
+<kbd>[16:55:48]</kbd> <code>&lt;ankurankan&gt;</code> If the user is in Bayesian mode the model would be directed if in markov it would be undirected<br/>
+<kbd>[16:56:10]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, No don't need to name the edges.<br/>
+<kbd>[16:56:22]</kbd> <code>&lt;ankurankan&gt;</code> Naming nodes would be same as it is right now<br/>
+<kbd>[16:56:27]</kbd> <code>&lt;shashankg&gt;</code> ok. How and when will user name edges.<br/>
+<kbd>[16:56:31]</kbd> <code>&lt;ankurankan&gt;</code> When you create a node a box pops up asking for name<br/>
+<kbd>[16:56:37]</kbd> <code>&lt;shashankg&gt;</code> sorry nodes<br/>
+<kbd>[16:57:13]</kbd> <code>&lt;shashankg&gt;</code> How will you implement this? tweaking cytoscape.js?<br/>
+<kbd>[16:57:22]</kbd> <code>&lt;ankurankan&gt;</code> It's already implemented<br/>
+<kbd>[16:57:37]</kbd> <code>&lt;shashankg&gt;</code> ok. my bad<br/>
+<kbd>[16:57:39]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Am I right?<br/>
+<kbd>[16:58:47]</kbd> <code>&lt;ankurankan&gt;</code> Also in the Bayesian Model mode we will have add cpd button and in markov we will have add factor button<br/>
+<kbd>[16:59:01]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[16:59:01]</kbd> <code>&lt;shashankg&gt;</code> How exactly is the name of node associated with it. I mean can it be accessed with cytoscape.js functions? Does the name shows on the node right now?<br/>
+<kbd>[16:59:14]</kbd> <code>&lt;ankurankan&gt;</code> We will have the same post model button also<br/>
+<kbd>[16:59:27]</kbd> <code>&lt;skundu&gt;</code> shashankg, the name of node can be accessed wit cyto<br/>
+<kbd>[16:59:34]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, No I don't think that it shows right now<br/>
+<kbd>[16:59:53]</kbd> <code>&lt;shashankg&gt;</code> Let's discuss draw first. Post is entirely different animal<br/>
+<kbd>[17:00:01]</kbd> <code>&lt;skundu&gt;</code> no, it is not visible right now which can be doen easily<br/>
+<kbd>[17:01:04]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[17:02:23]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Yeah but it is the final step and doesn't require much effort<br/>
+<kbd>[17:02:52]</kbd> <code>&lt;skundu&gt;</code> so please clarify about the next enhancements<br/>
+<kbd>[17:03:34]</kbd> <code>&lt;shashankg&gt;</code> So for the first screen, we will have a dropdown asking for bayesian or markov<br/>
+<kbd>[17:03:40]</kbd> <code>&lt;ankurankan&gt;</code> I think we have discussed everything about model creation<br/>
+<kbd>[17:03:49]</kbd> <code>&lt;ankurankan&gt;</code> Don't go for dropdown<br/>
+<kbd>[17:03:53]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:04:03]</kbd> <code>&lt;shashankg&gt;</code> then user will create model. and while doing that, he can add names<br/>
+<kbd>[17:04:12]</kbd> <code>&lt;ankurankan&gt;</code> We have just two option. Dropdowns should be used when we have many values<br/>
+<kbd>[17:04:26]</kbd> <code>&lt;skundu&gt;</code> ankurankan, what alternative do you suggest for adropdown<br/>
+<kbd>[17:04:27]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: +1<br/>
+<kbd>[17:04:40]</kbd> <code>&lt;ankurankan&gt;</code> Just have two buttons<br/>
+<kbd>[17:04:56]</kbd> <code>&lt;shashankg&gt;</code> just have 2 buttons on first page.<br/>
+<kbd>[17:05:15]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:05:23]</kbd> <code>&lt;shashankg&gt;</code> each will load a blank page with settings for different models<br/>
+<kbd>[17:05:51]</kbd> <code>&lt;ankurankan&gt;</code> No. Just have the buttons as we were having right now<br/>
+<kbd>[17:05:52]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: are there only two models, bayesian and markov?<br/>
+<kbd>[17:06:00]</kbd> <code>&lt;ankurankan&gt;</code> Don't go for multiple pages<br/>
+<kbd>[17:06:04]</kbd> <code>&lt;shashankg&gt;</code> What about hmm etc?<br/>
+<kbd>[17:06:20]</kbd> <code>&lt;ankurankan&gt;</code> HMM is a specific kind of Markov model<br/>
+<kbd>[17:06:34]</kbd> <code>&lt;ankurankan&gt;</code> We won't be supporting every kind of model right now<br/>
+<kbd>[17:06:39]</kbd> <code>&lt;skundu&gt;</code> ankurankan, that would crowd the top of the page<br/>
+<kbd>[17:06:40]</kbd> <code>&lt;ankurankan&gt;</code> There are many others<br/>
+<kbd>[17:06:44]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: why? I think it will be easy to manage<br/>
+<kbd>[17:07:00]</kbd> <code>&lt;shashankg&gt;</code> We will support only these two?<br/>
+<kbd>[17:07:03]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Because I don't know about other models<br/>
+<kbd>[17:07:16]</kbd> <code>&lt;shashankg&gt;</code> :D<br/>
+<kbd>[17:07:45]</kbd> <code>&lt;ankurankan&gt;</code> So, let's just start with these two and then later we can add support for others<br/>
+<kbd>[17:08:09]</kbd> <code>&lt;skundu&gt;</code> i think we should go with shashank's idea<br/>
+<kbd>[17:08:10]</kbd> <code>&lt;shashankg&gt;</code> I guess, all other models are derived from these two and are specific cases of these two.<br/>
+<kbd>[17:08:19]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Yup<br/>
+<kbd>[17:08:30]</kbd> <code>&lt;ankurankan&gt;</code> Not exactly specific<br/>
+<kbd>[17:08:35]</kbd> <code>&lt;skundu&gt;</code> about the buttons<br/>
+<kbd>[17:08:42]</kbd> <code>&lt;shashankg&gt;</code> Later on we will be needing templates for all these standard models like HMM.<br/>
+<kbd>[17:08:42]</kbd> <code>&lt;ankurankan&gt;</code> There are models having both directed and undirected edges<br/>
+<kbd>[17:08:56]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, We are going too far :P<br/>
+<kbd>[17:09:03]</kbd> <code>&lt;shashankg&gt;</code> okk<br/>
+<kbd>[17:09:12]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Let's come back to creating models :P<br/>
+<kbd>[17:09:25]</kbd> <code>&lt;shashankg&gt;</code> so why not multiple pages?<br/>
+<kbd>[17:09:47]</kbd> <code>&lt;ankurankan&gt;</code> Because that doesn't look cool<br/>
+<kbd>[17:10:06]</kbd> <code>&lt;ankurankan&gt;</code> Have a ajax call or use js to have everything in one page<br/>
+<kbd>[17:10:19]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Please have a look at angular.js<br/>
+<kbd>[17:10:25]</kbd> <code>&lt;shashankg&gt;</code> So you want to hide the buttons after selection is done?<br/>
+<kbd>[17:10:37]</kbd> <code>&lt;ankurankan&gt;</code> It is used to create single page apps I think<br/>
+<kbd>[17:11:01]</kbd> <code>&lt;ankurankan&gt;</code> Don't hide it. Just show that which is selected right now<br/>
+<kbd>[17:11:15]</kbd> <code>&lt;ankurankan&gt;</code> It we hide it the user won't be able to switch<br/>
+<kbd>[17:12:04]</kbd> <code>&lt;shashankg&gt;</code> ok. higlight the selected option<br/>
+<kbd>[17:12:25]</kbd> <code>&lt;skundu&gt;</code> so how exaclty do you want the user to select the model<br/>
+<kbd>[17:12:58]</kbd> <code>&lt;ankurankan&gt;</code> skundu, I didn't get what you are asking.. Please elaborate<br/>
+<kbd>[17:13:50]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: skundu wants you  to elaborate on selecting by buttongs<br/>
+<kbd>[17:13:56]</kbd> <code>&lt;skundu&gt;</code> so what you are saying is that there would be two buttons and on selecting one the other would disappear<br/>
+<kbd>[17:14:23]</kbd> <code>&lt;ankurankan&gt;</code> skundu, No just highlight the button that was selected and enter into that mode<br/>
+<kbd>[17:15:53]</kbd> <code>&lt;skundu&gt;</code> so where do you want the buttons to be<br/>
+<kbd>[17:16:09]</kbd> <code>&lt;skundu&gt;</code> my suggestion would be to have them at top right<br/>
+<kbd>[17:16:16]</kbd> <code>&lt;ankurankan&gt;</code> skundu, That you will have to think :P<br/>
+<kbd>[17:16:20]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:16:27]</kbd> <code>&lt;ankurankan&gt;</code> However it looks good<br/>
+<kbd>[17:17:05]</kbd> <code>&lt;ankurankan&gt;</code> What did I just write :P<br/>
+<kbd>[17:17:08]</kbd> <code>&lt;skundu&gt;</code> now after the model is selected, user would create a graph<br/>
+<kbd>[17:17:12]</kbd> <code>&lt;ankurankan&gt;</code> In whatever way it looks good<br/>
+<kbd>[17:17:18]</kbd> <code>&lt;ankurankan&gt;</code> yup<br/>
+<kbd>[17:17:45]</kbd> <code>&lt;ankurankan&gt;</code> Now depending on the selection the graph would be either directed or undirected<br/>
+<kbd>[17:17:45]</kbd> <code>&lt;skundu&gt;</code> what happens after that in bayesian<br/>
+<kbd>[17:18:04]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:18:06]</kbd> <code>&lt;ankurankan&gt;</code> Bayesian models will have directed model<br/>
+<kbd>[17:18:12]</kbd> <code>&lt;ankurankan&gt;</code> Markov would be undirected<br/>
+<kbd>[17:18:25]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:18:34]</kbd> <code>&lt;ankurankan&gt;</code> After selecting Bayesian Model show a add cpd button<br/>
+<kbd>[17:18:43]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:18:45]</kbd> <code>&lt;shashankg&gt;</code> Now two roads have diverged. let's stick to bayesian one<br/>
+<kbd>[17:18:52]</kbd> <code>&lt;skundu&gt;</code> +<br/>
+<kbd>[17:18:55]</kbd> <code>&lt;skundu&gt;</code> +1<br/>
+<kbd>[17:19:00]</kbd> <code>&lt;ankurankan&gt;</code> ok..<br/>
+<kbd>[17:19:14]</kbd> <code>&lt;ankurankan&gt;</code> So on clicking on add cpd<br/>
+<kbd>[17:19:19]</kbd> <code>&lt;shashankg&gt;</code> we will have separate js files for bayesian and markov?<br/>
+<kbd>[17:19:36]</kbd> <code>&lt;skundu&gt;</code> that would be easier to handle<br/>
+<kbd>[17:20:01]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, I don't really know how things are going to be implemented. So skundu should see how things look more cleaner<br/>
+<kbd>[17:20:13]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[17:20:36]</kbd> <code>&lt;skundu&gt;</code> ankurankan, please continue<br/>
+<kbd>[17:21:23]</kbd> <code>&lt;ankurankan&gt;</code> So on clicking add_cpd show a translucent page (I don't know what that thing is called so using page)<br/>
+<kbd>[17:21:51]</kbd> <code>&lt;ankurankan&gt;</code> There first ask for the variable on which the cpd is to be defined<br/>
+<kbd>[17:22:03]</kbd> <code>&lt;ankurankan&gt;</code> and the number of states of the variable.<br/>
+<kbd>[17:22:52]</kbd> <code>&lt;shashankg&gt;</code> Will it be a good idea to let the user select the variable by clicking on it? and disabling selecting edges in bayesian and nodes in markov??<br/>
+<kbd>[17:22:59]</kbd> <code>&lt;ankurankan&gt;</code> Here check it the user has already provided the no of states of the node's parent variables<br/>
+<kbd>[17:23:28]</kbd> <code>&lt;shashankg&gt;</code> asking for variable will create problems in markov. because edges don't have names .<br/>
+<kbd>[17:24:05]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, No. Because the factor needs not to be necessarily defined on the edge<br/>
+<kbd>[17:24:18]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[17:24:19]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, We don't need edge name anywhere<br/>
+<kbd>[17:24:45]</kbd> <code>&lt;ankurankan&gt;</code> The factor is on two variable name and is associated with the edge connecting those two nodes<br/>
+<kbd>[17:25:18]</kbd> <code>&lt;skundu&gt;</code> wait, before adding cpd how are the states of variables going to be edited<br/>
+<kbd>[17:25:39]</kbd> <code>&lt;ankurankan&gt;</code> If the user has already given the no of states of the parents then show him the cpd table using all this information.<br/>
+<kbd>[17:25:55]</kbd> <code>&lt;shashankg&gt;</code> I understand that. You said that we will ask user for the variable. So he will have to write the node's name in bayesian and two node's names in markov?<br/>
+<kbd>[17:25:56]</kbd> <code>&lt;ankurankan&gt;</code> Otherwise ask for the no of states of variables that you don't know and then show him the table.<br/>
+<kbd>[17:27:00]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Exactly. But since the factor can also be defined on more than 2 nodes we will have to give the user option to add the factor on as many variables as he likes<br/>
+<kbd>[17:27:22]</kbd> <code>&lt;shashankg&gt;</code> okk<br/>
+<kbd>[17:28:22]</kbd> <code>&lt;ankurankan&gt;</code> Everything good?<br/>
+<kbd>[17:28:23]</kbd> <code>&lt;skundu&gt;</code> so what is going to happen on clicking of nodes<br/>
+<kbd>[17:28:54]</kbd> <code>&lt;ankurankan&gt;</code> Maybe pop a box to edit the name of the variables<br/>
+<kbd>[17:28:57]</kbd> <code>&lt;ankurankan&gt;</code> *variable<br/>
+<kbd>[17:28:58]</kbd> <code>&lt;shashankg&gt;</code> yes<br/>
+<kbd>[17:29:02]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:29:24]</kbd> <code>&lt;skundu&gt;</code> and the states of it too, right?<br/>
+<kbd>[17:29:30]</kbd> <code>&lt;skundu&gt;</code> the variables<br/>
+<kbd>[17:29:34]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: +1<br/>
+<kbd>[17:29:34]</kbd> <code>&lt;skundu&gt;</code> variable<br/>
+<kbd>[17:30:40]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Don't give that option there because if a user changes no of states of the variable then he will have to change to cpd also<br/>
+<kbd>[17:30:51]</kbd> <code>&lt;ankurankan&gt;</code> So leave this option in the add cpd page only<br/>
+<kbd>[17:31:01]</kbd> <code>&lt;shashankg&gt;</code> +1<br/>
+<kbd>[17:31:53]</kbd> <code>&lt;skundu&gt;</code> but it would be difficult to edit states of all the variables in a single page<br/>
+<kbd>[17:31:54]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: proceed<br/>
+<kbd>[17:32:00]</kbd> <code>&lt;skundu&gt;</code> wait please<br/>
+<kbd>[17:32:43]</kbd> <code>&lt;shashankg&gt;</code> If user edits the states of any variable, it will make the cpd table of all it's kids useless<br/>
+<kbd>[17:34:15]</kbd> <code>&lt;skundu&gt;</code> by editing if you mean changing the name, it wont create an issue, but to change the no of stateswould be huge problem if you want to do it from a single page<br/>
+<kbd>[17:34:42]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Explain<br/>
+<kbd>[17:35:38]</kbd> <code>&lt;skundu&gt;</code> say by clicking on a node we can change the name of states as well as increase or decrease no of states<br/>
+<kbd>[17:35:48]</kbd> <code>&lt;shashankg&gt;</code> If only the name is changed, we need to change that name all over the data. and it will not be easy as we need to have unique state names for this. I was concerned about changing numbe of states<br/>
+<kbd>[17:36:10]</kbd> <code>&lt;skundu&gt;</code> but by clicking on add_cpd we can only edit the cpd by entering values<br/>
+<kbd>[17:36:38]</kbd> <code>&lt;skundu&gt;</code> the name is just  a parameter, it can be changed anytime anywhere<br/>
+<kbd>[17:36:50]</kbd> <code>&lt;shashankg&gt;</code> I you edit the number of states of difficulty, It will affect the cpd table of grades also. If user created cpd for both diff and grades. and later edits the table of diff, what do you think we should do?<br/>
+<kbd>[17:37:37]</kbd> <code>&lt;skundu&gt;</code> but to change no of states of all variables from a single page would be very difficult<br/>
+<kbd>[17:38:11]</kbd> <code>&lt;skundu&gt;</code> what was supposed to happen if say a user removes a state of a varibale from the cpd page?<br/>
+<kbd>[17:38:24]</kbd> <code>&lt;ankurankan&gt;</code> skundu, No. Change the no of states of only a single variable from that page and delete all other cpds affected by it<br/>
+<kbd>[17:38:48]</kbd> <code>&lt;shashankg&gt;</code> If you decide to delete all the tables which have become useless it is not a good idea because the edit made by user may be a mistake, we can have a red cross on the table to show that is is inconsistent with parent data.<br/>
+<kbd>[17:38:49]</kbd> <code>&lt;ankurankan&gt;</code> If something is affecting other cpds you should delete those cpds<br/>
+<kbd>[17:39:28]</kbd> <code>&lt;ankurankan&gt;</code> yeah that would be a good option show a pop up that this will affect other cpds<br/>
+<kbd>[17:39:33]</kbd> <code>&lt;ankurankan&gt;</code> And are you sure to do this<br/>
+<kbd>[17:40:11]</kbd> <code>&lt;shashankg&gt;</code> Let's not delete anything. just show that this data is corrupted by other edits and you need to fix it<br/>
+<kbd>[17:40:42]</kbd> <code>&lt;ankurankan&gt;</code> How do you show data corrupted. The table size might change because of your change<br/>
+<kbd>[17:41:20]</kbd> <code>&lt;skundu&gt;</code> we can recreate ann empty cpd<br/>
+<kbd>[17:41:26]</kbd> <code>&lt;shashankg&gt;</code> Show the pop while editing and make a little red cross on all nodes (and or edges) whose tables have been rendered useless by user's edit<br/>
+<kbd>[17:42:09]</kbd> <code>&lt;ankurankan&gt;</code> yeah and what about when the user goes to edit those cpds?<br/>
+<kbd>[17:42:54]</kbd> <code>&lt;shashankg&gt;</code> have a reset button to delete the cpds of that table and create new empty table<br/>
+<kbd>[17:43:20]</kbd> <code>&lt;shashankg&gt;</code> new table consistent with present parent states<br/>
+<kbd>[17:43:28]</kbd> <code>&lt;skundu&gt;</code> +1<br/>
+<kbd>[17:43:40]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. makes sense<br/>
+<kbd>[17:44:02]</kbd> <code>&lt;shashankg&gt;</code> +1 I agree with myself here<br/>
+<kbd>[17:44:10]</kbd> <code>&lt;skundu&gt;</code> so final recollection<br/>
+<kbd>[17:44:34]</kbd> <code>&lt;shashankg&gt;</code> are we done for today??<br/>
+<kbd>[17:44:41]</kbd> <code>&lt;skundu&gt;</code> on clicking nodes user edits the states as well as the no. of states<br/>
+<kbd>[17:44:55]</kbd> <code>&lt;shashankg&gt;</code> Do we need an idea page before registration??<br/>
+<kbd>[17:45:21]</kbd> <code>&lt;ankurankan&gt;</code> skundu, yeah with a warning<br/>
+<kbd>[17:45:21]</kbd> <code>&lt;skundu&gt;</code> now using these variables we create  an empty cpd which can be accessed and edited with a button<br/>
+<kbd>[17:45:34]</kbd> <code>&lt;shashankg&gt;</code> If not than skundu please register today or tommorow and we will think about ideas tomorrow.<br/>
+<kbd>[17:47:27]</kbd> <code>&lt;ankurankan&gt;</code> I am registering<br/>
+<kbd>[17:47:35]</kbd> <code>&lt;ankurankan&gt;</code> We will discuss the ideas tomorrow<br/>
+<kbd>[17:47:45]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[17:47:58]</kbd> <code>&lt;skundu&gt;</code> same time tomorrow?<br/>
+<kbd>[17:48:00]</kbd> <code>&lt;shashankg&gt;</code> ok. same time, same place, same channel.<br/>
+<kbd>[17:48:16]</kbd> <code>&lt;skundu&gt;</code> gdnight guys<br/>
+<kbd>[17:48:19]</kbd> <code>&lt;ankurankan&gt;</code> can we push it to 10?<br/>
+<kbd>[17:48:36]</kbd> <code>&lt;skundu&gt;</code> no prob with me<br/>
+<kbd>[17:49:17]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Is 10 pm okay for you?<br/>
+<kbd>[17:49:19]</kbd> <code>&lt;skundu&gt;</code> create an event<br/>
+<kbd>[17:50:29]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, ??<br/>
+<kbd>[17:52:08]</kbd> <code>&lt;shashankgarg&gt;</code> Sorry I lost connection.<br/>
+<kbd>[17:52:22]</kbd> <code>&lt;ankurankan&gt;</code> shashankgarg, Is 10 pm tomorrow okay with you ?<br/>
+<kbd>[17:52:39]</kbd> <code>&lt;shashankgarg&gt;</code> It will be better if we start early<br/>
+<kbd>[17:52:51]</kbd> <code>&lt;shashankgarg&gt;</code> I have nothing to do from 9 to 10<br/>
+<kbd>[17:53:17]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. then let's do at 9:30<br/>
+<kbd>[17:53:24]</kbd> <code>&lt;shashankgarg&gt;</code> and it is difficult to control myself from sleeping during that time<br/>
+<kbd>[17:53:32]</kbd> <code>&lt;shashankgarg&gt;</code> :) 9.30 done<br/>
+<kbd>[17:53:43]</kbd> <code>&lt;ankurankan&gt;</code> I usually come from office after 9:30 :P<br/>
+<kbd>[17:53:46]</kbd> <code>&lt;ankurankan&gt;</code> That's why<br/>
+<kbd>[17:53:54]</kbd> <code>&lt;ankurankan&gt;</code> Okay. I will create an event for 9:30<br/>
+<kbd>[17:54:02]</kbd> <code>&lt;shashankgarg&gt;</code> I will be online at 9.30<br/>
+<kbd>[17:54:09]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:54:10]</kbd> <code>&lt;ankurankan&gt;</code> Bye..<br/>
+<kbd>[17:54:11]</kbd> <code>&lt;ankurankan&gt;</code> Gn..<br/>
+<kbd>[17:54:26]</kbd> <code>&lt;shashankgarg&gt;</code> Try to think of some sem long ideas.<br/>
+<kbd>[17:54:29]</kbd> <code>&lt;shashankgarg&gt;</code> bye<br/>
+<kbd>[17:54:37]</kbd> <code>&lt;ankurankan&gt;</code> Okay<br/>
+<kbd>[17:54:46]</kbd> <code>&lt;shashankgarg&gt;</code> make an event to tomorrow.<br/>
+<kbd>[17:55:02]</kbd> <code>&lt;shashankgarg&gt;</code> *for<br/>
+<kbd>[17:56:04]</kbd> <code>&lt;ankurankan&gt;</code> okay<br/>
+<kbd>[17:57:13]</kbd> <code>&lt;shashankgarg&gt;</code> bye<br/>
+<kbd>[13:52:25]</kbd> <strong>[disconnected at Wed Sep 10 13:52:25 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

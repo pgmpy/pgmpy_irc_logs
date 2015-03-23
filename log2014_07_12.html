@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 12-07-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 12-07-2014 </h3><br/><br/>
+                <br/>
+<kbd>[17:34:12]</kbd> <strong>[connected at Sat Jul 12 17:34:12 2014]</strong><br/>
+<kbd>[17:34:28]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[17:34:32]</kbd> <code>&lt;abinash_panda&gt;</code> hi all<br/>
+<kbd>[17:35:07]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, So how is your project going<br/>
+<kbd>[17:35:10]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[17:35:55]</kbd> <code>&lt;navinchandak&gt;</code> Hi. Project is going fine.<br/>
+<kbd>[17:36:12]</kbd> <code>&lt;navinchandak&gt;</code> I couldn't work on it for some time in between, but it has picked up pace<br/>
+<kbd>[17:36:23]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, Ok great.<br/>
+<kbd>[17:36:40]</kbd> <code>&lt;ankurankan&gt;</code> I haven't been able to fix the factor product method yet<br/>
+<kbd>[17:36:44]</kbd> <code>&lt;navinchandak&gt;</code> So my sister's marriage was there and I had hoped that I would be able to work before that, but I was not able to spare time for about a week before that.<br/>
+<kbd>[17:36:48]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[17:37:08]</kbd> <code>&lt;ankurankan&gt;</code> Other than that all other methods are now working correctly according to the new factor representation.<br/>
+<kbd>[17:37:12]</kbd> <code>&lt;navinchandak&gt;</code> Okay..<br/>
+<kbd>[17:37:41]</kbd> <code>&lt;ankurankan&gt;</code> Do you think you would be able to fix the factor product method ?<br/>
+<kbd>[17:38:02]</kbd> <code>&lt;navinchandak&gt;</code> Yes. However, that part of the code is not documented.<br/>
+<kbd>[17:38:19]</kbd> <code>&lt;navinchandak&gt;</code> So it might take some time. But I should be able to fix it, no issues.<br/>
+<kbd>[17:38:53]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: If you have any doubt on fixing that one, ping me ;)<br/>
+<kbd>[17:39:05]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Do you have time to fix that? You had written that so I think you would be the one who could fix it the quickest<br/>
+<kbd>[17:39:24]</kbd> <code>&lt;abinash_panda&gt;</code> ankurankan: Okay. I would fix it by tomorrow :)<br/>
+<kbd>[17:39:43]</kbd> <code>&lt;abinash_panda&gt;</code> or within a day or two ;)<br/>
+<kbd>[17:40:04]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:40:14]</kbd> <code>&lt;navinchandak&gt;</code> Okay. So that means that I won't have to look into factor_product, right?<br/>
+<kbd>[17:40:28]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: yeah<br/>
+<kbd>[17:40:32]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, No. abinash_panda will fix it<br/>
+<kbd>[17:41:20]</kbd> <code>&lt;navinchandak&gt;</code> One issue. Can we discuss it now?<br/>
+<kbd>[17:41:24]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, What are you working on right now?<br/>
+<kbd>[17:41:55]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, Yeah<br/>
+<kbd>[17:42:36]</kbd> <code>&lt;navinchandak&gt;</code> I am working on ankurankan Week7 things. Should be done with it soon.<br/>
+<kbd>[17:42:59]</kbd> <code>&lt;navinchandak&gt;</code> But there were a few pending issues with things before that, which I needed some help with.<br/>
+<kbd>[17:43:23]</kbd> <code>&lt;navinchandak&gt;</code> So there was this one thing.<br/>
+<kbd>[17:43:57]</kbd> <code>&lt;navinchandak&gt;</code> reduce, marginalize, and maximize (maximize is a function which I needed , which basically is needed for MAP assignments)<br/>
+<kbd>[17:44:09]</kbd> <code>&lt;navinchandak&gt;</code> are all very similar functions with very similar structure<br/>
+<kbd>[17:44:15]</kbd> <code>&lt;navinchandak&gt;</code> and just some minor differences<br/>
+<kbd>[17:44:53]</kbd> <code>&lt;navinchandak&gt;</code> So I created a function called operations_on_variables which takes in a function . And this function will be different for maximize, reduce and marginalize<br/>
+<kbd>[17:44:58]</kbd> <code>&lt;navinchandak&gt;</code> Is that fine?<br/>
+<kbd>[17:45:06]</kbd> <code>&lt;navinchandak&gt;</code> Take a look here.<br/>
+<kbd>[17:45:06]</kbd> <code>&lt;navinchandak&gt;</code> https://github.com/navinchandak/pgmpy/blob/dev/pgmpy/Factor/Factor.py<br/>
+<kbd>[17:45:30]</kbd> <code>&lt;navinchandak&gt;</code> I have not added docstrings because once you approve it, then only I'll add.<br/>
+<kbd>[17:46:17]</kbd> <code>&lt;navinchandak&gt;</code> I have changed marginalize and maximize to work with this new interface. Reduce can also be made to work using this.<br/>
+<kbd>[17:46:39]</kbd> <code>&lt;navinchandak&gt;</code> So this helps because there is no code duplication.<br/>
+<kbd>[17:47:08]</kbd> <code>&lt;navinchandak&gt;</code> Also, it is easy to add new functions which work in a similar manner.<br/>
+<kbd>[17:47:47]</kbd> <code>&lt;ankurankan&gt;</code> I don't think this is a good idea<br/>
+<kbd>[17:48:03]</kbd> <code>&lt;ankurankan&gt;</code> We should try to keep things modular.<br/>
+<kbd>[17:48:16]</kbd> <code>&lt;ankurankan&gt;</code> You will not be the only one using this code.<br/>
+<kbd>[17:48:36]</kbd> <code>&lt;ankurankan&gt;</code> Think of a user who sees a function named operations_on_variables<br/>
+<kbd>[17:48:50]</kbd> <code>&lt;ankurankan&gt;</code> What idea will he get about the function from that<br/>
+<kbd>[17:49:19]</kbd> <code>&lt;ankurankan&gt;</code> Things like marginalize, reduce etc give a clear idea about what the function would do<br/>
+<kbd>[17:49:40]</kbd> <code>&lt;ankurankan&gt;</code> So I am totally against operation_on_variables function.<br/>
+<kbd>[17:49:43]</kbd> <code>&lt;navinchandak&gt;</code> There are still functions like marginalize reduce etc which just use operations_on_variables<br/>
+<kbd>[17:50:12]</kbd> <code>&lt;navinchandak&gt;</code> its like an internal function. Operations_on_variables can be made private.<br/>
+<kbd>[17:50:34]</kbd> <code>&lt;navinchandak&gt;</code> Also, perhaps the name given is not nice. We can have a different name.<br/>
+<kbd>[17:52:45]</kbd> <code>&lt;ankurankan&gt;</code> operations_on_variables simply applies some function on the values of the factor. Right?<br/>
+<kbd>[17:53:06]</kbd> <code>&lt;navinchandak&gt;</code> Yes. Might use data also.<br/>
+<kbd>[17:53:14]</kbd> <code>&lt;navinchandak&gt;</code> That will be needed for MAP<br/>
+<kbd>[17:53:52]</kbd> <code>&lt;navinchandak&gt;</code> but only func needs to be passed which is a very small function which finally works on the relevant values (and data, if needed)<br/>
+<kbd>[17:54:41]</kbd> <code>&lt;ankurankan&gt;</code> I still don't think this is a good idea.<br/>
+<kbd>[17:54:47]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, What do you say?<br/>
+<kbd>[17:56:03]</kbd> <code>&lt;abinash_panda&gt;</code> I agree with ankurankan. This is not a good idea<br/>
+<kbd>[17:56:40]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, You are not keeping things modular. Try to keep things separate.<br/>
+<kbd>[17:56:47]</kbd> <code>&lt;navinchandak&gt;</code> But then otherwise we would be copying that fragment of code everywhere. (which is used in marginalize)<br/>
+<kbd>[17:57:02]</kbd> <code>&lt;navinchandak&gt;</code> Which is never a good idea.<br/>
+<kbd>[17:57:13]</kbd> <code>&lt;navinchandak&gt;</code> Plus marginalize, reduce and maximize do very similar things<br/>
+<kbd>[17:57:22]</kbd> <code>&lt;navinchandak&gt;</code> the entire procedure is very similar.<br/>
+<kbd>[17:57:58]</kbd> <code>&lt;ankurankan&gt;</code> okay go with your implementation. I will see it while reviewing your code.<br/>
+<kbd>[17:58:14]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[17:58:30]</kbd> <code>&lt;navinchandak&gt;</code> But then reverting might be slightly painful if you ask me to revert.<br/>
+<kbd>[17:58:55]</kbd> <code>&lt;navinchandak&gt;</code> Thats why I asked now. So that even if I have to revert, it won't be very painful.<br/>
+<kbd>[17:59:04]</kbd> <code>&lt;navinchandak&gt;</code> So just to explain my above point.<br/>
+<kbd>[17:59:26]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Lets discuss on it from the beginning. Could you explain me the use of _operation_single_variable and operations_on_variables<br/>
+<kbd>[17:59:32]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[17:59:47]</kbd> <code>&lt;navinchandak&gt;</code> Yes. So if we look at these three problems.<br/>
+<kbd>[18:00:00]</kbd> <code>&lt;navinchandak&gt;</code> marginalize , maximize and reduce<br/>
+<kbd>[18:00:05]</kbd> <code>&lt;navinchandak&gt;</code> lets take an example<br/>
+<kbd>[18:00:17]</kbd> <code>&lt;navinchandak&gt;</code> suppose there is x1, x2 and x3<br/>
+<kbd>[18:00:27]</kbd> <code>&lt;navinchandak&gt;</code> cardinality [2,2,2]<br/>
+<kbd>[18:00:43]</kbd> <code>&lt;navinchandak&gt;</code> now if we need to marginalize on x1<br/>
+<kbd>[18:01:22]</kbd> <code>&lt;navinchandak&gt;</code> we need to find x1_0 and x1_1 for all combinations of x2 and x3 and then for each of these combinations, we do something with the value for x1_0 and x1_1<br/>
+<kbd>[18:01:29]</kbd> <code>&lt;navinchandak&gt;</code> in case of marginalize it is sum<br/>
+<kbd>[18:01:35]</kbd> <code>&lt;navinchandak&gt;</code> in case of maximize it is max<br/>
+<kbd>[18:01:46]</kbd> <code>&lt;navinchandak&gt;</code> in case of reduce, it is choosing one of the values<br/>
+<kbd>[18:01:56]</kbd> <code>&lt;abinash_panda&gt;</code> okay<br/>
+<kbd>[18:02:04]</kbd> <code>&lt;navinchandak&gt;</code> And then whatever we have done, we need to store it for the next stage.<br/>
+<kbd>[18:02:22]</kbd> <code>&lt;navinchandak&gt;</code> So it makes sense to have a function which has the entire architecture.<br/>
+<kbd>[18:02:45]</kbd> <code>&lt;navinchandak&gt;</code> ANd then we just pass it a small function which just includes the sum, max or reduce funcions which is needed.<br/>
+<kbd>[18:03:06]</kbd> <code>&lt;navinchandak&gt;</code> Ankur left? Should we wait for him to be back?<br/>
+<kbd>[18:03:49]</kbd> <code>&lt;abinash_panda&gt;</code> we can continue on discussion.<br/>
+<kbd>[18:03:56]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[18:04:00]</kbd> <code>&lt;navinchandak&gt;</code> So yes.<br/>
+<kbd>[18:04:28]</kbd> <code>&lt;navinchandak&gt;</code> So the point is these three functions just do one thing slightly differently.<br/>
+<kbd>[18:04:40]</kbd> <code>&lt;navinchandak&gt;</code> Which is a small part in the entire architecture of the process.<br/>
+<kbd>[18:04:54]</kbd> <code>&lt;navinchandak&gt;</code> Hence I felt that passing the small function was the natural function to do.<br/>
+<kbd>[18:05:25]</kbd> <code>&lt;navinchandak&gt;</code> So _operation_single_variable basically makes a list out of x1_0 and x1_1 for every other combination of other variables.<br/>
+<kbd>[18:05:44]</kbd> <code>&lt;navinchandak&gt;</code> and then passes this list to the func<br/>
+<kbd>[18:05:49]</kbd> <code>&lt;abinash_panda&gt;</code> okay. Let me have a look at it<br/>
+<kbd>[18:06:13]</kbd> <code>&lt;navinchandak&gt;</code> ANd this func just sums, chooses the max, or chooses one of the index depending on what is needed.<br/>
+<kbd>[18:06:35]</kbd> <code>&lt;navinchandak&gt;</code> So i have changed marginalize and maximize to work with these functions.<br/>
+<kbd>[18:06:58]</kbd> <code>&lt;navinchandak&gt;</code> Reduce can also be *very* easily changed into this format.<br/>
+<kbd>[18:07:01]</kbd> <code>&lt;abinash_panda&gt;</code> I am unable to get it. What do you mean by *makes a list out of x1_0 and x1_1 for every other combination of other variables.*<br/>
+<kbd>[18:07:32]</kbd> <code>&lt;navinchandak&gt;</code> Just one second.<br/>
+<kbd>[18:07:40]</kbd> <code>&lt;abinash_panda&gt;</code> can you give an example?<br/>
+<kbd>[18:08:41]</kbd> <code>&lt;navinchandak&gt;</code> Yes.<br/>
+<kbd>[18:08:46]</kbd> <code>&lt;navinchandak&gt;</code> that is what I was looking for.<br/>
+<kbd>[18:08:51]</kbd> <code>&lt;navinchandak&gt;</code> Say the factor is<br/>
+<kbd>[18:08:52]</kbd> <code>&lt;navinchandak&gt;</code> x1	x2	x3	phi(x1, x2, x3) x1_0	x2_0	x3_0	0.0 x1_0	x2_0	x3_1	1.0 x1_0	x2_1	x3_0	2.0 x1_0	x2_1	x3_1	3.0 x1_0	x2_2	x3_0	4.0 x1_0	x2_2	x3_1	5.0 x1_1	x2_0	x3_0	6.0 x1_1	x2_0	x3_1	7.0 x1_1	x2_1	x3_0	8.0 x1_1	x2_1	x3_1	9.0 x1_1	x2_2	x3_0	10.0 x1_1	x2_2	x3_1	11.0<br/>
+<kbd>[18:08:54]</kbd> <code>&lt;navinchandak&gt;</code> oh sorry<br/>
+<kbd>[18:09:17]</kbd> <code>&lt;navinchandak&gt;</code> (copy paste doesnt seem to be working)<br/>
+<kbd>[18:09:20]</kbd> <code>&lt;navinchandak&gt;</code> x1	x2	x3	phi(x1, x2, x3)<br/>
+<kbd>[18:09:25]</kbd> <code>&lt;navinchandak&gt;</code> x1_0	x2_0	x3_0	0.0<br/>
+<kbd>[18:09:30]</kbd> <code>&lt;navinchandak&gt;</code> x1_0	x2_0	x3_1	1.0<br/>
+<kbd>[18:09:39]</kbd> <code>&lt;abinash_panda&gt;</code> can you just use paste bin.<br/>
+<kbd>[18:09:43]</kbd> <code>&lt;abinash_panda&gt;</code> that would be better<br/>
+<kbd>[18:09:49]</kbd> <code>&lt;navinchandak&gt;</code> paste bin?<br/>
+<kbd>[18:10:04]</kbd> <code>&lt;abinash_panda&gt;</code> http://pastebin.com/<br/>
+<kbd>[18:10:20]</kbd> <code>&lt;abinash_panda&gt;</code> paste your code or anything over here and send the link<br/>
+<kbd>[18:10:51]</kbd> <code>&lt;navinchandak&gt;</code> http://pastebin.com/RU07RjVg<br/>
+<kbd>[18:10:53]</kbd> <code>&lt;navinchandak&gt;</code> yeah<br/>
+<kbd>[18:10:58]</kbd> <code>&lt;navinchandak&gt;</code> so this is the factor<br/>
+<kbd>[18:11:19]</kbd> <code>&lt;abinash_panda&gt;</code> okay<br/>
+<kbd>[18:11:38]</kbd> <code>&lt;navinchandak&gt;</code> Now while marginalizing ,<br/>
+<kbd>[18:11:45]</kbd> <code>&lt;navinchandak&gt;</code> I would need<br/>
+<kbd>[18:11:55]</kbd> <code>&lt;navinchandak&gt;</code> (0 , 1)<br/>
+<kbd>[18:12:28]</kbd> <code>&lt;navinchandak&gt;</code> So suppose that you are marginalizing on x3<br/>
+<kbd>[18:12:33]</kbd> <code>&lt;navinchandak&gt;</code> then you would need (0,1)<br/>
+<kbd>[18:12:35]</kbd> <code>&lt;navinchandak&gt;</code> (2,3)<br/>
+<kbd>[18:12:38]</kbd> <code>&lt;navinchandak&gt;</code> (3,4)<br/>
+<kbd>[18:12:40]</kbd> <code>&lt;navinchandak&gt;</code> (4,5)<br/>
+<kbd>[18:13:06]</kbd> <code>&lt;navinchandak&gt;</code> which is basically the list out of values of x3_0 and x3_1 for every combination of x1 and x3<br/>
+<kbd>[18:13:18]</kbd> <code>&lt;abinash_panda&gt;</code> I think you mean (0, 1), (2, 3), (4, 5), (6, 7) right?<br/>
+<kbd>[18:13:23]</kbd> <code>&lt;navinchandak&gt;</code> Yes<br/>
+<kbd>[18:13:36]</kbd> <code>&lt;navinchandak&gt;</code> Now marginalize will just add it up.<br/>
+<kbd>[18:13:40]</kbd> <code>&lt;abinash_panda&gt;</code> okay. Now, I get your point.<br/>
+<kbd>[18:13:41]</kbd> <code>&lt;navinchandak&gt;</code> Maximize will find the max of it<br/>
+<kbd>[18:13:44]</kbd> <code>&lt;navinchandak&gt;</code> Yes.<br/>
+<kbd>[18:14:04]</kbd> <code>&lt;navinchandak&gt;</code> and reduce will choose the ith element of this list if the variable has to reduced on the ith value.<br/>
+<kbd>[18:14:08]</kbd> <code>&lt;abinash_panda&gt;</code> but I don't think that you would be requiring a whole new function for doing this.<br/>
+<kbd>[18:14:48]</kbd> <code>&lt;abinash_panda&gt;</code> This can be done within a few line of code.<br/>
+<kbd>[18:14:54]</kbd> <code>&lt;navinchandak&gt;</code> So operation_single_variable just does this. Makes this list and passes these individual lists to the func<br/>
+<kbd>[18:15:41]</kbd> <code>&lt;navinchandak&gt;</code> Umm. few lines?<br/>
+<kbd>[18:15:57]</kbd> <code>&lt;navinchandak&gt;</code> I used the code from marginalize to make it more general.<br/>
+<kbd>[18:16:21]</kbd> <code>&lt;navinchandak&gt;</code> And so the way of doing it is similar to what marginalize does.<br/>
+<kbd>[18:16:44]</kbd> <code>&lt;abinash_panda&gt;</code> okay. let me have a look at it. Just give me a minute<br/>
+<kbd>[18:17:17]</kbd> <code>&lt;navinchandak&gt;</code> Okay sure.<br/>
+<kbd>[18:23:20]</kbd> <code>&lt;abinash_panda&gt;</code> okay. I have seen both your code and the previous implementations<br/>
+<kbd>[18:23:26]</kbd> <code>&lt;abinash_panda&gt;</code> some suggestions:<br/>
+<kbd>[18:24:20]</kbd> <code>&lt;abinash_panda&gt;</code> * don't go for naming _operation_single_variable as the name is very ambigous. We are only required to find the list of indices to be summed or any thing.<br/>
+<kbd>[18:24:36]</kbd> <code>&lt;abinash_panda&gt;</code> so, I would suggest you to change the name to something appropriate.<br/>
+<kbd>[18:25:13]</kbd> <code>&lt;navinchandak&gt;</code> can you suggest some name? :P<br/>
+<kbd>[18:25:41]</kbd> <code>&lt;abinash_panda&gt;</code> * secondly, your function _operation_single_variable takes the func as an input. I am unable to understand why are you trying to use the function over here<br/>
+<kbd>[18:26:10]</kbd> <code>&lt;abinash_panda&gt;</code> here you should only compute the indices over which you have to operate and do the operation on the corresponding function.<br/>
+<kbd>[18:26:23]</kbd> <code>&lt;abinash_panda&gt;</code> Try to keep things as much modular as possible<br/>
+<kbd>[18:26:28]</kbd> <code>&lt;navinchandak&gt;</code> umm<br/>
+<kbd>[18:26:39]</kbd> <code>&lt;navinchandak&gt;</code> I din't understand your second point<br/>
+<kbd>[18:26:49]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Let me explain it you.<br/>
+<kbd>[18:27:37]</kbd> <code>&lt;abinash_panda&gt;</code> Your main purpose of going for _operation_single_variable was to create a function for generating the indices you want to operate..right?<br/>
+<kbd>[18:28:24]</kbd> <code>&lt;navinchandak&gt;</code> Umm no<br/>
+<kbd>[18:28:30]</kbd> <code>&lt;navinchandak&gt;</code> yes.. sorry<br/>
+<kbd>[18:28:45]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. So, create a function to generate the indices only.<br/>
+<kbd>[18:28:46]</kbd> <code>&lt;navinchandak&gt;</code> yes, you are right. Generate the indices.<br/>
+<kbd>[18:28:53]</kbd> <code>&lt;navinchandak&gt;</code> And also apply the function on that.<br/>
+<kbd>[18:29:06]</kbd> <code>&lt;navinchandak&gt;</code> Otherwise we will have to store the indices which is a bad thing.<br/>
+<kbd>[18:29:12]</kbd> <code>&lt;navinchandak&gt;</code> Are u suggesting the use of yield?<br/>
+<kbd>[18:29:29]</kbd> <code>&lt;abinash_panda&gt;</code> don't apply the function over there.<br/>
+<kbd>[18:29:41]</kbd> <code>&lt;abinash_panda&gt;</code> Can you explain, why storing the indices would be a bad thing?<br/>
+<kbd>[18:30:09]</kbd> <code>&lt;abinash_panda&gt;</code> If you would applying the function over there, then also you would be storing them in a variable.<br/>
+<kbd>[18:30:20]</kbd> <code>&lt;navinchandak&gt;</code> yes. But only the function.<br/>
+<kbd>[18:30:28]</kbd> <code>&lt;navinchandak&gt;</code> The list of indices might be huge.<br/>
+<kbd>[18:30:33]</kbd> <code>&lt;navinchandak&gt;</code> As big as the self.values<br/>
+<kbd>[18:30:54]</kbd> <code>&lt;navinchandak&gt;</code> And there is not really much use of storing except that it makes things more modular.<br/>
+<kbd>[18:30:57]</kbd> <code>&lt;abinash_panda&gt;</code> In the _operation_single_variable, you are storing the indices in sum_index.<br/>
+<kbd>[18:31:21]</kbd> <code>&lt;abinash_panda&gt;</code> So, I am suggesting that you should just return them.<br/>
+<kbd>[18:31:50]</kbd> <code>&lt;abinash_panda&gt;</code> And when you are done with your variable, go on and delete them using del<br/>
+<kbd>[18:31:51]</kbd> <code>&lt;navinchandak&gt;</code> The entire list is not stored, however. Only a small fraction is stored.<br/>
+<kbd>[18:32:16]</kbd> <code>&lt;navinchandak&gt;</code> Hm.. i see your point and understand why you are looking for modularity.<br/>
+<kbd>[18:32:28]</kbd> <code>&lt;navinchandak&gt;</code> However, we can also use yield and it will be quite modular.<br/>
+<kbd>[18:32:31]</kbd> <code>&lt;navinchandak&gt;</code> what do u think?<br/>
+<kbd>[18:33:23]</kbd> <code>&lt;abinash_panda&gt;</code> no, don't go for yield. We are using list over here because we can index numpy arrays by list directly as you can see in<br/>
+<kbd>[18:33:51]</kbd> <code>&lt;abinash_panda&gt;</code> self.data[np.array(sum_index)[j] + i*cum_cardinality[index+1]]<br/>
+<kbd>[18:34:13]</kbd> <code>&lt;abinash_panda&gt;</code> so, don't go for yield.<br/>
+<kbd>[18:35:11]</kbd> <code>&lt;navinchandak&gt;</code> I am not clear on what you are saying.<br/>
+<kbd>[18:35:16]</kbd> <code>&lt;navinchandak&gt;</code> Just for clarification.<br/>
+<kbd>[18:35:29]</kbd> <code>&lt;navinchandak&gt;</code> We can't return just sum_index right?<br/>
+<kbd>[18:35:38]</kbd> <code>&lt;navinchandak&gt;</code> this part of the code<br/>
+<kbd>[18:35:39]</kbd> <code>&lt;navinchandak&gt;</code> for i in range(self.cardinality[index]):                 temp.append(self.values[np.array(sum_index)[j] +                                            i*cum_cardinality[index+1]])<br/>
+<kbd>[18:35:59]</kbd> <code>&lt;navinchandak&gt;</code> Where does this go?<br/>
+<kbd>[18:36:14]</kbd> <code>&lt;abinash_panda&gt;</code> and furthermore, this would be more modular. I am (and you should be also) stressing on modularity because when if you have to create a new function in future going for the same principle than it would be more easier and less messier to implement this way.<br/>
+<kbd>[18:36:54]</kbd> <code>&lt;navinchandak&gt;</code> okay. I understood your point. But how to do it is yet not clear to me.<br/>
+<kbd>[18:37:10]</kbd> <code>&lt;abinash_panda&gt;</code> Sorry, I gave you the wrong snippet. See it<br/>
+<kbd>[18:37:11]</kbd> <code>&lt;abinash_panda&gt;</code> marg_factor += self.values[np.array(sum_index) + i*cum_cardinality[index]]<br/>
+<kbd>[18:38:00]</kbd> <code>&lt;navinchandak&gt;</code> So are you saying that this is much faster than<br/>
+<kbd>[18:38:06]</kbd> <code>&lt;abinash_panda&gt;</code> As you can see that as sum_index is a list (rather than a generator) we could directly use to index numpy arrays (self.values[np.array(sum_index)...])<br/>
+<kbd>[18:38:18]</kbd> <code>&lt;abinash_panda&gt;</code> yeah, its very much faster.<br/>
+<kbd>[18:38:35]</kbd> <code>&lt;navinchandak&gt;</code> oh so I am making a list, as you can see<br/>
+<kbd>[18:38:49]</kbd> <code>&lt;navinchandak&gt;</code> the temp list for each of the indexes in marg_factor.<br/>
+<kbd>[18:39:11]</kbd> <code>&lt;navinchandak&gt;</code> Will that make things slower?<br/>
+<kbd>[18:39:21]</kbd> <code>&lt;navinchandak&gt;</code> I mean it will obviously be slow<br/>
+<kbd>[18:39:33]</kbd> <code>&lt;navinchandak&gt;</code> but is the effect very important?<br/>
+<kbd>[18:40:00]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah. It is. Numpy arrays are very much faster than list.<br/>
+<kbd>[18:40:24]</kbd> <code>&lt;abinash_panda&gt;</code> Furthermore, list would take a huge amount of memory because of their dynamic nature.<br/>
+<kbd>[18:40:39]</kbd> <code>&lt;navinchandak&gt;</code> hmm..<br/>
+<kbd>[18:40:45]</kbd> <code>&lt;abinash_panda&gt;</code> So, please don't go for creating a list by appending values and then converting them to arrays.<br/>
+<kbd>[18:40:45]</kbd> <code>&lt;navinchandak&gt;</code> thats true.<br/>
+<kbd>[18:41:21]</kbd> <code>&lt;abinash_panda&gt;</code> It would kill your computer when you would be scaling them in tens of thousands (forget about large scale computing)<br/>
+<kbd>[18:41:30]</kbd> <code>&lt;navinchandak&gt;</code> hmm..<br/>
+<kbd>[18:41:32]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[18:41:51]</kbd> <code>&lt;navinchandak&gt;</code> but then how do i do what I am attempting to do?<br/>
+<kbd>[18:42:04]</kbd> <code>&lt;abinash_panda&gt;</code> So, here is the final conclusion. Ask me if you are not getting somewhere:<br/>
+<kbd>[18:42:29]</kbd> <code>&lt;abinash_panda&gt;</code> * create a function that would be just providing you with the list of elements you want to operate on<br/>
+<kbd>[18:42:44]</kbd> <code>&lt;abinash_panda&gt;</code> this would be very similar to how we had created sum_index.<br/>
+<kbd>[18:42:46]</kbd> <code>&lt;navinchandak&gt;</code> just a second.<br/>
+<kbd>[18:42:56]</kbd> <code>&lt;navinchandak&gt;</code> list of elements?<br/>
+<kbd>[18:43:06]</kbd> <code>&lt;abinash_panda&gt;</code> sorry...list of indices<br/>
+<kbd>[18:43:29]</kbd> <code>&lt;navinchandak&gt;</code> so you mean a list of list of indices?<br/>
+<kbd>[18:43:48]</kbd> <code>&lt;navinchandak&gt;</code> [ [0,1], [2,3], [4,5] .. ]andso on??<br/>
+<kbd>[18:44:59]</kbd> <code>&lt;abinash_panda&gt;</code> I would not suggest to go for list of list of indices, as it would consume a hell lot of memory.<br/>
+<kbd>[18:45:31]</kbd> <code>&lt;abinash_panda&gt;</code> Instead go for [0, 1, 2, 3, 4, 5, ...] and figure out how to use them as [0, 1], [2, 3], ...<br/>
+<kbd>[18:46:06]</kbd> <code>&lt;navinchandak&gt;</code> hmm<br/>
+<kbd>[18:46:41]</kbd> <code>&lt;navinchandak&gt;</code> okay. I will think about how to do it.<br/>
+<kbd>[18:46:50]</kbd> <code>&lt;navinchandak&gt;</code> but even if i do that.<br/>
+<kbd>[18:46:52]</kbd> <code>&lt;abinash_panda&gt;</code> okay.<br/>
+<kbd>[18:46:58]</kbd> <code>&lt;navinchandak&gt;</code> Then how to use things like<br/>
+<kbd>[18:47:07]</kbd> <code>&lt;navinchandak&gt;</code> marg_factor += self.values[np.array(sum_index) + i*cum_cardinality[index]]<br/>
+<kbd>[18:47:43]</kbd> <code>&lt;navinchandak&gt;</code> even if I have the list of [0,1,2 .. ]<br/>
+<kbd>[18:47:44]</kbd> <code>&lt;navinchandak&gt;</code> ?<br/>
+<kbd>[18:47:46]</kbd> <code>&lt;abinash_panda&gt;</code> In this case we are not computing 0, 1 both<br/>
+<kbd>[18:48:06]</kbd> <code>&lt;abinash_panda&gt;</code> we are just computing 0, 2, 4, ..<br/>
+<kbd>[18:48:43]</kbd> <code>&lt;abinash_panda&gt;</code> in the next iterations the value of 0, 2, 4, ... would come out to be 1, 3, 5, ...<br/>
+<kbd>[18:48:46]</kbd> <code>&lt;abinash_panda&gt;</code> and so on<br/>
+<kbd>[18:48:48]</kbd> <code>&lt;navinchandak&gt;</code> Yes, right.<br/>
+<kbd>[18:48:54]</kbd> <code>&lt;navinchandak&gt;</code> That was being done in the previous code.<br/>
+<kbd>[18:48:59]</kbd> <code>&lt;navinchandak&gt;</code> I understand that.<br/>
+<kbd>[18:49:15]</kbd> <code>&lt;navinchandak&gt;</code> So should i return the sum_index array<br/>
+<kbd>[18:49:25]</kbd> <code>&lt;navinchandak&gt;</code> and the cum_cardinality[index] value<br/>
+<kbd>[18:49:42]</kbd> <code>&lt;navinchandak&gt;</code> because these two things together are enough to do any of the operations<br/>
+<kbd>[18:49:46]</kbd> <code>&lt;abinash_panda&gt;</code> yeah. thats what I am suggesting.<br/>
+<kbd>[18:50:05]</kbd> <code>&lt;navinchandak&gt;</code> okay ifne.<br/>
+<kbd>[18:50:08]</kbd> <code>&lt;navinchandak&gt;</code> Works.<br/>
+<kbd>[18:50:23]</kbd> <code>&lt;abinash_panda&gt;</code> anything more to discuss?<br/>
+<kbd>[18:50:40]</kbd> <code>&lt;navinchandak&gt;</code> umm..<br/>
+<kbd>[18:50:57]</kbd> <code>&lt;navinchandak&gt;</code> not now.<br/>
+<kbd>[18:51:12]</kbd> <code>&lt;navinchandak&gt;</code> If you could spare some time to reply to some of the hanging issues.<br/>
+<kbd>[18:51:17]</kbd> <code>&lt;abinash_panda&gt;</code> okay then. If you have anything related to this topic. Mail me.<br/>
+<kbd>[18:51:20]</kbd> <code>&lt;navinchandak&gt;</code> like optimal triangulation.<br/>
+<kbd>[18:51:35]</kbd> <code>&lt;navinchandak&gt;</code> Those are from long back. So it will be nice to close them ASAP<br/>
+<kbd>[18:52:19]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Actually, right now I am quite busy with my GSoC project, so it would require me some time to go through it. Maybe you and ankur can discuss about it.<br/>
+<kbd>[18:52:37]</kbd> <code>&lt;navinchandak&gt;</code> okay. fine.<br/>
+<kbd>[18:52:47]</kbd> <code>&lt;navinchandak&gt;</code> I will ask ankur to take a look at that.<br/>
+<kbd>[18:53:06]</kbd> <code>&lt;navinchandak&gt;</code> However, do spare time for the factor.product function.<br/>
+<kbd>[18:53:11]</kbd> <code>&lt;abinash_panda&gt;</code> If you have some problem regarding the code architecture ping me. I can do that atleast.<br/>
+<kbd>[18:53:13]</kbd> <code>&lt;navinchandak&gt;</code> Because that is really holding me back from any testing.<br/>
+<kbd>[18:53:19]</kbd> <code>&lt;navinchandak&gt;</code> okay sure.<br/>
+<kbd>[18:53:35]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah, I would do it surely by tomorrow or at maximum by monday night<br/>
+<kbd>[18:53:51]</kbd> <code>&lt;navinchandak&gt;</code> okay thanks! :)<br/>
+<kbd>[18:54:07]</kbd> <code>&lt;abinash_panda&gt;</code> :)<br/>
+<kbd>[18:54:36]</kbd> <code>&lt;abinash_panda&gt;</code> anything more....<br/>
+<kbd>[18:54:41]</kbd> <code>&lt;navinchandak&gt;</code> Fine then. So i am assuming that today's IRC chat is over?<br/>
+<kbd>[18:54:49]</kbd> <code>&lt;abinash_panda&gt;</code> yeah..good night :)<br/>
+<kbd>[18:55:03]</kbd> <code>&lt;navinchandak&gt;</code> okay. good night..!<br/>
+<kbd>[09:54:32]</kbd> <strong>[disconnected at Tue Jul 22 09:54:32 2014]</strong><br/><kbd>[09:54:47]</kbd> <strong>[disconnected at Tue Jul 22 09:54:47 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

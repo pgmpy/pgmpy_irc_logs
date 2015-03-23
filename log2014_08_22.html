@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 22-08-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 22-08-2014 </h3><br/><br/>
+                <br/>
+<kbd>[16:34:27]</kbd> <strong>[connected at Fri Aug 22 16:34:27 2014]</strong><br/>
+<kbd>[16:34:42]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:34:57]</kbd> <code>&lt;navinchandak&gt;</code> hi all.<br/>
+<kbd>[16:36:00]</kbd> <code>&lt;ankurankan_&gt;</code> hi<br/>
+<kbd>[16:36:07]</kbd> <code>&lt;navinchandak&gt;</code> sorry for the delay. i was trying to postpone a meeting which they kept at 10:30. I got it postponed to 11:15. So unfortunately, I will have to leave by 11:10ish<br/>
+<kbd>[16:36:10]</kbd> <code>&lt;navinchandak&gt;</code> is that fine?<br/>
+<kbd>[16:36:50]</kbd> <code>&lt;ankurankan_&gt;</code> yeah<br/>
+<kbd>[16:37:06]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[16:37:29]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Hi !<br/>
+<kbd>[16:37:35]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Hi!<br/>
+<kbd>[16:37:46]</kbd> <code>&lt;ankurankan_&gt;</code> navinchandak, So how's everything going<br/>
+<kbd>[16:38:23]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan_: Everything is fine. Slightly busy semester.<br/>
+<kbd>[16:38:32]</kbd> <code>&lt;navinchandak&gt;</code> 7th semester. Lots of stuff to do!<br/>
+<kbd>[16:38:53]</kbd> <code>&lt;navinchandak&gt;</code> Infact that is the reason I couldn't spend enough time on the project over the last few weeks.<br/>
+<kbd>[16:38:56]</kbd> <code>&lt;ankurankan_&gt;</code> Okay...<br/>
+<kbd>[16:40:00]</kbd> <code>&lt;navinchandak&gt;</code> So are we using the session for specific reviews or general feedback?<br/>
+<kbd>[16:40:32]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Not specifically for reviews ;)<br/>
+<kbd>[16:40:49]</kbd> <code>&lt;ankurankan_&gt;</code> You wanted to have this meeting yesterday, so I thought you have something to talk about<br/>
+<kbd>[16:41:10]</kbd> <code>&lt;navinchandak&gt;</code> No. I just wanted to talk. It has been a long time :P<br/>
+<kbd>[16:41:20]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: cool :)<br/>
+<kbd>[16:41:24]</kbd> <code>&lt;ankurankan_&gt;</code> Okay..<br/>
+<kbd>[16:41:31]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: So how was your overall GSoC experience??<br/>
+<kbd>[16:41:32]</kbd> <code>&lt;ankurankan_&gt;</code> So how was your GSoC experience<br/>
+<kbd>[16:42:55]</kbd> <code>&lt;navinchandak&gt;</code> It was really good.<br/>
+<kbd>[16:43:11]</kbd> <code>&lt;navinchandak&gt;</code> I enjoyed the work. It was a really new experience to write so many tests and documentations and stuff<br/>
+<kbd>[16:43:16]</kbd> <code>&lt;navinchandak&gt;</code> which I didn't like initially :P<br/>
+<kbd>[16:43:23]</kbd> <code>&lt;navinchandak&gt;</code> but now i see the point.<br/>
+<kbd>[16:43:38]</kbd> <code>&lt;navinchandak&gt;</code> You feel so much more confident about any change u make, if all tests are successfully passing<br/>
+<kbd>[16:43:45]</kbd> <code>&lt;navinchandak&gt;</code> coding becomes much more streamlined :D<br/>
+<kbd>[16:43:54]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Yeah...but remember that good coding involves rigorous testing and documentation<br/>
+<kbd>[16:43:58]</kbd> <code>&lt;navinchandak&gt;</code> well there was one particular thing which i hated.<br/>
+<kbd>[16:44:00]</kbd> <code>&lt;ankurankan_&gt;</code> Great.. Finally you realized the importance<br/>
+<kbd>[16:44:10]</kbd> <code>&lt;ankurankan_&gt;</code> :P<br/>
+<kbd>[16:45:00]</kbd> <code>&lt;navinchandak&gt;</code> so copying the test cases to below the function definition and then writing all those ">>>" and removing selfs was bad<br/>
+<kbd>[16:45:01]</kbd> <code>&lt;navinchandak&gt;</code> :P<br/>
+<kbd>[16:45:06]</kbd> <code>&lt;navinchandak&gt;</code> i wish there was a better way to do it<br/>
+<kbd>[16:45:55]</kbd> <code>&lt;ankurankan_&gt;</code> Docstrings are really important. Think about someone using the library for the first time.<br/>
+<kbd>[16:46:15]</kbd> <code>&lt;ankurankan_&gt;</code> It serves as an example to the user which really helps a lot<br/>
+<kbd>[16:46:17]</kbd> <code>&lt;navinchandak&gt;</code> Oh. i don't underestimate the importance of docstings in any case<br/>
+<kbd>[16:46:31]</kbd> <code>&lt;abinash_panda&gt;</code> See the doctests are not meant to be quite detailed. I would prefer you to first write the docstrings and then go for implementation of the function.<br/>
+<kbd>[16:46:43]</kbd> <code>&lt;navinchandak&gt;</code> All i am saying is that there should be a better way to transform test cases into docstrings<br/>
+<kbd>[16:46:53]</kbd> <code>&lt;abinash_panda&gt;</code> It would serve as a guideline for you also.<br/>
+<kbd>[16:46:57]</kbd> <code>&lt;navinchandak&gt;</code> Not the docstrings. but the examples.<br/>
+<kbd>[16:46:59]</kbd> <code>&lt;navinchandak&gt;</code> yeah<br/>
+<kbd>[16:47:37]</kbd> <code>&lt;ankurankan_&gt;</code> Examples also help you better think how you want the function to be<br/>
+<kbd>[16:47:58]</kbd> <code>&lt;navinchandak&gt;</code> ok<br/>
+<kbd>[16:48:05]</kbd> <code>&lt;ankurankan_&gt;</code> If you write it before writing the function it gives you a much clear picture of how you want your function to behave<br/>
+<kbd>[16:48:17]</kbd> <code>&lt;abinash_panda&gt;</code> +1<br/>
+<kbd>[16:48:27]</kbd> <code>&lt;navinchandak&gt;</code> Okay. i see.<br/>
+<kbd>[16:48:40]</kbd> <code>&lt;navinchandak&gt;</code> Yeah. You had said that before too.<br/>
+<kbd>[16:49:04]</kbd> <code>&lt;navinchandak&gt;</code> But in many cases, i know how my function is to behave. In those cases, examples are the boring parts<br/>
+<kbd>[16:49:18]</kbd> <code>&lt;abinash_panda&gt;</code> Python is not about just coding. Its about creating beautiful code. :P<br/>
+<kbd>[16:49:54]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[16:50:19]</kbd> <code>&lt;ankurankan_&gt;</code> So you plan on to contribute to the project after GSoC ?<br/>
+<kbd>[16:50:33]</kbd> <code>&lt;navinchandak&gt;</code> Oh sure.<br/>
+<kbd>[16:50:39]</kbd> <code>&lt;ankurankan_&gt;</code> Great<br/>
+<kbd>[16:50:41]</kbd> <code>&lt;navinchandak&gt;</code> Infact i think i will learn a lot after the code reviews.<br/>
+<kbd>[16:50:47]</kbd> <code>&lt;navinchandak&gt;</code> My code has not really been reviewed yet.<br/>
+<kbd>[16:50:47]</kbd> <code>&lt;shashankg&gt;</code> great!<br/>
+<kbd>[16:51:04]</kbd> <code>&lt;ankurankan_&gt;</code> Yeah maybe I will review it tomorrow if I get time<br/>
+<kbd>[16:51:09]</kbd> <code>&lt;navinchandak&gt;</code> and if you say that my code was not that good, then i will definitely want to improve my part of the code for sure<br/>
+<kbd>[16:51:19]</kbd> <code>&lt;shashankg&gt;</code> So you intend to continue your current work or start something else?<br/>
+<kbd>[16:51:22]</kbd> <code>&lt;navinchandak&gt;</code> and then maybe other things<br/>
+<kbd>[16:51:24]</kbd> <code>&lt;ankurankan_&gt;</code> Any suggestions for us to mentor better next year?<br/>
+<kbd>[16:51:56]</kbd> <code>&lt;navinchandak&gt;</code> Oh. just one thing.<br/>
+<kbd>[16:52:17]</kbd> <code>&lt;navinchandak&gt;</code> First i think it will be better if i finish my part properly.<br/>
+<kbd>[16:52:26]</kbd> <code>&lt;navinchandak&gt;</code> and then i can surely work on other things.<br/>
+<kbd>[16:52:37]</kbd> <code>&lt;navinchandak&gt;</code> and as far as suggestions go<br/>
+<kbd>[16:52:42]</kbd> <code>&lt;navinchandak&gt;</code> Just one thign<br/>
+<kbd>[16:53:30]</kbd> <code>&lt;abinash_panda&gt;</code> okay...go on<br/>
+<kbd>[16:53:47]</kbd> <code>&lt;navinchandak&gt;</code> I think we didn't have regular weekly meetings. And you weren't very particular that we stick to our weekly deadlines.<br/>
+<kbd>[16:54:02]</kbd> <code>&lt;navinchandak&gt;</code> therefore there were times when we took liberty and moved past the deadline<br/>
+<kbd>[16:54:23]</kbd> <code>&lt;navinchandak&gt;</code> i mean when there are other things going on, it's easy to postpone work thinking that it can be done some other times<br/>
+<kbd>[16:54:29]</kbd> <code>&lt;abinash_panda&gt;</code> Actually, now we all have joined companies. So you know weekly meetings and deadlines would not be that feasible for us ;)<br/>
+<kbd>[16:54:32]</kbd> <code>&lt;navinchandak&gt;</code> but then some work piles up<br/>
+<kbd>[16:54:48]</kbd> <code>&lt;navinchandak&gt;</code> Oh okay. i see.<br/>
+<kbd>[16:55:02]</kbd> <code>&lt;abinash_panda&gt;</code> in case of any doubts you can just ping us. I know that I had been very late in replying the mails. But now I can devote my full time for pgmpy.<br/>
+<kbd>[16:55:08]</kbd> <code>&lt;abinash_panda&gt;</code> So feel free to bug me.<br/>
+<kbd>[16:55:11]</kbd> <code>&lt;abinash_panda&gt;</code> :)<br/>
+<kbd>[16:55:16]</kbd> <code>&lt;navinchandak&gt;</code> okay sure :)<br/>
+<kbd>[16:55:23]</kbd> <code>&lt;ankurankan_&gt;</code> It is very difficult to plan everything before the actual coding begins. People can face various problems while working on the code. That's why we are flexible with the weekly deadlines<br/>
+<kbd>[16:56:01]</kbd> <code>&lt;ankurankan_&gt;</code> And it's open source. There are no strict deadlines here :)<br/>
+<kbd>[16:56:08]</kbd> <code>&lt;navinchandak&gt;</code> hmm. yeah that's true too.<br/>
+<kbd>[16:56:09]</kbd> <code>&lt;abinash_panda&gt;</code> +1<br/>
+<kbd>[16:56:39]</kbd> <code>&lt;navinchandak&gt;</code> okay! but still I think when we have deadlines, then we work properly. otherwise we laze off at times.<br/>
+<kbd>[16:57:02]</kbd> <code>&lt;navinchandak&gt;</code> or maybe that's just the case with me, and not everyone. :P<br/>
+<kbd>[16:57:09]</kbd> <code>&lt;abinash_panda&gt;</code> Don't worry abotu that man.<br/>
+<kbd>[16:57:10]</kbd> <code>&lt;abinash_panda&gt;</code> :P<br/>
+<kbd>[16:57:28]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[16:58:17]</kbd> <code>&lt;ankurankan_&gt;</code> Okay.. So anything else?<br/>
+<kbd>[16:58:27]</kbd> <code>&lt;navinchandak&gt;</code> Well nothing in particular.<br/>
+<kbd>[16:58:52]</kbd> <code>&lt;navinchandak&gt;</code> Would you like to give me a general feedback on the kind of things i should improve upon?<br/>
+<kbd>[16:59:01]</kbd> <code>&lt;navinchandak&gt;</code> or would you talk about that after the review tomorrow?<br/>
+<kbd>[16:59:16]</kbd> <code>&lt;ankurankan_&gt;</code> And please do hangout on IRC when you are free. It's like nobody is ever online here<br/>
+<kbd>[16:59:33]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Coming to the feedback. I would like to say few points:<br/>
+<kbd>[16:59:37]</kbd> <code>&lt;ankurankan_&gt;</code> I think I will talk about that after the review<br/>
+<kbd>[16:59:54]</kbd> <code>&lt;navinchandak&gt;</code> And one more thing. As far as the code review goes. please make it an iterative process. give me some review. i can implement the changes everywhere. and then give me more feedback.<br/>
+<kbd>[17:00:07]</kbd> <code>&lt;navinchandak&gt;</code> otherwise u will end up giving the same kind of feedback at a lot of places.<br/>
+<kbd>[17:00:13]</kbd> <code>&lt;navinchandak&gt;</code> okay fine ankurankan_<br/>
+<kbd>[17:00:26]</kbd> <code>&lt;abinash_panda&gt;</code> * First of all believe in writing documentation and rigorous testing. I felt that you lacked in both of them.<br/>
+<kbd>[17:01:36]</kbd> <code>&lt;abinash_panda&gt;</code> * Secondly, don't always try to re-invent the wheel (I am not being particular to something). Put some more effort in reusing codes.<br/>
+<kbd>[17:02:07]</kbd> <code>&lt;ankurankan_&gt;</code>  +1 to both of abinash_panda's points<br/>
+<kbd>[17:02:42]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan_: hmm. yes, i think i learnt the second thing over the course of gsoc. there were times when i spent 5 hours on something and then i replaced the code with a single line.<br/>
+<kbd>[17:03:17]</kbd> <code>&lt;ankurankan_&gt;</code> navinchandak, Atleast you agree with us now :P<br/>
+<kbd>[17:03:35]</kbd> <code>&lt;navinchandak&gt;</code> oh sure.! :P<br/>
+<kbd>[17:05:05]</kbd> <code>&lt;ankurankan_&gt;</code> I got to go now.. Am dead hungry<br/>
+<kbd>[17:05:06]</kbd> <code>&lt;navinchandak&gt;</code> So anything in particular for now?<br/>
+<kbd>[17:05:14]</kbd> <code>&lt;navinchandak&gt;</code> okay. btw, where are you working now?<br/>
+<kbd>[17:05:30]</kbd> <code>&lt;navinchandak&gt;</code> (if u don't mind telling me, that is :P )<br/>
+<kbd>[17:05:32]</kbd> <code>&lt;ankurankan_&gt;</code> I am working at Instamojo<br/>
+<kbd>[17:06:08]</kbd> <code>&lt;navinchandak&gt;</code> okay. and abinash_panda you ?<br/>
+<kbd>[17:08:07]</kbd> <code>&lt;ankurankan_&gt;</code> I don't know if he wants to tell or not otherwise I would have told you :P<br/>
+<kbd>[17:08:15]</kbd> <code>&lt;abinash_panda&gt;</code> I am working in a startup called Bidgely.<br/>
+<kbd>[17:08:27]</kbd> <code>&lt;navinchandak&gt;</code> okay. great! :)<br/>
+<kbd>[17:08:38]</kbd> <code>&lt;abinash_panda&gt;</code> Both of us are working in field of machine learning and data science.<br/>
+<kbd>[17:08:51]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[17:09:30]</kbd> <code>&lt;navinchandak&gt;</code> Fine then. I better say bye now. since ankur is hungry<br/>
+<kbd>[17:09:33]</kbd> <code>&lt;navinchandak&gt;</code> :P<br/>
+<kbd>[17:09:43]</kbd> <code>&lt;ankurankan_&gt;</code> I am going.. bye..<br/>
+<kbd>[17:09:44]</kbd> <code>&lt;ankurankan_&gt;</code> gn..<br/>
+<kbd>[17:09:46]</kbd> <code>&lt;abinash_panda&gt;</code> Okay bye.<br/>
+<kbd>[17:09:51]</kbd> <code>&lt;abinash_panda&gt;</code> :)<br/>
+<kbd>[17:10:13]</kbd> <code>&lt;navinchandak&gt;</code> bye!<br/>
+<kbd>[14:29:58]</kbd> <strong>[disconnected at Mon Aug 25 14:29:58 2014]</strong><br/><kbd>[14:30:14]</kbd> <strong>[disconnected at Mon Aug 25 14:30:14 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

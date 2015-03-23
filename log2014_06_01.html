@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 01-06-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 01-06-2014 </h3><br/><br/>
+                <br/>
+<kbd>[16:36:03]</kbd> <strong>[connected at Sun Jun  1 16:36:03 2014]</strong><br/>
+<kbd>[16:36:15]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:36:32]</kbd> <code>&lt;ankurankan&gt;</code> You didn't mail about your problem ?<br/>
+<kbd>[16:37:05]</kbd> <code>&lt;abinash_panda&gt;</code> Hi all..:)<br/>
+<kbd>[16:37:13]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Hi<br/>
+<kbd>[16:37:38]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: sorry about that. It's been over an hour of power here<br/>
+<kbd>[16:38:14]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, Okay.<br/>
+<kbd>[16:38:16]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: and about that problem. I think it will be suitable if I code it by the naive method<br/>
+<kbd>[16:38:39]</kbd> <code>&lt;ankurankan&gt;</code> What problem were you facing?<br/>
+<kbd>[16:38:44]</kbd> <code>&lt;abinash_panda&gt;</code> ankurankan it rained heavily here, so I am on mobile.<br/>
+<kbd>[16:39:14]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Enjoying rain, eh?<br/>
+<kbd>[16:39:16]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: the parameter tag has a type dd(decision diagram)<br/>
+<kbd>[16:39:38]</kbd> <code>&lt;abinash_panda&gt;</code> sorry, I can't be here for long.<br/>
+<kbd>[16:39:54]</kbd> <code>&lt;abinash_panda&gt;</code> BTW navin is not available today.<br/>
+<kbd>[16:40:04]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, No problem. Yeah I read the mail<br/>
+<kbd>[16:40:56]</kbd> <code>&lt;abinash_panda&gt;</code> Ok. So tomorrow we can discuss with him.<br/>
+<kbd>[16:41:00]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: it can a heavily nested structure of nodes and edges for variables having a lot of instances. So there are two possible solutions I was thinking of.<br/>
+<kbd>[16:41:01]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, So what's the problem with that tag?<br/>
+<kbd>[16:43:03]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: One in which I iterate over all of the tags.. this can be done by knowing the instances of the variables from the "numvalues" in parameter and then  iterating over all the possible values to get the distribution table.<br/>
+<kbd>[16:44:36]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: The other method is in which I make a graph from the available xml. the nodes and edges can be occupied in a datastructure and then we can call methods on that graph. I mean operate on the graph after that.<br/>
+<kbd>[16:46:52]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: The first method is naive and I think will be easy to code but the second one represents the problem better. I could not decide on what will be more appropriate.<br/>
+<kbd>[16:49:36]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, Could you please send a mail to the mailing list regarding this problem? I will need some time to properly figure out the problem and possible solution.<br/>
+<kbd>[16:51:22]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: Sure. I will try to approach one of them and find what can be done to make the parsing more clearer.<br/>
+<kbd>[16:52:17]</kbd> <code>&lt;ankurankan&gt;</code> Just make sure you send the mail today.<br/>
+<kbd>[16:52:25]</kbd> <code>&lt;ankurankan&gt;</code> And what are your plans for the next week?<br/>
+<kbd>[16:52:27]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: ok.<br/>
+<kbd>[16:53:35]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: If this problem passes by tomorrow, I will send a p.r. on the reader class for the final review and work on the writer class.<br/>
+<kbd>[16:54:09]</kbd> <code>&lt;ankurankan&gt;</code> Great<br/>
+<kbd>[16:54:38]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: Also, I do not know where do I write the examples for the functions. Is it just above the function as comments only or I have to specify them somewhere else too?<br/>
+<kbd>[16:54:45]</kbd> <code>&lt;ankurankan&gt;</code> I would but first like you to write tests for the reader class before moving on the writer class<br/>
+<kbd>[16:55:38]</kbd> <code>&lt;ankurankan&gt;</code> You need to write the docstrings (doc above the functions) and tests.<br/>
+<kbd>[16:55:38]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: Actually I was writing tests for each of the functions along with them. They are present on my last commit on github.<br/>
+<kbd>[16:56:24]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I usually write a test as soon as a function completes.<br/>
+<kbd>[16:56:37]</kbd> <code>&lt;ankurankan&gt;</code> Are the tests passing?<br/>
+<kbd>[16:56:48]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: yes.<br/>
+<kbd>[16:57:23]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[16:57:37]</kbd> <code>&lt;ankurankan&gt;</code> So you will just need to write the docstrings for each function..<br/>
+<kbd>[16:57:40]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: till now :P . As I have to write function for parsing the complete parameter tag<br/>
+<kbd>[16:58:35]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: I do not know what exactly is a docstring.<br/>
+<kbd>[16:58:37]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, So I think you will be able to complete the reader class along with tests by next week. Right?<br/>
+<kbd>[16:59:39]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan:yes<br/>
+<kbd>[17:00:06]</kbd> <code>&lt;ankurankan&gt;</code> Docstring is the documentation that you write just below the function definition<br/>
+<kbd>[17:00:10]</kbd> <code>&lt;ankurankan&gt;</code> Example: https://github.com/pgmpy/pgmpy/blob/dev/pgmpy/BayesianModel/BayesianModel.py#L113<br/>
+<kbd>[17:00:23]</kbd> <code>&lt;ankurankan&gt;</code> Line 113 to 130 is docstring.<br/>
+<kbd>[17:01:58]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan: thanks. Got that.<br/>
+<kbd>[17:02:15]</kbd> <code>&lt;ankurankan&gt;</code> Great.<br/>
+<kbd>[17:02:24]</kbd> <code>&lt;ankurankan&gt;</code> So anything else for now?<br/>
+<kbd>[17:05:09]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet1, Looks like you are having problem with your internet connection<br/>
+<kbd>[17:05:16]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[17:05:22]</kbd> <code>&lt;jaspreet1&gt;</code> Ankurankan: sorry,i accidently disconnected<br/>
+<kbd>[17:05:55]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet1, no problem. I was asking if you have anything else for now?<br/>
+<kbd>[17:06:42]</kbd> <code>&lt;jaspreet1&gt;</code> Ankurankan: nothing. I am done for now. Will  brief you about my approach to the problem by mail.<br/>
+<kbd>[17:06:58]</kbd> <code>&lt;ankurankan&gt;</code> Cool.<br/>
+<kbd>[17:07:10]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet1, Okay then. Bye..<br/>
+<kbd>[17:07:26]</kbd> <code>&lt;jaspreet1&gt;</code> Ankurankan: Bye!..goodnight<br/>
+<kbd>[03:55:25]</kbd> <strong>[disconnected at Mon Jun  2 03:55:25 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

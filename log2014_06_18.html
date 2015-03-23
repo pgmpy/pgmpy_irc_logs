@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 18-06-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 18-06-2014 </h3><br/><br/>
+                <br/>
+<kbd>[02:24:00]</kbd> <strong>[connected at Wed Jun 18 02:24:00 2014]</strong><br/>
+<kbd>[02:24:14]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[02:24:45]</kbd> <code>&lt;ankurankan&gt;</code> Gm..<br/>
+<kbd>[02:25:17]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Any idea why the bot quits once everytime we start to chat<br/>
+<kbd>[02:25:19]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[02:26:06]</kbd> <code>&lt;ankurankan&gt;</code> Okay so task no 3 that I have thought can be to add the functionality of deleting the nodes and edges<br/>
+<kbd>[02:26:11]</kbd> <code>&lt;ankurankan&gt;</code> What do you think?<br/>
+<kbd>[02:26:48]</kbd> <code>&lt;skundu&gt;</code> okay<br/>
+<kbd>[02:27:10]</kbd> <code>&lt;shashankg&gt;</code> I think deleting will be very easy work and can be implemented in 10-20 lines.<br/>
+<kbd>[02:27:30]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Yeah I agree<br/>
+<kbd>[02:27:33]</kbd> <code>&lt;shashankg&gt;</code> The original code, written by pranjal had deleting feature<br/>
+<kbd>[02:28:12]</kbd> <code>&lt;ankurankan&gt;</code> But the some of the guys are very new to programming, so I think they can start with this<br/>
+<kbd>[02:28:40]</kbd> <code>&lt;skundu&gt;</code> but once a node is deleted the nodeid which is kept in sequence needs to be updated<br/>
+<kbd>[02:28:59]</kbd> <code>&lt;shashankg&gt;</code> ok, then this is task #3<br/>
+<kbd>[02:29:03]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Yeah exactly. So this would be that a small task<br/>
+<kbd>[02:29:14]</kbd> <code>&lt;ankurankan&gt;</code> *this would not be such a small task<br/>
+<kbd>[02:29:16]</kbd> <code>&lt;skundu&gt;</code> say somebody deletes node5 then node6 has to be updated as node5<br/>
+<kbd>[02:29:22]</kbd> <code>&lt;skundu&gt;</code> exactly<br/>
+<kbd>[02:29:50]</kbd> <code>&lt;ankurankan&gt;</code> Why are we having the default node name thing when we are not accepting them as name ?<br/>
+<kbd>[02:30:11]</kbd> <code>&lt;skundu&gt;</code> i am saying them as nodeid<br/>
+<kbd>[02:30:21]</kbd> <code>&lt;ankurankan&gt;</code> Sry, it does take the default name<br/>
+<kbd>[02:30:33]</kbd> <code>&lt;ankurankan&gt;</code> No I was talking about the frontend<br/>
+<kbd>[02:30:47]</kbd> <code>&lt;shashankg&gt;</code> skundu: what exactly is the strategy for nodeId, node name and default name?<br/>
+<kbd>[02:30:47]</kbd> <code>&lt;ankurankan&gt;</code> when we click the pop up shows something like "node 5"<br/>
+<kbd>[02:31:00]</kbd> <code>&lt;ankurankan&gt;</code> but the save button doesn't turn to green<br/>
+<kbd>[02:31:43]</kbd> <code>&lt;skundu&gt;</code> node id would be kept in sequence in format "node4"<br/>
+<kbd>[02:32:18]</kbd> <code>&lt;skundu&gt;</code> if user enters any node name, node name is updated else it stays default as node id<br/>
+<kbd>[02:32:45]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[02:33:27]</kbd> <code>&lt;ankurankan&gt;</code> Okay. So task 3 is final ?<br/>
+<kbd>[02:33:32]</kbd> <code>&lt;shashankg&gt;</code> so if a user deletes a node, do you wish to update the name as well as nodeId?<br/>
+<kbd>[02:34:10]</kbd> <code>&lt;ankurankan&gt;</code> No I think we should just remove it from the json that we were having for the graph<br/>
+<kbd>[02:34:54]</kbd> <code>&lt;shashankg&gt;</code> I agree.<br/>
+<kbd>[02:35:15]</kbd> <code>&lt;shashankg&gt;</code> just skip the node number which has been deleted.<br/>
+<kbd>[02:35:26]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Yes<br/>
+<kbd>[02:35:26]</kbd> <code>&lt;skundu&gt;</code> lets keep the node name same just change the nodeid<br/>
+<kbd>[02:35:53]</kbd> <code>&lt;ankurankan&gt;</code> skundu, Why do we need to keep anything when we are deleting the node<br/>
+<kbd>[02:35:57]</kbd> <code>&lt;shashankg&gt;</code> then we will have situation where nodeId will be node4 and node name will be node5<br/>
+<kbd>[02:36:27]</kbd> <code>&lt;shashankg&gt;</code> It is  not intuitive solution.<br/>
+<kbd>[02:37:05]</kbd> <code>&lt;skundu&gt;</code> ok<br/>
+<kbd>[02:37:09]</kbd> <code>&lt;shashankg&gt;</code> ankurankan: suppose there are 3 nodes. User deleted node number2, skundu wants to update the nodeId of node3 to node2<br/>
+<kbd>[02:37:36]</kbd> <code>&lt;ankurankan&gt;</code> No. We shouldn't do that<br/>
+<kbd>[02:37:46]</kbd> <code>&lt;ankurankan&gt;</code> We should just leave that node id<br/>
+<kbd>[02:37:56]</kbd> <code>&lt;skundu&gt;</code> i agree<br/>
+<kbd>[02:38:00]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[02:38:09]</kbd> <code>&lt;ankurankan&gt;</code> Okay so I am adding it to the doc<br/>
+<kbd>[02:38:47]</kbd> <code>&lt;shashankg&gt;</code> Is there any edit that you would suggest to the first 2 tasks?<br/>
+<kbd>[02:39:55]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, No.<br/>
+<kbd>[02:40:10]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[02:40:22]</kbd> <code>&lt;ankurankan&gt;</code> You should write task 3 also. You can write better :P<br/>
+<kbd>[02:40:36]</kbd> <code>&lt;ankurankan&gt;</code> And I am unable to think what should I write<br/>
+<kbd>[02:40:42]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[02:44:33]</kbd> <code>&lt;shashankg&gt;</code> skundu: how are you implementing loop validation?<br/>
+<kbd>[02:45:21]</kbd> <code>&lt;skundu&gt;</code> once an edge is created all child nodes are searched if they coincide with the parent node<br/>
+<kbd>[02:47:00]</kbd> <code>&lt;shashankg&gt;</code> okay.<br/>
+<kbd>[02:47:09]</kbd> <code>&lt;ankurankan&gt;</code> One more thing, why are we having a post model button<br/>
+<kbd>[02:47:30]</kbd> <code>&lt;shashankg&gt;</code> what else do you suggest?<br/>
+<kbd>[02:47:45]</kbd> <code>&lt;ankurankan&gt;</code> Whenever the user click on the analysis mode the model should automatically get posted<br/>
+<kbd>[02:48:41]</kbd> <code>&lt;shashankg&gt;</code> I don't think it is a good idea.<br/>
+<kbd>[02:49:07]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Reason ?<br/>
+<kbd>[02:50:08]</kbd> <code>&lt;shashankg&gt;</code> not intuitive for me<br/>
+<kbd>[02:51:06]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. Then lets leave it as it is<br/>
+<kbd>[02:51:30]</kbd> <code>&lt;shashankg&gt;</code> we will give an edit graph button in analysis mode<br/>
+<kbd>[02:52:08]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Why would we need that ? Going to draw mode would be the same thing<br/>
+<kbd>[02:52:39]</kbd> <code>&lt;shashankg&gt;</code> okk. No edit button<br/>
+<kbd>[02:53:25]</kbd> <code>&lt;shashankg&gt;</code> skundu: do you think we should add any other details to our tasks doc?<br/>
+<kbd>[02:54:09]</kbd> <code>&lt;ankurankan&gt;</code> One more thing, when we are adding nodes the add nodes button shows stop adding nodes but when we have to switch to adding edges we can't simply click on start adding edges. We first have to click on stop adding nodes and then on start adding edges to make it work<br/>
+<kbd>[02:54:57]</kbd> <code>&lt;ankurankan&gt;</code> I think the user should be directly able to click on start adding edges and the stop adding nodes button should automatically change to start adding nodes and the user should be able to add the edges<br/>
+<kbd>[02:55:02]</kbd> <code>&lt;ankurankan&gt;</code> What do you think?<br/>
+<kbd>[02:55:08]</kbd> <code>&lt;shashankg&gt;</code> I agree.<br/>
+<kbd>[02:56:09]</kbd> <code>&lt;shashankg&gt;</code> skundu: your thoughts?<br/>
+<kbd>[02:57:28]</kbd> <code>&lt;ankurankan&gt;</code> And we can add this as task #4<br/>
+<kbd>[02:57:38]</kbd> <code>&lt;shashankg&gt;</code> yep<br/>
+<kbd>[02:58:22]</kbd> <code>&lt;shashankg&gt;</code> ok, I'll add this to doc<br/>
+<kbd>[02:58:29]</kbd> <code>&lt;shashankg&gt;</code> any other tasks?<br/>
+<kbd>[02:58:35]</kbd> <code>&lt;shashankg&gt;</code> I think skundu left<br/>
+<kbd>[02:58:41]</kbd> <code>&lt;ankurankan&gt;</code> Nah, 4 should be enough for now<br/>
+<kbd>[02:59:15]</kbd> <code>&lt;shashankg&gt;</code> so when do you plan to have a meeting with new guys?<br/>
+<kbd>[02:59:29]</kbd> <code>&lt;ankurankan&gt;</code> Tonight ?<br/>
+<kbd>[02:59:42]</kbd> <code>&lt;shashankg&gt;</code> Will the new guys be familiar with IRC?<br/>
+<kbd>[02:59:44]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[02:59:52]</kbd> <code>&lt;ankurankan&gt;</code> I don't think so<br/>
+<kbd>[02:59:57]</kbd> <code>&lt;ankurankan&gt;</code> One of them is<br/>
+<kbd>[02:59:59]</kbd> <code>&lt;ankurankan&gt;</code> No idea about others<br/>
+<kbd>[03:00:15]</kbd> <code>&lt;abinash_panda&gt;</code>  hi guys :) Gm :)<br/>
+<kbd>[03:00:28]</kbd> <code>&lt;shashankg&gt;</code> Good morning :)<br/>
+<kbd>[03:00:30]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Hi<br/>
+<kbd>[03:01:01]</kbd> <code>&lt;shashankg&gt;</code> I'll add instructions on the top of task page<br/>
+<kbd>[03:01:10]</kbd> <code>&lt;shashankg&gt;</code> and share the link with students.<br/>
+<kbd>[03:01:18]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda always comes after the discussion when ever we discuss about viz<br/>
+<kbd>[03:01:20]</kbd> <code>&lt;ankurankan&gt;</code> :P<br/>
+<kbd>[03:01:26]</kbd> <code>&lt;abinash_panda&gt;</code> seems that you are doing some serious things<br/>
+<kbd>[03:01:42]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Yeah we should do that<br/>
+<kbd>[03:01:55]</kbd> <code>&lt;shashankg&gt;</code> Can someone add the links in the doc. Links in places where  I have written text.<br/>
+<kbd>[03:02:17]</kbd> <code>&lt;ankurankan&gt;</code> We should also write some basic instruction about how to clone the repo and setup things<br/>
+<kbd>[03:03:19]</kbd> <code>&lt;shashankg&gt;</code> Okay. I'll edit the doc after and hour.<br/>
+<kbd>[03:03:32]</kbd> <code>&lt;skundu&gt;</code> srry i left<br/>
+<kbd>[03:03:43]</kbd> <code>&lt;skundu&gt;</code> task 4 sounds good<br/>
+<kbd>[03:03:44]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, I will add the links<br/>
+<kbd>[03:03:50]</kbd> <code>&lt;shashankg&gt;</code> skundu: what do you say about django vs flask?<br/>
+<kbd>[03:05:10]</kbd> <code>&lt;ankurankan&gt;</code> skundu, And is your code able to draw the tables right now ?<br/>
+<kbd>[03:06:03]</kbd> <code>&lt;skundu&gt;</code> i can draw tables but there is a small issue with adding new rows and columns<br/>
+<kbd>[03:06:12]</kbd> <code>&lt;skundu&gt;</code> that wont take much time though<br/>
+<kbd>[03:06:36]</kbd> <code>&lt;skundu&gt;</code> shashankg: i havent used flask<br/>
+<kbd>[03:06:46]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[03:07:13]</kbd> <code>&lt;ankurankan&gt;</code> Okay, no problem let's just go with django<br/>
+<kbd>[03:07:38]</kbd> <code>&lt;shashankg&gt;</code> I think flask will be more suitable for our purpose, but the problem is that non of us is familiar with it. And it will be difficult to find flask developers.<br/>
+<kbd>[03:07:52]</kbd> <code>&lt;shashankg&gt;</code> So let's go with django<br/>
+<kbd>[03:08:30]</kbd> <code>&lt;ankurankan&gt;</code> Yeah, anyway our app is not that huge or something that django or flask would make much of a difference<br/>
+<kbd>[03:09:08]</kbd> <code>&lt;shashankg&gt;</code> yeah<br/>
+<kbd>[03:19:23]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, skundu How frequently does PSF wants the students to write the blog?<br/>
+<kbd>[03:20:15]</kbd> <code>&lt;shashankg&gt;</code> There was a mail on soc2014 students. It had the deadlines for all blog posts<br/>
+<kbd>[03:20:24]</kbd> <code>&lt;shashankg&gt;</code> let me look for it.<br/>
+<kbd>[06:43:11]</kbd> <strong>[disconnected at Thu Jun 19 06:43:11 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

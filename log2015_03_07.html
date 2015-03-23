@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 07-03-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 07-03-2015 </h3><br/><br/>
+                <br/>
+<kbd>[15:41:39]</kbd> <strong>[connected at Sat Mar  7 15:41:39 2015]</strong><br/>
+<kbd>[15:41:52]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[15:41:59]</kbd> <code>&lt;vivekjain&gt;</code> http://pastebin.com/D7FNUs3g<br/>
+<kbd>[15:43:34]</kbd> <code>&lt;vivekjain&gt;</code> i am running following command:  [sudo] pip3 install -r requirements.txt<br/>
+<kbd>[15:43:51]</kbd> <code>&lt;vivekjain&gt;</code> * sudo pip3 install -r requirements.txt<br/>
+<kbd>[16:05:16]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: When i run sudo python3 setup.py install it is giving me following error<br/>
+<kbd>[16:05:17]</kbd> <code>&lt;vivekjain&gt;</code> http://pastebin.com/Wj69v6Wf<br/>
+<kbd>[16:13:33]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, You need to install ATLAS and LAPACK on your system.. These are base linear algebra libraries that you will need for installing scipy<br/>
+<kbd>[16:19:13]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: What are the commands ? Is this the only command sudo apt-get install liblapack-dev ?<br/>
+<kbd>[16:21:03]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Google it  for installing it on your platform.<br/>
+<kbd>[16:21:13]</kbd> <code>&lt;vivekjain&gt;</code> after running above i am getting the following error when i again try to install the same http://pastebin.com/uWH761Tr<br/>
+<kbd>[16:27:01]</kbd> <code>&lt;ankurankan&gt;</code> try doing sudo apt-get build-dep python3-scipy for building all the dependencies of scipy<br/>
+<kbd>[16:27:21]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, ^ and then use pip to install scipy<br/>
+<kbd>[16:47:08]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I have successfully built pgmpy.<br/>
+<kbd>[16:47:39]</kbd> <code>&lt;vivekjain&gt;</code> When i try to run tests using nosetests3 it gives me no module named pandas error<br/>
+<kbd>[16:47:39]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Great..<br/>
+<kbd>[16:48:10]</kbd> <code>&lt;vivekjain&gt;</code> but when i import pandas in my python shell it successfully import it.<br/>
+<kbd>[16:48:21]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Did you install the dependencies?<br/>
+<kbd>[16:48:37]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Are you sure you installed it for python3 not python2?<br/>
+<kbd>[16:49:11]</kbd> <code>&lt;vivekjain&gt;</code> yes, i will try installing it again<br/>
+<kbd>[16:49:50]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, So you did pip3 install -r requirements.txt?<br/>
+<kbd>[16:50:21]</kbd> <code>&lt;vivekjain&gt;</code> yes, but i think it gave the error in scipy. so i installed all of them manually.<br/>
+<kbd>[16:52:42]</kbd> <code>&lt;ankurankan&gt;</code> So are you able to do: python3 -c 'import pandas'<br/>
+<kbd>[16:52:48]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[16:54:09]</kbd> <code>&lt;vivekjain&gt;</code> ok, i tried to upgrade the pandas. Now the tests are running fine.<br/>
+<kbd>[16:54:17]</kbd> <code>&lt;vivekjain&gt;</code> Thanks<br/>
+<kbd>[16:55:30]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Cool..<br/>
+<kbd>[16:56:35]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I want to start contributing to the org.<br/>
+<kbd>[16:57:50]</kbd> <code>&lt;vivekjain&gt;</code> I am interested in the project Parsing from and writing to standard PGM file formats.<br/>
+<kbd>[16:58:11]</kbd> <code>&lt;vivekjain&gt;</code> Are there any bugs related to it ?<br/>
+<kbd>[16:59:48]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, I would suggest you to go through any one of the file formats listed here: https://github.com/pgmpy/pgmpy/issues/65 and try to implement it.<br/>
+<kbd>[17:00:48]</kbd> <code>&lt;ankurankan&gt;</code> Also we have implementation of a few file formats. So have a look at them.<br/>
+<kbd>[17:01:16]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Many things are broken in them, so you can try to find and fix them.<br/>
+<kbd>[17:01:55]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I will start exploring them.<br/>
+<kbd>[17:03:23]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Great..<br/>
+<kbd>[17:00:59]</kbd> <strong>[disconnected at Sun Mar  8 17:00:59 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

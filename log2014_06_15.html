@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 15-06-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 15-06-2014 </h3><br/><br/>
+                <br/>
+<kbd>[06:37:05]</kbd> <strong>[connected at Sun Jun 15 06:37:05 2014]</strong><br/>
+<kbd>[06:37:18]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[06:37:19]</kbd> <code>&lt;ankurankan&gt;</code> Ankur Ankan<br/>
+<kbd>[06:37:22]</kbd> <code>&lt;ankurankan&gt;</code> Navin Chandak<br/>
+<kbd>[06:37:24]</kbd> <code>&lt;ankurankan&gt;</code> Oh.<br/>
+<kbd>[06:37:26]</kbd> <code>&lt;ankurankan&gt;</code> I had been running nosetests from inside the tests folder.<br/>
+<kbd>[06:37:28]</kbd> <code>&lt;ankurankan&gt;</code> It works on running it from inside the tests folder<br/>
+<kbd>[06:37:30]</kbd> <code>&lt;ankurankan&gt;</code> If I change the paths so as to make them work from the main folder, then it will not work from inside the test folder, right?<br/>
+<kbd>[06:37:32]</kbd> <code>&lt;ankurankan&gt;</code> What should I do?<br/>
+<kbd>[06:37:35]</kbd> <code>&lt;ankurankan&gt;</code> Navin • 54 mins<br/>
+<kbd>[06:37:39]</kbd> <code>&lt;ankurankan&gt;</code> That's why I always said to use absolute path from pgmpy dir<br/>
+<kbd>[06:37:41]</kbd> <code>&lt;ankurankan&gt;</code> because that would be the top level dir when installed in the user's computer.<br/>
+<kbd>[06:37:43]</kbd> <code>&lt;ankurankan&gt;</code> 53 mins<br/>
+<kbd>[06:37:45]</kbd> <code>&lt;ankurankan&gt;</code> Ankur Ankan<br/>
+<kbd>[06:37:50]</kbd> <code>&lt;ankurankan&gt;</code> Navin Chandak<br/>
+<kbd>[06:37:50]</kbd> <code>&lt;ankurankan&gt;</code> Sorry, but I don't understand how to use absolute paths?<br/>
+<kbd>[06:37:51]</kbd> <code>&lt;ankurankan&gt;</code> give the path in terms of /usr/lib/ ... ?<br/>
+<kbd>[06:37:53]</kbd> <code>&lt;ankurankan&gt;</code> Navin • 52 mins<br/>
+<kbd>[06:37:57]</kbd> <code>&lt;ankurankan&gt;</code> No..<br/>
+<kbd>[06:37:58]</kbd> <code>&lt;ankurankan&gt;</code> Like if you want the Factor.py<br/>
+<kbd>[06:37:59]</kbd> <code>&lt;ankurankan&gt;</code> 51 mins<br/>
+<kbd>[06:38:01]</kbd> <code>&lt;ankurankan&gt;</code> Ankur Ankan<br/>
+<kbd>[06:38:03]</kbd> <code>&lt;ankurankan&gt;</code> Navin Chandak<br/>
+<kbd>[06:38:05]</kbd> <code>&lt;ankurankan&gt;</code> no no no no<br/>
+<kbd>[06:38:09]</kbd> <code>&lt;ankurankan&gt;</code> wait<br/>
+<kbd>[06:38:11]</kbd> <code>&lt;ankurankan&gt;</code> I have used global imports<br/>
+<kbd>[06:38:13]</kbd> <code>&lt;ankurankan&gt;</code> I was talking about the test_files<br/>
+<kbd>[06:38:15]</kbd> <code>&lt;ankurankan&gt;</code> The nosetests is not able to read the text files which stores the graph<br/>
+<kbd>[06:38:17]</kbd> <code>&lt;ankurankan&gt;</code> I am not talking about importing python files, but reading text files.<br/>
+<kbd>[06:38:19]</kbd> <code>&lt;ankurankan&gt;</code> (not able to read, when run from the main directory)(<br/>
+<kbd>[06:38:21]</kbd> <code>&lt;ankurankan&gt;</code> Navin • 50 mins<br/>
+<kbd>[06:38:23]</kbd> <code>&lt;ankurankan&gt;</code> send me a link to the code.<br/>
+<kbd>[06:38:25]</kbd> <code>&lt;ankurankan&gt;</code> 49 mins<br/>
+<kbd>[06:38:27]</kbd> <code>&lt;ankurankan&gt;</code> Ankur Ankan<br/>
+<kbd>[06:38:29]</kbd> <code>&lt;ankurankan&gt;</code> Navin Chandak<br/>
+<kbd>[06:38:31]</kbd> <code>&lt;ankurankan&gt;</code> btw, if you just try once, please run nosetests from inside the tests folder<br/>
+<kbd>[06:38:33]</kbd> <code>&lt;ankurankan&gt;</code> Navin • 48 mins<br/>
+<kbd>[06:38:35]</kbd> <code>&lt;ankurankan&gt;</code> I am still getting an error<br/>
+<kbd>[06:38:39]</kbd> <code>&lt;ankurankan&gt;</code> in test_MarkovModel<br/>
+<kbd>[06:38:41]</kbd> <code>&lt;ankurankan&gt;</code> No module named help_functions<br/>
+<kbd>[06:38:43]</kbd> <code>&lt;ankurankan&gt;</code> 46 mins<br/>
+<kbd>[06:38:45]</kbd> <code>&lt;ankurankan&gt;</code> Ankur Ankan<br/>
+<kbd>[06:38:47]</kbd> <code>&lt;ankurankan&gt;</code> Navin Chandak<br/>
+<kbd>[06:38:49]</kbd> <code>&lt;ankurankan&gt;</code> okay. Yes. I resolved that.<br/>
+<kbd>[06:38:51]</kbd> <code>&lt;ankurankan&gt;</code> I pulled in the package-making changes now.<br/>
+<kbd>[06:38:53]</kbd> <code>&lt;ankurankan&gt;</code> Before now, tests was not a package<br/>
+<kbd>[06:38:55]</kbd> <code>&lt;ankurankan&gt;</code> Hence it had to be imported that way.<br/>
+<kbd>[06:38:57]</kbd> <code>&lt;ankurankan&gt;</code> Now that it is a package, this seems to be giving errors.<br/>
+<kbd>[06:38:59]</kbd> <code>&lt;ankurankan&gt;</code> I have resolved that.<br/>
+<kbd>[06:39:01]</kbd> <code>&lt;ankurankan&gt;</code> For the previous errors(reading text files), which code link should I give you?<br/>
+<kbd>[06:39:03]</kbd> <code>&lt;ankurankan&gt;</code> the code which is reading the graph gile?<br/>
+<kbd>[06:39:05]</kbd> <code>&lt;ankurankan&gt;</code> *file<br/>
+<kbd>[06:39:09]</kbd> <code>&lt;ankurankan&gt;</code> Navin • 41 mins<br/>
+<kbd>[06:39:11]</kbd> <code>&lt;ankurankan&gt;</code> why are you reading graph from the files?<br/>
+<kbd>[06:39:13]</kbd> <code>&lt;ankurankan&gt;</code> 41 mins<br/>
+<kbd>[06:39:15]</kbd> <code>&lt;ankurankan&gt;</code> Ankur Ankan<br/>
+<kbd>[06:39:17]</kbd> <code>&lt;ankurankan&gt;</code> Navin Chandak<br/>
+<kbd>[06:39:19]</kbd> <code>&lt;ankurankan&gt;</code> Because it is much more convenient than writing it in the python file<br/>
+<kbd>[06:39:21]</kbd> <code>&lt;ankurankan&gt;</code> Also, I felt<br/>
+<kbd>[06:39:51]</kbd> <code>&lt;abinash_panda&gt;</code> ankurankan: I am really getting confused with all this *strange[TM]* messages :D<br/>
+<kbd>[06:40:27]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Hi !<br/>
+<kbd>[06:40:53]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Hi !<br/>
+<kbd>[06:42:49]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Facing any problems in the PR.<br/>
+<kbd>[06:43:50]</kbd> <code>&lt;navinchandak&gt;</code> No there was one issue which we wanted to take your opinion about.<br/>
+<kbd>[06:44:03]</kbd> <code>&lt;abinash_panda&gt;</code> Okay..and whats that?<br/>
+<kbd>[06:44:45]</kbd> <code>&lt;navinchandak&gt;</code> Its about reading graph data from text files vs putting graph data in the test_files itself.<br/>
+<kbd>[06:45:09]</kbd> <code>&lt;navinchandak&gt;</code> So currently i have lines in my code like<br/>
+<kbd>[06:45:13]</kbd> <code>&lt;navinchandak&gt;</code> "graph.read_simple_format("test_graphs/clique_graph")"<br/>
+<kbd>[06:45:31]</kbd> <code>&lt;navinchandak&gt;</code> in the other case, I will have 3-4 lines to add the edges to the graph.<br/>
+<kbd>[06:45:56]</kbd> <code>&lt;navinchandak&gt;</code> I think that it is more pleasing to read such simple code and adding 20 edges in test_files makes the code messy.<br/>
+<kbd>[06:46:25]</kbd> <code>&lt;abinash_panda&gt;</code> First few things to be clarified:<br/>
+<kbd>[06:46:40]</kbd> <code>&lt;abinash_panda&gt;</code> * Is there any specific format you are using for reading graph files<br/>
+<kbd>[06:46:51]</kbd> <code>&lt;navinchandak&gt;</code> Also the approach of reading graph file will be needed when we write performance testing modules and why not also use it for testing with small graphs.<br/>
+<kbd>[06:46:56]</kbd> <code>&lt;abinash_panda&gt;</code> * If so could you send me the link of it, so that I can have a look<br/>
+<kbd>[06:47:58]</kbd> <code>&lt;navinchandak&gt;</code> Okay. Right now, I am not using a standard format.(Since I didn't mean it to be a public function. However, Ankur suggested that it is better to move to a standard format and I agree.<br/>
+<kbd>[06:48:19]</kbd> <code>&lt;navinchandak&gt;</code> So I plan to move to a standard format and that should be peaceful.<br/>
+<kbd>[06:48:33]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah..we should, we just can't add any format for reading graphs. This would kill us all in the long run.<br/>
+<kbd>[06:49:25]</kbd> <code>&lt;abinash_panda&gt;</code> So, you can see that there are some file formats already implemented in readwrite module, so you can use them<br/>
+<kbd>[06:49:41]</kbd> <code>&lt;navinchandak&gt;</code> Then we can use networkx functions to read the graph and we can pass the returned nx.Graph to UndirectedGraph and it can create a UndirectedGraph object out of it.<br/>
+<kbd>[06:50:36]</kbd> <code>&lt;navinchandak&gt;</code> Or use the formats which networkx supports ?<br/>
+<kbd>[06:50:47]</kbd> <code>&lt;abinash_panda&gt;</code> I am still not satisfied with going for UndirectedGraph instead of nx.Graph. You know it would be really tough to maintain if we are going to create<br/>
+<kbd>[06:50:49]</kbd> <code>&lt;navinchandak&gt;</code> even that should be fine, right?<br/>
+<kbd>[06:50:53]</kbd> <code>&lt;abinash_panda&gt;</code> a new class for everything.<br/>
+<kbd>[06:51:00]</kbd> <code>&lt;navinchandak&gt;</code> Which code link do you want to see?<br/>
+<kbd>[06:51:21]</kbd> <code>&lt;abinash_panda&gt;</code> I would suggest you to invest some time and find out ways of avoiding UndirectedGraph.<br/>
+<kbd>[06:51:41]</kbd> <code>&lt;ankurankan&gt;</code> Yeah I would also not like to see UndirectedGraph<br/>
+<kbd>[06:52:00]</kbd> <code>&lt;abinash_panda&gt;</code> So, please work on removing it. And I am serious about it.<br/>
+<kbd>[06:52:27]</kbd> <code>&lt;abinash_panda&gt;</code> We can't just go on creating classes for everything. Just don't try to re-invent the wheel<br/>
+<kbd>[06:53:03]</kbd> <code>&lt;navinchandak&gt;</code> hmm.. it is not re-inventing the wheel. It doesn't contain any code which was present in networkx<br/>
+<kbd>[06:53:20]</kbd> <code>&lt;navinchandak&gt;</code> it just contains all the graph functions which was not present in networkx.<br/>
+<kbd>[06:53:25]</kbd> <code>&lt;navinchandak&gt;</code> Where else can i put it? suggestions?<br/>
+<kbd>[06:53:54]</kbd> <code>&lt;navinchandak&gt;</code> So basically let me explain what all is present in UndirectedGraphs<br/>
+<kbd>[06:54:18]</kbd> <code>&lt;navinchandak&gt;</code> It has the wrappers for a few static networkx functions,<br/>
+<kbd>[06:55:15]</kbd> <code>&lt;navinchandak&gt;</code> It has the algorithms to triangulate the graph, to make junction trees out of it and so on.<br/>
+<kbd>[06:55:28]</kbd> <code>&lt;navinchandak&gt;</code> (triangulation using heuristics)<br/>
+<kbd>[06:56:18]</kbd> <code>&lt;navinchandak&gt;</code> It will have the algorithm for optimal triangulation when I put it.<br/>
+<kbd>[06:56:26]</kbd> <code>&lt;navinchandak&gt;</code> Then currently there are functions for reading and printing a UndirectedGraph object.<br/>
+<kbd>[06:56:55]</kbd> <code>&lt;abinash_panda&gt;</code> Okay..for triangulation, I am searching for any possibilities now.<br/>
+<kbd>[06:56:56]</kbd> <code>&lt;navinchandak&gt;</code> I felt that a UndirectedGraph class is the best place to put all this code. .<br/>
+<kbd>[06:57:06]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[06:57:07]</kbd> <code>&lt;abinash_panda&gt;</code> I would get to you on this.<br/>
+<kbd>[06:57:31]</kbd> <code>&lt;abinash_panda&gt;</code> and for reading and writing simple file format, still not satisfied with it<br/>
+<kbd>[06:57:53]</kbd> <code>&lt;abinash_panda&gt;</code> we should go for some standard file formats (if needed) and see whether they are implemented in networkx<br/>
+<kbd>[06:58:23]</kbd> <code>&lt;navinchandak&gt;</code> Yes. agreed on that count^<br/>
+<kbd>[06:58:35]</kbd> <code>&lt;navinchandak&gt;</code> I was planning to work with this format.<br/>
+<kbd>[06:58:36]</kbd> <code>&lt;navinchandak&gt;</code> http://networkx.lanl.gov/reference/readwrite.edgelist.html#format<br/>
+<kbd>[06:58:49]</kbd> <code>&lt;navinchandak&gt;</code> This is a standard format and can be read by networkx functions.<br/>
+<kbd>[06:59:04]</kbd> <code>&lt;navinchandak&gt;</code> However, the thing which we were not agreeing on was this.<br/>
+<kbd>[06:59:34]</kbd> <code>&lt;navinchandak&gt;</code> Ankur felt that it is better to write the data in the test_file and I was of the opinion that it is cleaner to read the graph data from a file.<br/>
+<kbd>[07:00:33]</kbd> <code>&lt;abinash_panda&gt;</code> I am also going with ankur. You should write the data in the test_file.<br/>
+<kbd>[07:02:10]</kbd> <code>&lt;abinash_panda&gt;</code> We just can't create a new file for everything...right?<br/>
+<kbd>[07:02:44]</kbd> <code>&lt;ankurankan&gt;</code> Just think about the number of files we will have if we put all our graphs in separate files<br/>
+<kbd>[07:03:08]</kbd> <code>&lt;navinchandak&gt;</code> there are only a few files which are being reused in all the places.<br/>
+<kbd>[07:03:39]</kbd> <code>&lt;ankurankan&gt;</code> Give me line numbers of your code<br/>
+<kbd>[07:03:53]</kbd> <code>&lt;navinchandak&gt;</code> Files which are to be used in only 1-2 places and are small too, then I don't mind writing them to test_files<br/>
+<kbd>[07:04:30]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan: Code where the test_files are being used, you mean?<br/>
+<kbd>[07:04:32]</kbd> <code>&lt;ankurankan&gt;</code> Which of your files do you think is too large ?<br/>
+<kbd>[07:04:47]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan: RIght now, none of them is large.<br/>
+<kbd>[07:05:08]</kbd> <code>&lt;ankurankan&gt;</code> Which of the files are being reused?<br/>
+<kbd>[07:06:33]</kbd> <code>&lt;navinchandak&gt;</code> "graph" is being reused and since it is a general graph it can be reused in many more places.<br/>
+<kbd>[07:07:08]</kbd> <code>&lt;navinchandak&gt;</code> Check test_UndirectedGraph.py<br/>
+<kbd>[07:07:13]</kbd> <code>&lt;navinchandak&gt;</code> Its a very small file.<br/>
+<kbd>[07:07:28]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: I found out something regarding the graph triangulation, https://groups.google.com/forum/#!topic/networkx-discuss/D7fMmuzVBAw<br/>
+<kbd>[07:07:37]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Have a look at it.<br/>
+<kbd>[07:09:34]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: From what I understand, Delaunay Triangulation is not at all related to pgms<br/>
+<kbd>[07:09:36]</kbd> <code>&lt;navinchandak&gt;</code> http://en.wikipedia.org/wiki/Delaunay_triangulation<br/>
+<kbd>[07:09:43]</kbd> <code>&lt;navinchandak&gt;</code> It is some other random algorithm.<br/>
+<kbd>[07:09:51]</kbd> <code>&lt;navinchandak&gt;</code> I had looked at that google group discussion.<br/>
+<kbd>[07:11:51]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Okay. Currently, I am working on sth else. I would be mailing you ASAP.<br/>
+<kbd>[07:12:11]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: No problem. Please take your time.<br/>
+<kbd>[07:12:22]</kbd> <code>&lt;navinchandak&gt;</code> However, the final word on data in test_files<br/>
+<kbd>[07:12:31]</kbd> <code>&lt;navinchandak&gt;</code> Should I move the data to the test_files?<br/>
+<kbd>[07:12:56]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan: Final word<br/>
+<kbd>[07:12:56]</kbd> <code>&lt;navinchandak&gt;</code> ?<br/>
+<kbd>[07:13:44]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, move the data to the test files<br/>
+<kbd>[07:13:47]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Yes, you should move the data to the test_file.<br/>
+<kbd>[07:14:00]</kbd> <code>&lt;navinchandak&gt;</code> okay<br/>
+<kbd>[07:14:06]</kbd> <code>&lt;navinchandak&gt;</code> fine<br/>
+<kbd>[07:14:07]</kbd> <code>&lt;ankurankan&gt;</code> One more thing<br/>
+<kbd>[07:14:23]</kbd> <code>&lt;ankurankan&gt;</code> I have noticed that you never try to keep your code compact<br/>
+<kbd>[07:14:45]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: are you familiar with list comprehensions or dictionary comprehensions??<br/>
+<kbd>[07:14:53]</kbd> <code>&lt;ankurankan&gt;</code> Like your equal_graphs method<br/>
+<kbd>[07:15:09]</kbd> <code>&lt;ankurankan&gt;</code> you could have done the whole thing in 3 lines<br/>
+<kbd>[07:15:42]</kbd> <code>&lt;navinchandak&gt;</code> umm.. yes<br/>
+<kbd>[07:15:52]</kbd> <code>&lt;navinchandak&gt;</code> But is it not more readable this way.<br/>
+<kbd>[07:16:04]</kbd> <code>&lt;ankurankan&gt;</code> no we don't even need comprehensions here<br/>
+<kbd>[07:16:08]</kbd> <code>&lt;navinchandak&gt;</code> yes i know<br/>
+<kbd>[07:16:39]</kbd> <code>&lt;navinchandak&gt;</code> Okay. Fine. I will change such cases and move things like set(self.nodes()) to inside the expression<br/>
+<kbd>[07:16:47]</kbd> <code>&lt;abinash_panda&gt;</code> it would still be readable if you would be writing in 3 lines ;)<br/>
+<kbd>[07:17:18]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Just look at your UndirectedGraph.print_graph() method.<br/>
+<kbd>[07:17:20]</kbd> <code>&lt;navinchandak&gt;</code> okay fine. Sure.<br/>
+<kbd>[07:17:24]</kbd> <code>&lt;navinchandak&gt;</code> However, just one comment.<br/>
+<kbd>[07:17:41]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Try to use list comprehensions over here instead of loops<br/>
+<kbd>[07:17:48]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Okay sure.<br/>
+<kbd>[07:17:52]</kbd> <code>&lt;abinash_panda&gt;</code> It would be elegant code.<br/>
+<kbd>[07:18:15]</kbd> <code>&lt;navinchandak&gt;</code> And I feel that the code for pgmpy is not well commented. It is well documented but the commenting is really bad.<br/>
+<kbd>[07:18:37]</kbd> <code>&lt;ankurankan&gt;</code> you have also used loops inside loops at many places which can be easily replaced with itertools<br/>
+<kbd>[07:18:38]</kbd> <code>&lt;navinchandak&gt;</code> If you see _factor_product.pyx , it is very difficult to read the code.<br/>
+<kbd>[07:18:50]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Remember the golden rule: If you are going for *more than 3 level of indentation*, then its a bad code. Anyhow, always there are exceptions.<br/>
+<kbd>[07:19:08]</kbd> <code>&lt;abinash_panda&gt;</code> So, try to stick to it.<br/>
+<kbd>[07:19:30]</kbd> <code>&lt;navinchandak&gt;</code> assignment method in Factor.py took me about 30 minutes to just figure out what you were doing.<br/>
+<kbd>[07:19:47]</kbd> <code>&lt;abinash_panda&gt;</code> for _factor_product.pyx.<br/>
+<kbd>[07:19:59]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan: Can you please point to a specific example. This will help me understand the cases which can be replaced with itertoold<br/>
+<kbd>[07:20:29]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Okay.<br/>
+<kbd>[07:21:15]</kbd> <code>&lt;ankurankan&gt;</code> Line no 139 in UndirectedGraph.py you could replace the two loops with itertools.combination<br/>
+<kbd>[07:21:57]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: yeah..for the assigment method we actually did spent more than an hour for optimizing it.<br/>
+<kbd>[07:22:07]</kbd> <code>&lt;navinchandak&gt;</code> okay. I have not used itertools.combination etc. I will look into it.<br/>
+<kbd>[07:23:15]</kbd> <code>&lt;ankurankan&gt;</code> You should certainly have a look at all the itertools methods and collections structures.<br/>
+<kbd>[07:23:16]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: numpy is highly optimized (atleast 50-100x faster) so we were figuring it how to use it instead of going for any simple algorithm<br/>
+<kbd>[07:23:50]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: so, always try to vectorize your code. Come up with an elegant solution ;)<br/>
+<kbd>[07:24:03]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: I am not complaining about the use of numpy. But just about the commenting. There are no comments to explain what these complicated lines are doing.<br/>
+<kbd>[07:24:37]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Yeah..infact for optimizing _factor_product.pyx, I remember we had spent nearly about 2 nights.<br/>
+<kbd>[07:24:53]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: I would be writing comments on it. Thanks for pointing it out :)<br/>
+<kbd>[07:25:05]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[07:25:13]</kbd> <code>&lt;navinchandak&gt;</code> :)<br/>
+<kbd>[07:25:18]</kbd> <code>&lt;ankurankan&gt;</code> One more thing<br/>
+<kbd>[07:25:35]</kbd> <code>&lt;ankurankan&gt;</code> For comparing two objects you can use __eq__ method<br/>
+<kbd>[07:25:49]</kbd> <code>&lt;navinchandak&gt;</code> oh right<br/>
+<kbd>[07:25:56]</kbd> <code>&lt;navinchandak&gt;</code> Okay I will change the equal_graph thing.<br/>
+<kbd>[07:25:57]</kbd> <code>&lt;ankurankan&gt;</code> You have created equal_graphs which should be replace by __eq__<br/>
+<kbd>[07:25:59]</kbd> <code>&lt;navinchandak&gt;</code> Thanks for that<br/>
+<kbd>[07:26:01]</kbd> <code>&lt;navinchandak&gt;</code> Yes. agreed.<br/>
+<kbd>[07:26:20]</kbd> <code>&lt;ankurankan&gt;</code> https://docs.python.org/2/reference/datamodel.html#object.__eq__<br/>
+<kbd>[07:26:41]</kbd> <code>&lt;navinchandak&gt;</code> Fine. Will do that.<br/>
+<kbd>[07:26:58]</kbd> <code>&lt;abinash_panda&gt;</code> so anything more on the table for discussion ;)<br/>
+<kbd>[07:27:15]</kbd> <code>&lt;navinchandak&gt;</code> not from my side.<br/>
+<kbd>[07:27:15]</kbd> <code>&lt;ankurankan&gt;</code> nah<br/>
+<kbd>[07:27:30]</kbd> <code>&lt;ankurankan&gt;</code> Yes one more thing<br/>
+<kbd>[07:27:45]</kbd> <code>&lt;ankurankan&gt;</code> Remove all your print statements before you send a PR<br/>
+<kbd>[07:28:02]</kbd> <code>&lt;ankurankan&gt;</code> And things like debug = False<br/>
+<kbd>[07:28:06]</kbd> <code>&lt;ankurankan&gt;</code> Python has a debugger<br/>
+<kbd>[07:28:53]</kbd> <code>&lt;navinchandak&gt;</code> By removing print statements, you mean commenting it out or removing it from the code<br/>
+<kbd>[07:28:54]</kbd> <code>&lt;navinchandak&gt;</code> ?<br/>
+<kbd>[07:29:03]</kbd> <code>&lt;ankurankan&gt;</code> remove it from the code<br/>
+<kbd>[07:29:19]</kbd> <code>&lt;navinchandak&gt;</code> oh.. I see.<br/>
+<kbd>[07:29:42]</kbd> <code>&lt;navinchandak&gt;</code> I haven't really used debuggers for debugging. I have used print statements till now.<br/>
+<kbd>[07:30:11]</kbd> <code>&lt;navinchandak&gt;</code> By the python debugger, you mean the debugger that comes with pycharm , right?<br/>
+<kbd>[07:30:19]</kbd> <code>&lt;ankurankan&gt;</code> No problem with that. Use when you are writing code. Printing values is the simplest way to debug code.<br/>
+<kbd>[07:30:28]</kbd> <code>&lt;ankurankan&gt;</code> But when you send a PR remove them.<br/>
+<kbd>[07:30:50]</kbd> <code>&lt;navinchandak&gt;</code> hmm.. i just comment it out because if i need it anytime later, it will be easier to use them<br/>
+<kbd>[07:32:57]</kbd> <code>&lt;navinchandak&gt;</code> But anyway, it hardly comes to use once we have finalized the code.<br/>
+<kbd>[07:32:59]</kbd> <code>&lt;navinchandak&gt;</code> I will remove it.<br/>
+<kbd>[07:33:07]</kbd> <code>&lt;navinchandak&gt;</code> Also, By the python debugger, you mean the debugger that comes with pycharm , right?<br/>
+<kbd>[07:33:11]</kbd> <code>&lt;ankurankan&gt;</code> No. I meant pdb: https://docs.python.org/2/library/pdb.html<br/>
+<kbd>[07:33:50]</kbd> <code>&lt;ankurankan&gt;</code> Also IPython has a bit customized debugger which adds a lot of functionalities.<br/>
+<kbd>[07:34:26]</kbd> <code>&lt;navinchandak&gt;</code> okay. I will look into these tools.<br/>
+<kbd>[07:34:34]</kbd> <code>&lt;ankurankan&gt;</code> Cool !!<br/>
+<kbd>[07:34:50]</kbd> <code>&lt;navinchandak&gt;</code> Fine then. Anything else?<br/>
+<kbd>[07:35:03]</kbd> <code>&lt;ankurankan&gt;</code> No. Not for now<br/>
+<kbd>[07:35:32]</kbd> <code>&lt;navinchandak&gt;</code> Okay then. I'll leave.<br/>
+<kbd>[07:35:33]</kbd> <code>&lt;navinchandak&gt;</code> Bye!<br/>
+<kbd>[07:36:05]</kbd> <code>&lt;ankurankan&gt;</code> Bye<br/>
+<kbd>[16:24:44]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Are you there?<br/>
+<kbd>[16:27:07]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Give me just 10 mins.<br/>
+<kbd>[16:27:59]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[16:35:10]</kbd> <code>&lt;abinash_panda&gt;</code> Hey all !<br/>
+<kbd>[16:35:22]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, Hi<br/>
+<kbd>[16:35:41]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: Hi !<br/>
+<kbd>[16:35:49]</kbd> <code>&lt;abinash_panda&gt;</code> so, whats your progress status?<br/>
+<kbd>[16:36:25]</kbd> <code>&lt;navinchandak&gt;</code> btw, just asking, abinash_panda , Is this chat also meant for me? Because I had a chat just yesterday?<br/>
+<kbd>[16:37:06]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: if you have something to say or clarify, you can discuss?<br/>
+<kbd>[16:37:21]</kbd> <code>&lt;abinash_panda&gt;</code> the chat is not meant for any one specific.<br/>
+<kbd>[16:37:38]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[16:38:01]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, the reader class is almost complete. I had to roll back some commits after I found out about the TreeCPD class in the factor module. I will send a p.r tomorrow with the complete reader class and some functions of the writer class.<br/>
+<kbd>[16:38:49]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Does your module depend upon TreeCPD class<br/>
+<kbd>[16:40:01]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, The TreeCPD class will help be to parse the file format in the case of recursive representation of parameters. For eg.  The example 17 here - http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl/index.php?n=Main.PomdpXDocumentation<br/>
+<kbd>[16:40:15]</kbd> <code>&lt;abinash_panda&gt;</code> BTW, what about your blog posts?? navinchandak and jaspreet<br/>
+<kbd>[16:40:29]</kbd> <code>&lt;abinash_panda&gt;</code> Any updates on it?<br/>
+<kbd>[16:40:51]</kbd> <code>&lt;navinchandak&gt;</code> I will be writing one soon. I will post it once I am done.<br/>
+<kbd>[16:40:59]</kbd> <code>&lt;abinash_panda&gt;</code> because, its mandatory to write a blog according to PSF<br/>
+<kbd>[16:41:27]</kbd> <code>&lt;abinash_panda&gt;</code> you have write weekly posts, so try to write what you have implemented this week<br/>
+<kbd>[16:41:28]</kbd> <code>&lt;jaspreet&gt;</code> The blog will be done by tomorrow evening<br/>
+<kbd>[16:41:38]</kbd> <code>&lt;abinash_panda&gt;</code> Don't wait untill the completion of task.<br/>
+<kbd>[16:41:58]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, ok. will follow it from now.<br/>
+<kbd>[16:42:01]</kbd> <code>&lt;abinash_panda&gt;</code> and remember PSF considers your blog while mid-term evaluation<br/>
+<kbd>[16:42:19]</kbd> <code>&lt;abinash_panda&gt;</code> so, I would suggest you both to write the blogs of previous weeks also<br/>
+<kbd>[16:43:32]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Okay. Thanks for the reminder.<br/>
+<kbd>[16:44:18]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, I will try to complete the pending blogs by tuesday then.<br/>
+<kbd>[16:44:24]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, Thanks for reminding<br/>
+<kbd>[16:45:28]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: facing any problems in your project? want to discuss anything?<br/>
+<kbd>[16:46:58]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, yeah. The TreeCPD class has a method to_tabular_cpd() here - https://github.com/pgmpy/pgmpy/blob/dev/pgmpy/Factor/CPD.py#L268<br/>
+<kbd>[16:47:41]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, I don't exactly know how it works. I do not require it for now but maybe in the writer class.<br/>
+<kbd>[16:48:27]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, The function lacks examples too. I will forward this to ankur ankan also.<br/>
+<kbd>[16:49:03]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah...actually ankur has written this method. I also need to look at it.<br/>
+<kbd>[16:49:17]</kbd> <code>&lt;abinash_panda&gt;</code> So, you can mail ankur<br/>
+<kbd>[16:49:42]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, Sure.<br/>
+<kbd>[16:51:11]</kbd> <code>&lt;abinash_panda&gt;</code> anything more<br/>
+<kbd>[16:51:53]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: I would suggest you to do some bench-marks<br/>
+<kbd>[16:52:22]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: Take a large file and see how your code performs and do we require to cythonize it<br/>
+<kbd>[16:53:09]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, how exactly will I measure the performance?<br/>
+<kbd>[16:54:04]</kbd> <code>&lt;abinash_panda&gt;</code> you can measure the time required by using the *time* module<br/>
+<kbd>[16:54:48]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, Is this compatible with pycharm?<br/>
+<kbd>[16:55:01]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda,  I mean can I use it like a normal import?<br/>
+<kbd>[16:56:14]</kbd> <code>&lt;abinash_panda&gt;</code> and for memory profiling you can use *heapy* module<br/>
+<kbd>[16:56:15]</kbd> <code>&lt;abinash_panda&gt;</code> http://guppy-pe.sourceforge.net/<br/>
+<kbd>[16:56:41]</kbd> <code>&lt;abinash_panda&gt;</code> yeah, you can import it. Its basically a std module present in python.<br/>
+<kbd>[16:58:40]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, ok. I will measure the performance, but first I need to find some large files on the formats.<br/>
+<kbd>[16:59:00]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, The one's I am dealing with are less than 500 lines<br/>
+<kbd>[16:59:11]</kbd> <code>&lt;abinash_panda&gt;</code> If you are unable to find some large file, try to create data randomly.<br/>
+<kbd>[16:59:54]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Can you tell me how many variables are present in the current file you are working.<br/>
+<kbd>[17:00:38]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, there are five<br/>
+<kbd>[17:01:51]</kbd> <code>&lt;abinash_panda&gt;</code> jaspreet: Five is really a very small number. I would suggest you to go for thousands of variables with cardinality of each variable in something 100s<br/>
+<kbd>[17:02:20]</kbd> <code>&lt;abinash_panda&gt;</code> Actually, we want to analyze how much data we can handle.<br/>
+<kbd>[17:02:34]</kbd> <code>&lt;abinash_panda&gt;</code> If it is taking longer time, maybe we should cythonize it<br/>
+<kbd>[17:02:46]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, ok. I understand.<br/>
+<kbd>[17:03:44]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: I would also suggest you to find bottlenecks in your code.<br/>
+<kbd>[17:04:23]</kbd> <code>&lt;navinchandak&gt;</code> hmm.. okay. And then cythonize them?<br/>
+<kbd>[17:04:45]</kbd> <code>&lt;abinash_panda&gt;</code> yeah..then cythonize them.<br/>
+<kbd>[17:05:14]</kbd> <code>&lt;abinash_panda&gt;</code> In the _factor_product function we tried and tested using both python (+numpy) and cython<br/>
+<kbd>[17:05:39]</kbd> <code>&lt;abinash_panda&gt;</code> cython gave use 50x performance improvements on smaller data sets<br/>
+<kbd>[17:06:04]</kbd> <code>&lt;abinash_panda&gt;</code> and for larger ones the python(+numpy) implementation was a total failure<br/>
+<kbd>[17:06:46]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, I have not really looked into the cython part of the code yet. I will take a look and try to understand what can I achieve using it.<br/>
+<kbd>[17:06:56]</kbd> <code>&lt;navinchandak&gt;</code> okay. so cython is much better than numpy, atleast for these experiments?<br/>
+<kbd>[17:07:51]</kbd> <code>&lt;abinash_panda&gt;</code> no in cython we have also used numpy..<br/>
+<kbd>[17:08:43]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[17:09:01]</kbd> <code>&lt;navinchandak&gt;</code> But the for loops etc will be compiled in C, and hence the performance improvement?<br/>
+<kbd>[17:09:05]</kbd> <code>&lt;navinchandak&gt;</code> Is that the case?<br/>
+<kbd>[17:09:20]</kbd> <code>&lt;abinash_panda&gt;</code> go through this tutorial http://docs.cython.org/src/tutorial/numpy.html to get a better understanding<br/>
+<kbd>[17:13:15]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, ok.bookmarked<br/>
+<kbd>[17:14:05]</kbd> <code>&lt;navinchandak&gt;</code> Okay. So basically using numpy with cython is a good deal ? (After adding all the type information and so on)<br/>
+<kbd>[17:15:10]</kbd> <code>&lt;abinash_panda&gt;</code> yeah..basically cython uses faster access to numpy's array.<br/>
+<kbd>[17:15:27]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[17:16:27]</kbd> <code>&lt;abinash_panda&gt;</code> as python is a dynamic language so there is always some overhead in accessing the arrays<br/>
+<kbd>[17:17:02]</kbd> <code>&lt;abinash_panda&gt;</code> and in case of cython, you specify the data type so there are no furhter overheads so it provides faster performance<br/>
+<kbd>[17:18:06]</kbd> <code>&lt;jaspreet&gt;</code> abinash_panda, Is it only for the case of numpy arrays that the performance is better in cython?<br/>
+<kbd>[17:18:35]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: I didn't understand "as python is a dynamic language so there is always some overhead in accessing the arrays"<br/>
+<kbd>[17:18:43]</kbd> <code>&lt;navinchandak&gt;</code> Can you elaborate or give me some relevant links?<br/>
+<kbd>[17:18:45]</kbd> <code>&lt;abinash_panda&gt;</code> not only for numpy array but for everything<br/>
+<kbd>[17:19:01]</kbd> <code>&lt;abinash_panda&gt;</code> okay, let me explain it again.<br/>
+<kbd>[17:20:31]</kbd> <code>&lt;abinash_panda&gt;</code> python is a dynamic typed language ...meaning if you are going for a = 2 (then a is an integer) or if a = "hello" (then a is a string)..<br/>
+<kbd>[17:21:04]</kbd> <code>&lt;navinchandak&gt;</code> okay. which means that a can point to a integer object or to a string object.<br/>
+<kbd>[17:21:31]</kbd> <code>&lt;abinash_panda&gt;</code> yeah...a can point to anything<br/>
+<kbd>[17:21:36]</kbd> <code>&lt;navinchandak&gt;</code> okay<br/>
+<kbd>[17:21:53]</kbd> <code>&lt;abinash_panda&gt;</code> it is not like C/C++ right..that you have to define the type before initializing it<br/>
+<kbd>[17:22:02]</kbd> <code>&lt;navinchandak&gt;</code> yes<br/>
+<kbd>[17:23:34]</kbd> <code>&lt;jaspreet&gt;</code> I don't know cython but it mostly looks like C code<br/>
+<kbd>[17:24:38]</kbd> <code>&lt;jaspreet&gt;</code> is it that the declaration of variables before defining them makes it faster over python?<br/>
+<kbd>[17:25:57]</kbd> <code>&lt;abinash_panda&gt;</code> yes...that is one factor for faster performance<br/>
+<kbd>[17:26:42]</kbd> <code>&lt;abinash_panda&gt;</code> basically cython converts your python code to C/C++ code and compiles it<br/>
+<kbd>[17:27:11]</kbd> <code>&lt;abinash_panda&gt;</code> and then it provides a wrapper around this compiled C/C++ code for calling it in python<br/>
+<kbd>[17:27:30]</kbd> <code>&lt;abinash_panda&gt;</code> ankurankan: Hey !<br/>
+<kbd>[17:27:39]</kbd> <code>&lt;ankurankan&gt;</code> abinash_panda, Hi<br/>
+<kbd>[17:27:44]</kbd> <code>&lt;ankurankan&gt;</code> I was just reading the logs<br/>
+<kbd>[17:27:51]</kbd> <code>&lt;abinash_panda&gt;</code> :)<br/>
+<kbd>[17:28:18]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, Why does your reader class depend on TreeCPD<br/>
+<kbd>[17:29:05]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, I can use the object of TreeCPD class to fill the parsed data.<br/>
+<kbd>[17:29:37]</kbd> <code>&lt;ankurankan&gt;</code> I had earlier told you not to make the reader or writer class dependent on anything<br/>
+<kbd>[17:29:49]</kbd> <code>&lt;ankurankan&gt;</code> Just parse the data and keep it in the object<br/>
+<kbd>[17:30:06]</kbd> <code>&lt;ankurankan&gt;</code> Don't try to create any other objects from the reader class<br/>
+<kbd>[17:30:39]</kbd> <code>&lt;ankurankan&gt;</code> We will add the functionality to create the object in that object's class only<br/>
+<kbd>[17:31:01]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, I think then I will have to make a tree of my own for representing cpd's<br/>
+<kbd>[17:31:12]</kbd> <code>&lt;jaspreet&gt;</code> in the reader class<br/>
+<kbd>[17:32:10]</kbd> <code>&lt;ankurankan&gt;</code> Could you explain why you need this?<br/>
+<kbd>[17:33:41]</kbd> <code>&lt;ankurankan&gt;</code> If you need to store the cpd, simple have an attribute of the reader class and store the cpd there<br/>
+<kbd>[17:33:45]</kbd> <code>&lt;jaspreet&gt;</code> For containing this part of the file - http://pastebin.com/nG9Z9nbj<br/>
+<kbd>[17:33:59]</kbd> <code>&lt;ankurankan&gt;</code> as a numpy array maybe<br/>
+<kbd>[17:36:26]</kbd> <code>&lt;jaspreet&gt;</code> actually, I tried using numpy array but the thing is that the file has a tree type representation of the variable cpd's. Let me give an example.<br/>
+<kbd>[17:36:28]</kbd> <code>&lt;ankurankan&gt;</code> You could have a dag attribute of the reader class and then store everything in a nested dict.<br/>
+<kbd>[17:37:10]</kbd> <code>&lt;ankurankan&gt;</code> The thing is that I don't want you to process the values that you are reader from the value just store them.<br/>
+<kbd>[17:37:26]</kbd> <code>&lt;ankurankan&gt;</code> You just need to create proper structures for storing them<br/>
+<kbd>[17:37:32]</kbd> <code>&lt;ankurankan&gt;</code> You getting what I mean?<br/>
+<kbd>[17:39:22]</kbd> <code>&lt;jaspreet&gt;</code> I am getting it. But just one thing. how is a nested dict better than a tree representation in the first place itself?<br/>
+<kbd>[17:40:36]</kbd> <code>&lt;ankurankan&gt;</code> What structure would you be using for tree representation?<br/>
+<kbd>[17:41:29]</kbd> <code>&lt;ankurankan&gt;</code> You could use dict to represent trees<br/>
+<kbd>[17:41:54]</kbd> <code>&lt;jaspreet&gt;</code> Very similar to the one in the TreeCPD but it will have dicts rather than tuples in the form of nodes.<br/>
+<kbd>[17:43:58]</kbd> <code>&lt;jaspreet&gt;</code> Ok. I get it. I will use nested dicts instead. One of the reasons maybe that we have to deal with variables where we are not sure of the number of edges extending form each node. And hence a predefined format of a tree will not work.<br/>
+<kbd>[17:44:10]</kbd> <code>&lt;jaspreet&gt;</code> Am I right to some extent?<br/>
+<kbd>[17:44:46]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, ^<br/>
+<kbd>[17:44:56]</kbd> <code>&lt;ankurankan&gt;</code> Yeah..<br/>
+<kbd>[17:45:39]</kbd> <code>&lt;ankurankan&gt;</code> So, how much time do you think you will need to implement this?<br/>
+<kbd>[17:46:52]</kbd> <code>&lt;jaspreet&gt;</code> should not take long. It is the last attribute of the reader class.<br/>
+<kbd>[17:47:19]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, I will complete the blogs with this work by tuesday.<br/>
+<kbd>[17:47:41]</kbd> <code>&lt;jaspreet&gt;</code> and get back to you about the writer class<br/>
+<kbd>[17:48:19]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. And what have you been doing the previous weeks?<br/>
+<kbd>[17:49:25]</kbd> <code>&lt;ankurankan&gt;</code> I guess you are lagging behind your proposed schedule<br/>
+<kbd>[17:49:48]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, yeah. I will try to catch up this week I guess.<br/>
+<kbd>[17:50:43]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, plus I had my doubts solved so I will be on my toes this week.<br/>
+<kbd>[17:55:11]</kbd> <code>&lt;ankurankan&gt;</code> Sorry, I got disconnected<br/>
+<kbd>[17:57:33]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, I will try to address my problems in time.<br/>
+<kbd>[17:57:39]</kbd> <code>&lt;jaspreet&gt;</code> from now.<br/>
+<kbd>[17:58:17]</kbd> <code>&lt;ankurankan&gt;</code> I will need more regular reports from you now.<br/>
+<kbd>[17:58:42]</kbd> <code>&lt;ankurankan&gt;</code> So, you are going to complete the reader class this Tuesday. Right?<br/>
+<kbd>[17:58:49]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, will try my best to follow that in the following weeks.<br/>
+<kbd>[17:58:57]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, yes.<br/>
+<kbd>[17:59:54]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. Then we will have a meeting with you on Tuesday.<br/>
+<kbd>[18:00:08]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, ok.<br/>
+<kbd>[18:00:25]</kbd> <code>&lt;ankurankan&gt;</code> Okay then..<br/>
+<kbd>[18:00:30]</kbd> <code>&lt;ankurankan&gt;</code> Anything else for now ?<br/>
+<kbd>[18:00:46]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, done for me.<br/>
+<kbd>[18:00:56]</kbd> <code>&lt;ankurankan&gt;</code> And why don't you send a PR of whatever you have done till now ?<br/>
+<kbd>[18:01:02]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: I got disconnected then. You were explaining the reason why python is slow.<br/>
+<kbd>[18:01:33]</kbd> <code>&lt;navinchandak&gt;</code> I tried to see the logs to see what you said after that , but the logs are not available now. (The page is not opening)<br/>
+<kbd>[18:02:31]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Hey, its getting late. Maybe we could discuss more on this tomorrow.<br/>
+<kbd>[18:02:32]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, sure. I will send a p.r. as soon as I complete the nested dicts thing. That will be definitely before tuesday.<br/>
+<kbd>[18:02:42]</kbd> <code>&lt;abinash_panda&gt;</code> You can search it over internet also.<br/>
+<kbd>[18:03:19]</kbd> <code>&lt;ankurankan&gt;</code> I would suggest you to send it right now since I will also need time to review the code.<br/>
+<kbd>[18:03:40]</kbd> <code>&lt;navinchandak&gt;</code> okay fine! sure!<br/>
+<kbd>[18:05:04]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, ok. The work will not include the DD type of the parameter tag. Please let me evaluate my code for PEP8 before sending one.<br/>
+<kbd>[18:05:06]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, You can access the logs now<br/>
+<kbd>[18:05:55]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[18:06:10]</kbd> <code>&lt;navinchandak&gt;</code> yeah. fine.<br/>
+<kbd>[18:07:04]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, Anything else?<br/>
+<kbd>[18:07:38]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, not for now.<br/>
+<kbd>[18:08:26]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, the next meeting will be at the same time tuesday, right?<br/>
+<kbd>[18:08:53]</kbd> <code>&lt;ankurankan&gt;</code> Yeah most probably. I will create a calendar event for that.<br/>
+<kbd>[18:09:01]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, ok.<br/>
+<kbd>[18:11:15]</kbd> <code>&lt;ankurankan&gt;</code> jaspreet, navinchandak , Do you guys know someone who might be interested in contributing to pgmpy_viz?<br/>
+<kbd>[18:11:30]</kbd> <code>&lt;ankurankan&gt;</code> Someone who has experience in javascript?<br/>
+<kbd>[18:12:00]</kbd> <code>&lt;navinchandak&gt;</code> umm.. I can ask some of my college friends to see if they are interested<br/>
+<kbd>[18:12:26]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, some of my friends do have, I'll ask if they are interested<br/>
+<kbd>[18:12:59]</kbd> <code>&lt;ankurankan&gt;</code> Thanks a lot. We really need to develop pgmpy_viz to get some users for pgmpy.<br/>
+<kbd>[18:13:25]</kbd> <code>&lt;navinchandak&gt;</code> I'll get back to you about this in some time.<br/>
+<kbd>[18:13:35]</kbd> <code>&lt;ankurankan&gt;</code> If someone is interested please do connect them with us<br/>
+<kbd>[18:13:48]</kbd> <code>&lt;jaspreet&gt;</code> ankurankan, sure.<br/>
+<kbd>[18:14:15]</kbd> <code>&lt;ankurankan&gt;</code> Okay then..  Bye.. Gn..<br/>
+<kbd>[18:14:42]</kbd> <code>&lt;jaspreet&gt;</code> bye everyone!<br/>
+<kbd>[04:59:37]</kbd> <strong>[disconnected at Mon Jun 16 04:59:37 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>
