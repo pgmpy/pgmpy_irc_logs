@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 02-06-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 02-06-2015 </h3><br/><br/>
+                <br/>
+<kbd>[05:59:07]</kbd> <strong>[connected at Tue Jun  2 05:59:07 2015]</strong><br/>
+<kbd>[05:59:14]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[06:00:03]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, You can add that code also to parse the property<br/>
+<kbd>[06:00:29]</kbd> <code>&lt;ankurankan&gt;</code> And save it as an attribute of the model when creating the model<br/>
+<kbd>[06:01:38]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Can you link me to the code in Bayesian model where it takes property ?<br/>
+<kbd>[06:02:03]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, There is no code right now for that<br/>
+<kbd>[06:02:25]</kbd> <code>&lt;ankurankan&gt;</code> But you can add some code in the Reader class that parses the property<br/>
+<kbd>[06:02:45]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: the code in reader class for parsing the property is already present.<br/>
+<kbd>[06:03:23]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I want to know how to add the property tag in writer class if i don't know the property values from Bayesian model<br/>
+<kbd>[06:03:39]</kbd> <code>&lt;vivekjain&gt;</code> For now i have added it as a TODO for later stage.<br/>
+<kbd>[06:04:11]</kbd> <code>&lt;vivekjain&gt;</code> And also for the outcome i have used https://github.com/pgmpy/pgmpy/pull/401/files#diff-50d4fa4f86d800203bafe1c09d6b901aR365<br/>
+<kbd>[06:04:20]</kbd> <code>&lt;vivekjain&gt;</code> above^<br/>
+<kbd>[06:04:37]</kbd> <code>&lt;ankurankan&gt;</code> Since each node has a dict associated with it, the user can simply do model[node][property_name] = value to add a property for some node.<br/>
+<kbd>[06:04:39]</kbd> <code>&lt;vivekjain&gt;</code> since i cannot get true or false from the bayesian model instance<br/>
+<kbd>[06:06:10]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, That's okay.. I need to make some changes for state names. Till then its fine<br/>
+<kbd>[06:06:26]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Ok i will write the code to add property tag but there will be no way to test it .<br/>
+<kbd>[06:07:18]</kbd> <code>&lt;ankurankan&gt;</code> Yes you can test it.. You will be able to access the properties from the model<br/>
+<kbd>[06:09:40]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I din't got you.<br/>
+<kbd>[06:09:46]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, I will make some changes in the reader class for property parsing.. Have a look at that and you will understand it better<br/>
+<kbd>[06:09:49]</kbd> <code>&lt;ankurankan&gt;</code> Give me 2 mins<br/>
+<kbd>[06:10:01]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: ok thanks<br/>
+<kbd>[06:17:34]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Have a look at this PR: https://github.com/pgmpy/pgmpy/pull/403/files<br/>
+<kbd>[06:18:12]</kbd> <code>&lt;ankurankan&gt;</code> And in line 182, I am adding properties to each node of the model.<br/>
+<kbd>[06:18:44]</kbd> <code>&lt;ankurankan&gt;</code> And since all the properties are added to a dict, you can easily read it or modify it..<br/>
+<kbd>[06:19:25]</kbd> <code>&lt;ankurankan&gt;</code> In the tests you will just need to compare these values with what was in the actual file.<br/>
+<kbd>[06:22:46]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: ok thanks.<br/>
+<kbd>[06:23:02]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Also https://github.com/pgmpy/pgmpy/pull/403/files#diff-23bd7c079f9bb86b93ace0a15a2bc20cR179<br/>
+<kbd>[06:23:16]</kbd> <code>&lt;vivekjain&gt;</code> i think it should be self.variable_property.items()<br/>
+<kbd>[06:23:56]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, yes.. My bad<br/>
+<kbd>[06:25:13]</kbd> <code>&lt;ankurankan&gt;</code> Fixed now<br/>
+<kbd>[06:57:09]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Also please add a few tests for `get_model` method of reader class<br/>
+<kbd>[06:58:25]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: ok ,<br/>
+<kbd>[06:28:33]</kbd> <strong>[disconnected at Thu Jun  4 06:28:33 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

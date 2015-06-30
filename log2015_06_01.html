@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 01-06-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 01-06-2015 </h3><br/><br/>
+                <br/>
+<kbd>[08:13:24]</kbd> <strong>[connected at Mon Jun  1 08:13:24 2015]</strong><br/>
+<kbd>[08:13:31]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[08:13:42]</kbd> <code>&lt;kislay&gt;</code> I had a chat with OpenGM devs<br/>
+<kbd>[08:13:48]</kbd> <code>&lt;abinash&gt;</code> Okay.<br/>
+<kbd>[08:13:54]</kbd> <code>&lt;abinash&gt;</code> What they said?<br/>
+<kbd>[08:13:59]</kbd> <code>&lt;kislay&gt;</code> Their script is broken :(<br/>
+<kbd>[08:14:04]</kbd> <code>&lt;kislay&gt;</code> They admitted it<br/>
+<kbd>[08:14:17]</kbd> <code>&lt;abinash&gt;</code> okay<br/>
+<kbd>[08:14:21]</kbd> <code>&lt;kislay&gt;</code> Told me few thing to do so that I could fix it<br/>
+<kbd>[08:14:33]</kbd> <code>&lt;kislay&gt;</code> it will take them 2 weeks to get it correct<br/>
+<kbd>[08:14:39]</kbd> <code>&lt;abinash&gt;</code> So with the fixes, is the script working now?<br/>
+<kbd>[08:15:01]</kbd> <code>&lt;kislay&gt;</code> I received his last reply yesterday night. I haven't tried it yet.<br/>
+<kbd>[08:15:10]</kbd> <code>&lt;kislay&gt;</code> I am using MPLP independently<br/>
+<kbd>[08:15:13]</kbd> <code>&lt;kislay&gt;</code> for now<br/>
+<kbd>[08:15:55]</kbd> <code>&lt;kislay&gt;</code> Hmm...Are you clear on what a MPLP is ..?<br/>
+<kbd>[08:16:02]</kbd> <code>&lt;abinash&gt;</code> Okay. So do you still require to go through the OpenGM implementation.<br/>
+<kbd>[08:17:35]</kbd> <code>&lt;abinash&gt;</code> No. Not yet. Didn't get time to go through it.<br/>
+<kbd>[08:17:49]</kbd> <code>&lt;abinash&gt;</code> We can discuss about it by tomorrow or in another day.<br/>
+<kbd>[08:18:08]</kbd> <code>&lt;abinash&gt;</code> If you have any doubts apart from the theoretical part we can still discuss now.<br/>
+<kbd>[08:19:17]</kbd> <code>&lt;kislay&gt;</code> I don't think will need OPenGM...<br/>
+<kbd>[08:19:17]</kbd> <code>&lt;kislay&gt;</code> But if I can run OpenGM with MPLP, it will help me understand what are the requirements needed to use it from an external software<br/>
+<kbd>[08:19:17]</kbd> <code>&lt;kislay&gt;</code> Other than that, If I can figure that out myself....then it won;t be a problem.<br/>
+<kbd>[08:20:51]</kbd> <code>&lt;kislay&gt;</code> MPLP is basically a variant of message passing belief propogation algortihms which doesn't need any LP_Solver like CPLEX ...<br/>
+<kbd>[08:21:27]</kbd> <code>&lt;abinash&gt;</code> Okay<br/>
+<kbd>[08:21:31]</kbd> <code>&lt;kislay&gt;</code> on the other hand we need CPLEX for one iteration if we were to implement Cutting Plane<br/>
+<kbd>[08:21:43]</kbd> <code>&lt;kislay&gt;</code> So MPLP is quite cutting edge!<br/>
+<kbd>[08:22:01]</kbd> <code>&lt;abinash&gt;</code> Okay<br/>
+<kbd>[08:23:46]</kbd> <code>&lt;kislay&gt;</code> There ton's of theory out there. Do read it sometime. You will have much better insights than me!<br/>
+<kbd>[08:25:56]</kbd> <code>&lt;kislay&gt;</code> abinash: right now I am working on understanding the cpp code of Sontag which implements three research papers together<br/>
+<kbd>[08:26:33]</kbd> <code>&lt;kislay&gt;</code> So hopefully, I will be done by tomorrow. After that, I will have to write code in python.<br/>
+<kbd>[08:26:59]</kbd> <code>&lt;abinash&gt;</code> kislay: Thats great.<br/>
+<kbd>[08:27:27]</kbd> <code>&lt;abinash&gt;</code> Before you start writing the Python code, I would suggest you to discuss the infrastructure.<br/>
+<kbd>[08:27:35]</kbd> <code>&lt;kislay&gt;</code> yeah!<br/>
+<kbd>[08:27:38]</kbd> <code>&lt;kislay&gt;</code> sure will do<br/>
+<kbd>[08:28:04]</kbd> <code>&lt;abinash&gt;</code> In which module you want to place the code. What should be API style and all these stuffs. Create a doc and share with me and Jaidev<br/>
+<kbd>[08:28:13]</kbd> <code>&lt;abinash&gt;</code> In fact, share with all the mentors<br/>
+<kbd>[08:28:24]</kbd> <code>&lt;kislay&gt;</code> yes<br/>
+<kbd>[08:28:35]</kbd> <code>&lt;kislay&gt;</code> I will share it before starting<br/>
+<kbd>[08:28:59]</kbd> <code>&lt;abinash&gt;</code> and don't submit a huge PR at once.<br/>
+<kbd>[08:29:11]</kbd> <code>&lt;kislay&gt;</code> okay.<br/>
+<kbd>[08:29:26]</kbd> <code>&lt;abinash&gt;</code> It would be better if you implement the code in very modular format. Implement smaller part and keep sending the PR<br/>
+<kbd>[08:29:51]</kbd> <code>&lt;kislay&gt;</code> modular means in the form of classes?<br/>
+<kbd>[08:29:55]</kbd> <code>&lt;abinash&gt;</code> and don't worry till its reviewed. You can simultaneously keep working on the newer parts<br/>
+<kbd>[08:30:07]</kbd> <code>&lt;kislay&gt;</code> yup.<br/>
+<kbd>[08:30:32]</kbd> <code>&lt;abinash&gt;</code> Modular means not only in the form of classes but modular in general. Try breaking up larger functions into smaller components<br/>
+<kbd>[08:30:40]</kbd> <code>&lt;kislay&gt;</code> ah!<br/>
+<kbd>[08:30:41]</kbd> <code>&lt;kislay&gt;</code> yeah.<br/>
+<kbd>[08:30:44]</kbd> <code>&lt;abinash&gt;</code> It would help you to find bottleneck easily as well.<br/>
+<kbd>[15:13:48]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Hi<br/>
+<kbd>[15:14:01]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Hi<br/>
+<kbd>[15:15:24]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: If i am given a Bayesian model, how will i get the values of outcomes. I need the value of outcome to writing in the XMLBIF format . https://github.com/pgmpy/pgmpy/pull/401/files#diff-50d4fa4f86d800203bafe1c09d6b901aR389<br/>
+<kbd>[15:16:10]</kbd> <code>&lt;vivekjain&gt;</code> and also property https://github.com/pgmpy/pgmpy/pull/401/files#diff-50d4fa4f86d800203bafe1c09d6b901aR364<br/>
+<kbd>[15:47:53]</kbd> <code>&lt;ankurankan&gt;</code> Have a look at the Bayesian Model class<br/>
+<kbd>[15:48:03]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, You can use methods like nodes(), get_cpds() etc.. to get all the attributes of the model<br/>
+<kbd>[15:48:10]</kbd> <code>&lt;ankurankan&gt;</code> For properties you can actually read it from the node's properties. Since we use networkx for the model's graph structure, and networkx internally represents the nodes as a dictionary and you can store extra properties in that dict.<br/>
+<kbd>[15:48:16]</kbd> <code>&lt;ankurankan&gt;</code> And while writing a model you can check if there are any properties in those dicts.<br/>
+<kbd>[15:48:23]</kbd> <code>&lt;ankurankan&gt;</code> Play a bit with networkx and you should be able to understand the structure quickly.<br/>
+<kbd>[15:51:54]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: ok. i will try to send a pr by tomorrow for the method.<br/>
+<kbd>[15:53:01]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Great..<br/>
+<kbd>[16:29:22]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan: hi<br/>
+<kbd>[16:30:01]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Hi<br/>
+<kbd>[16:31:44]</kbd> <code>&lt;palashahuja&gt;</code> I need to make some changes in the factor module(both factor and CPD). Currently I am using named tuples(itertools) for the edges representation.<br/>
+<kbd>[16:32:33]</kbd> <code>&lt;ankurankan&gt;</code> What changes?<br/>
+<kbd>[16:33:34]</kbd> <code>&lt;palashahuja&gt;</code> Small changes. Nothing significant. Factor :-> self.variables[variable] instead of self.variables[str(variable)]<br/>
+<kbd>[16:34:04]</kbd> <code>&lt;palashahuja&gt;</code> *namedtuples(collections)<br/>
+<kbd>[16:35:17]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Okay.. I think there is an issue for that also.. I will try to fix both this and the state representation by tomorrow morning<br/>
+<kbd>[16:36:53]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, I have already fixed the issue for the representation<br/>
+<kbd>[16:37:10]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja,  You mean state representation?<br/>
+<kbd>[16:37:13]</kbd> <code>&lt;palashahuja&gt;</code> Yes<br/>
+<kbd>[16:37:22]</kbd> <code>&lt;ankurankan&gt;</code> Can you please send a PR for that?<br/>
+<kbd>[16:38:10]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, I am almost done with the unrolling of the network. I am still left with the documentation.<br/>
+<kbd>[16:39:03]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Still send a PR.. We will also need some time to review the code.<br/>
+<kbd>[16:39:07]</kbd> <code>&lt;palashahuja&gt;</code> But I am still operating under the assumption that the edges are added strictly in the 0th and 1st timeslice.<br/>
+<kbd>[16:39:51]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Okay.. Will work for now.<br/>
+<kbd>[16:40:17]</kbd> <code>&lt;palashahuja&gt;</code> Did you see the doc that I send you?<br/>
+<kbd>[16:40:56]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, No.. DIdn't get time.. Will have a look at it today<br/>
+<kbd>[16:42:36]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, What will you be working on next week?<br/>
+<kbd>[16:43:17]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, I am planning the hidden markov model representation.<br/>
+<kbd>[16:45:34]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Okay.. Till when do you think you will be able to send a PR for DBN?<br/>
+<kbd>[16:46:33]</kbd> <code>&lt;palashahuja&gt;</code> By tomorrow I guess, I still have minor bugs to fix and refactor also.<br/>
+<kbd>[16:47:16]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Okay.. Cool..<br/>
+<kbd>[16:47:50]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, You have almost completed the writer class for XMLBIF<br/>
+<kbd>[16:48:12]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, How much time do you think you will need to complete this?<br/>
+<kbd>[16:48:32]</kbd> <code>&lt;ankurankan&gt;</code> And what will you start to work on after that?<br/>
+<kbd>[16:49:32]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I will complete it by tuesday<br/>
+<kbd>[16:49:48]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: After that will work on ProbModelXML<br/>
+<kbd>[16:50:51]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. Cool..<br/>
+<kbd>[16:50:58]</kbd> <code>&lt;ankurankan&gt;</code> I think you will need to change it completely<br/>
+<kbd>[16:51:29]</kbd> <code>&lt;ankurankan&gt;</code> Let's first finish with ProbModel, then we can discuss for ProbModelXML<br/>
+<kbd>[16:51:50]</kbd> <code>&lt;ankurankan&gt;</code> *Let's first finish with XMLBIF, then we can discuss for ProbModelXML<br/>
+<kbd>[16:52:13]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Ok<br/>
+<kbd>[16:53:16]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Anything else for today?<br/>
+<kbd>[16:55:02]</kbd> <code>&lt;ankurankan&gt;</code> Anything else we need to discuss today?<br/>
+<kbd>[05:59:07]</kbd> <strong>[disconnected at Tue Jun  2 05:59:07 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

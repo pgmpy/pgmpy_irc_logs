@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 14-06-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 14-06-2014 </h3><br/><br/>
+                <br/>
+<kbd>[17:37:57]</kbd> <strong>[connected at Sat Jun 14 17:37:57 2014]</strong><br/>
+<kbd>[17:38:12]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[17:38:15]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: there?<br/>
+<kbd>[17:47:21]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, Hi<br/>
+<kbd>[17:47:32]</kbd> <code>&lt;navinchandak&gt;</code> Hi<br/>
+<kbd>[17:47:47]</kbd> <code>&lt;ankurankan&gt;</code> So, how was your week?<br/>
+<kbd>[17:48:23]</kbd> <code>&lt;navinchandak&gt;</code> ankurankan: Sorry sorry! I had (mistakenly) assumed that the chat would be at 11:00<br/>
+<kbd>[17:48:38]</kbd> <code>&lt;navinchandak&gt;</code> I sent a mail to you before a few minutes explaining that.<br/>
+<kbd>[17:48:53]</kbd> <code>&lt;ankurankan&gt;</code> navinchandak, No problem. Even my internet wasn't working at that time  :P<br/>
+<kbd>[17:49:22]</kbd> <code>&lt;navinchandak&gt;</code> Oh, great..! :)<br/>
+<kbd>[17:49:44]</kbd> <code>&lt;ankurankan&gt;</code> And I wasn't able to reply to all your mails but I will make sure that I do by tomorrow.<br/>
+<kbd>[17:50:03]</kbd> <code>&lt;navinchandak&gt;</code> My week was good. I wrote a lot of test_cases this week (Oh, writing test cases is so boring)<br/>
+<kbd>[17:50:22]</kbd> <code>&lt;ankurankan&gt;</code> Yeah its boring but worth it.<br/>
+<kbd>[17:50:31]</kbd> <code>&lt;navinchandak&gt;</code> And I advanced quite a lot on the message passing. That is almost done. (That was the work of this week as per the timeline)<br/>
+<kbd>[17:50:36]</kbd> <code>&lt;ankurankan&gt;</code> It really helps in finding bugs when the code base grows<br/>
+<kbd>[17:50:48]</kbd> <code>&lt;ankurankan&gt;</code> okay.. Great.<br/>
+<kbd>[17:51:31]</kbd> <code>&lt;ankurankan&gt;</code> Also I haven't seen your pull request till now.<br/>
+<kbd>[17:51:39]</kbd> <code>&lt;navinchandak&gt;</code> Yes, I can understand that it is important !<br/>
+<kbd>[17:51:47]</kbd> <code>&lt;navinchandak&gt;</code> Okay.<br/>
+<kbd>[17:51:51]</kbd> <code>&lt;ankurankan&gt;</code> I will comment on it tomorrow if I find something<br/>
+<kbd>[17:52:16]</kbd> <code>&lt;navinchandak&gt;</code> Okay. I am sure that you will find quite a lot , given that it is the first decent commit.<br/>
+<kbd>[17:52:44]</kbd> <code>&lt;ankurankan&gt;</code> So, what are your plans for the next week.<br/>
+<kbd>[17:52:44]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[17:53:00]</kbd> <code>&lt;navinchandak&gt;</code> However, I have handled most of the PEP error, blah blah and test cases etc<br/>
+<kbd>[17:53:09]</kbd> <code>&lt;navinchandak&gt;</code> So shouldn't be a problem there.<br/>
+<kbd>[17:53:15]</kbd> <code>&lt;ankurankan&gt;</code> Cool.<br/>
+<kbd>[17:53:26]</kbd> <code>&lt;ankurankan&gt;</code> You are using pylint or pep8 ?<br/>
+<kbd>[17:53:51]</kbd> <code>&lt;navinchandak&gt;</code> I will complete the message passing(by tomorrow morning hopefully)<br/>
+<kbd>[17:54:20]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:54:30]</kbd> <code>&lt;navinchandak&gt;</code> And then work on finding the MAP assignments.<br/>
+<kbd>[17:54:38]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Hi !<br/>
+<kbd>[17:54:50]</kbd> <code>&lt;navinchandak&gt;</code> So which all inference things will be useful?<br/>
+<kbd>[17:55:03]</kbd> <code>&lt;navinchandak&gt;</code> 1. Finding the MAP assignment using junction tree<br/>
+<kbd>[17:55:13]</kbd> <code>&lt;navinchandak&gt;</code> 2. Finding marginal probabilities<br/>
+<kbd>[17:55:29]</kbd> <code>&lt;navinchandak&gt;</code> 3. Finding the normalization constant<br/>
+<kbd>[17:55:38]</kbd> <code>&lt;navinchandak&gt;</code> What else can be done with junction trees?<br/>
+<kbd>[17:55:44]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Hi.<br/>
+<kbd>[17:56:09]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: So whats your progress status?<br/>
+<kbd>[17:56:30]</kbd> <code>&lt;navinchandak&gt;</code> And sorry for the delay. I had (mistakenly) assumed that the chat would be at 11:00<br/>
+<kbd>[17:57:03]</kbd> <code>&lt;abinash_panda&gt;</code> I have noticed that you have deleted your repo from which you had send the PR.<br/>
+<kbd>[17:57:08]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Almost done with this week's goal. However, haven't pushed the intermediate work because that would interfere with the pull request.<br/>
+<kbd>[17:57:13]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: So, you have any problem with git? Do you want any tutorial for it?<br/>
+<kbd>[17:57:31]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: No. I don't think so. git is fine.<br/>
+<kbd>[17:58:06]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: I had deleted the repo so that I could push things with good commit names, blah blah<br/>
+<kbd>[17:58:55]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: You should not do that. Deleting a repo is not a good thing.<br/>
+<kbd>[17:59:00]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Earlier the number of commits and commit names were non-explanatory. Have fixed that (hope so that they are sensible enough this time) with the new repo.<br/>
+<kbd>[17:59:04]</kbd> <code>&lt;abinash_panda&gt;</code> You can follow the tutorial https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CB0QFjAA&url=http%3A%2F%2Fgit-scm.com%2Fbook&ei=K42cU4-sE9eXuAS4_IDADA&usg=AFQjCNEXr-xuUYq9AkzT8izhhv6ot1YCrA<br/>
+<kbd>[17:59:22]</kbd> <code>&lt;abinash_panda&gt;</code> sorry, the url is git-scm.com/book<br/>
+<kbd>[17:59:44]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: hmm. okay fine. I don't think I will have to delete the repo anytime further.<br/>
+<kbd>[18:00:13]</kbd> <code>&lt;abinash_panda&gt;</code> You always have an option of ammending your commit messages. So, please don't delete the repo next time. As now it shows a PR from an unknown repo<br/>
+<kbd>[18:00:45]</kbd> <code>&lt;abinash_panda&gt;</code> also don't close the PR until its merged. Having all the comments in the same PR helps in resolving the issue faster and better<br/>
+<kbd>[18:01:24]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Yes, I understand. I had noted down all the comments in the previous PR before deleting the old repo. So I have fixed all the issues which were mentioned in the comments.<br/>
+<kbd>[18:04:03]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Okay. Fine.<br/>
+<kbd>[18:04:08]</kbd> <code>&lt;navinchandak&gt;</code> What about the junction tree algorithms. ankurankan and abinash_panda ?<br/>
+<kbd>[18:04:20]</kbd> <code>&lt;navinchandak&gt;</code> Which all things are to be done?<br/>
+<kbd>[18:04:21]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: What about your blog? Can you send the links<br/>
+<kbd>[18:04:57]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Sorry, I am unable to understand your question.<br/>
+<kbd>[18:05:47]</kbd> <code>&lt;navinchandak&gt;</code> So we can do a lot with junction trees. I was asking that what should I implement apart from  the following.<br/>
+<kbd>[18:05:48]</kbd> <code>&lt;navinchandak&gt;</code> 1. Finding the MAP assignment using junction tree<br/>
+<kbd>[18:05:55]</kbd> <code>&lt;navinchandak&gt;</code> 2. Finding marginal probabilities<br/>
+<kbd>[18:06:02]</kbd> <code>&lt;navinchandak&gt;</code> 3. Finding the normalization constant<br/>
+<kbd>[18:07:43]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Okay.<br/>
+<kbd>[18:08:05]</kbd> <code>&lt;navinchandak&gt;</code> I will write one soon enough and send you the links. (blog)<br/>
+<kbd>[18:08:30]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: So, have you implemented these<br/>
+<kbd>[18:09:24]</kbd> <code>&lt;navinchandak&gt;</code> No. I have implemented the message passing framework. And finding the normalization constant is almost done (will take only a few hours more)<br/>
+<kbd>[18:10:02]</kbd> <code>&lt;navinchandak&gt;</code> I have not done the marginal probability and MAP assignment yet. But they are extensions of the above and will not take much time.<br/>
+<kbd>[18:10:18]</kbd> <code>&lt;navinchandak&gt;</code> (btw, this is in the timeline for the next week. So I am doing okay on the schedule as such)<br/>
+<kbd>[18:11:48]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah, I have seen your application. Currently, you should focus on finding the MAP assignment and marginal probabilities using junction trees<br/>
+<kbd>[18:12:50]</kbd> <code>&lt;navinchandak&gt;</code> Okay. Fine.<br/>
+<kbd>[18:13:28]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: So, did you find any thing regarding refactoring using PyCharm or should I send a link?<br/>
+<kbd>[18:14:11]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: I do use refactoring very significantly on PyCharm. But that is for changing function names, changing variables inside the functions and so on.<br/>
+<kbd>[18:14:43]</kbd> <code>&lt;navinchandak&gt;</code> However, I didn't find any refactoring feature as you had said.<br/>
+<kbd>[18:14:52]</kbd> <code>&lt;abinash_panda&gt;</code> Okay, so could find more in www.jetbrains.com/pycharm/webhelp/refactoring-source-code.html<br/>
+<kbd>[18:15:06]</kbd> <code>&lt;navinchandak&gt;</code> Okay fine. I will take a look.<br/>
+<kbd>[18:18:03]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Have you done some benchmarking for your implementation with some other library?<br/>
+<kbd>[18:18:57]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: I have seen you mail on Optimal triangulation technique. Give me a day, I would give my thoughts about it.<br/>
+<kbd>[18:19:08]</kbd> <code>&lt;navinchandak&gt;</code> Which library can I use for benchmarking?<br/>
+<kbd>[18:19:19]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: umm. No. Once the junction trees is done, I can benchmark it with one of the existing libraries.<br/>
+<kbd>[18:19:38]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Okay.<br/>
+<kbd>[18:27:24]</kbd> <code>&lt;navinchandak&gt;</code> abinash_panda: Anything else for now?<br/>
+<kbd>[18:31:31]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: For now, submit the PR and then we can discuss.<br/>
+<kbd>[18:31:36]</kbd> <code>&lt;abinash_panda&gt;</code> Remember to<br/>
+<kbd>[18:31:49]</kbd> <code>&lt;abinash_panda&gt;</code> * write __good__ commit messages<br/>
+<kbd>[18:31:55]</kbd> <code>&lt;abinash_panda&gt;</code> * write __good__ documentation<br/>
+<kbd>[18:32:20]</kbd> <code>&lt;abinash_panda&gt;</code> * stick the particular naming convention<br/>
+<kbd>[18:32:32]</kbd> <code>&lt;abinash_panda&gt;</code> * most importantly follow PEP8<br/>
+<kbd>[18:32:35]</kbd> <code>&lt;navinchandak&gt;</code> I have submitted the PR of upto Week3 already. Is there any way that I push to my repo and not affect the existing PR?<br/>
+<kbd>[18:32:57]</kbd> <code>&lt;navinchandak&gt;</code> Because if I push anything, then that also gets added to the PR.<br/>
+<kbd>[18:32:59]</kbd> <code>&lt;navinchandak&gt;</code> Because of that, I cannot push any changes now.<br/>
+<kbd>[18:33:07]</kbd> <code>&lt;navinchandak&gt;</code> Yes, I will remember all of that.<br/>
+<kbd>[18:33:10]</kbd> <code>&lt;abinash_panda&gt;</code> As you have deleted the repo, this PR is use less.<br/>
+<kbd>[18:33:18]</kbd> <code>&lt;abinash_panda&gt;</code> Anyways, we have to close it.<br/>
+<kbd>[18:33:35]</kbd> <code>&lt;abinash_panda&gt;</code> So, start with a new PR.<br/>
+<kbd>[18:34:07]</kbd> <code>&lt;abinash_panda&gt;</code> and when you had sent a PR and you want to work on some thing new<br/>
+<kbd>[18:34:18]</kbd> <code>&lt;abinash_panda&gt;</code> I suggest that you go for a new branch<br/>
+<kbd>[18:34:23]</kbd> <code>&lt;abinash_panda&gt;</code> for example:<br/>
+<kbd>[18:34:27]</kbd> <code>&lt;abinash_panda&gt;</code> git checkout -b new_feature<br/>
+<kbd>[18:34:46]</kbd> <code>&lt;abinash_panda&gt;</code> work on the new_feature branch and push all your changes over there.<br/>
+<kbd>[18:35:18]</kbd> <code>&lt;abinash_panda&gt;</code> and once your PR of dev branched is merge, you can merge new_feature branch with the dev branch<br/>
+<kbd>[18:35:23]</kbd> <code>&lt;abinash_panda&gt;</code> get checkout dev<br/>
+<kbd>[18:35:30]</kbd> <code>&lt;abinash_panda&gt;</code> git merge new_feature<br/>
+<kbd>[18:35:43]</kbd> <code>&lt;abinash_panda&gt;</code> and then send a PR from the dev branch again.<br/>
+<kbd>[18:39:36]</kbd> <code>&lt;navinchandak&gt;</code> \msg nickserv identify 821822<br/>
+<kbd>[18:40:07]</kbd> <code>&lt;navinchandak&gt;</code> I had sent a new PR from the new repo.<br/>
+<kbd>[18:40:28]</kbd> <code>&lt;navinchandak&gt;</code> Can you see that PR?<br/>
+<kbd>[18:40:41]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Let me have a look.<br/>
+<kbd>[18:40:48]</kbd> <code>&lt;navinchandak&gt;</code> (That was PR#162)<br/>
+<kbd>[18:41:44]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[18:43:58]</kbd> <code>&lt;abinash_panda&gt;</code> This PR looks somewhat better than the earlier one :)<br/>
+<kbd>[18:44:06]</kbd> <code>&lt;abinash_panda&gt;</code> Few suggestions:<br/>
+<kbd>[18:44:23]</kbd> <code>&lt;abinash_panda&gt;</code> * I would still not suggest to go for UndirectedGraph<br/>
+<kbd>[18:44:54]</kbd> <code>&lt;abinash_panda&gt;</code> It would be just like re-inventing the wheel again. So, please try to use the methods provided with *networkx*<br/>
+<kbd>[18:45:20]</kbd> <code>&lt;navinchandak&gt;</code> But then where do I put all those functions? Whatever is there in UndirectedGraphs are not present in NetworkX<br/>
+<kbd>[18:45:40]</kbd> <code>&lt;abinash_panda&gt;</code> Maybe you can create a doc of all the methods required for you and whether they are present in networkx or not.<br/>
+<kbd>[18:45:47]</kbd> <code>&lt;navinchandak&gt;</code> So basically UndirectedGraphs are those graph stuff which were not present in networkX<br/>
+<kbd>[18:45:52]</kbd> <code>&lt;navinchandak&gt;</code> like triangulation and so on.<br/>
+<kbd>[18:46:15]</kbd> <code>&lt;navinchandak&gt;</code> No I did check. These methods were not present in networkx.<br/>
+<kbd>[18:46:28]</kbd> <code>&lt;navinchandak&gt;</code> I have removed all the functions which were present in networkx<br/>
+<kbd>[18:47:56]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Let me have a look and I will get back to you.<br/>
+<kbd>[18:48:25]</kbd> <code>&lt;abinash_panda&gt;</code> All these functions that you have implemented are compatible with general graphs (I think ;)).<br/>
+<kbd>[18:48:35]</kbd> <code>&lt;abinash_panda&gt;</code> Or are they meant specifically for PGMs.<br/>
+<kbd>[18:49:08]</kbd> <code>&lt;navinchandak&gt;</code> Yes. They are in general applicable for any graphs.<br/>
+<kbd>[18:49:18]</kbd> <code>&lt;navinchandak&gt;</code> Not exactly meant for PGMs<br/>
+<kbd>[18:50:12]</kbd> <code>&lt;abinash_panda&gt;</code> All these functions that you have implemented are compatible with general graphs (I think ;)).<br/>
+<kbd>[18:50:16]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah, so there may be functions present for them in networkx.<br/>
+<kbd>[18:51:06]</kbd> <code>&lt;abinash_panda&gt;</code> Give me a day, I would find something.<br/>
+<kbd>[18:51:12]</kbd> <code>&lt;navinchandak&gt;</code> okay fine. !<br/>
+<kbd>[18:52:16]</kbd> <code>&lt;abinash_panda&gt;</code> For example: you have written the function check_clique() in UndirectedGraph. I think there are algorithms present in networkx for it.<br/>
+<kbd>[18:52:52]</kbd> <code>&lt;abinash_panda&gt;</code> If you are unable to find the exact algorithm, then go for writing wrappers for them using the networkx methods.<br/>
+<kbd>[18:53:17]</kbd> <code>&lt;abinash_panda&gt;</code> As this library is highly optimized, so I would suggest to stick to it as much as possible ;)<br/>
+<kbd>[18:54:40]</kbd> <code>&lt;navinchandak&gt;</code> okay sure! check-clique is just a two line function. I was writing it in-code only and then wrote a wrapper for it.<br/>
+<kbd>[18:55:04]</kbd> <code>&lt;navinchandak&gt;</code> It is too simple a function and is it not fine if we just write our own thing in half-a-minute<br/>
+<kbd>[18:55:33]</kbd> <code>&lt;navinchandak&gt;</code> However, I understand that in general. its a good idea to use networkx functions than our own.<br/>
+<kbd>[18:56:08]</kbd> <code>&lt;abinash_1anda&gt;</code> Yeah, because writing something more robust is more important then writing something faster.<br/>
+<kbd>[18:56:26]</kbd> <code>&lt;abinash_1anda&gt;</code> In the long run, robust methods and class would be more helpful.<br/>
+<kbd>[18:56:46]</kbd> <code>&lt;navinchandak&gt;</code> okay. I understand.<br/>
+<kbd>[18:57:57]</kbd> <code>&lt;abinash_1anda&gt;</code> * Secondly, your build is failing. I would suggest you to have a look into it.<br/>
+<kbd>[18:58:12]</kbd> <code>&lt;navinchandak&gt;</code> build is failing, meaning?<br/>
+<kbd>[18:59:02]</kbd> <code>&lt;abinash_1anda&gt;</code> After your commit the Travis build failed.<br/>
+<kbd>[18:59:16]</kbd> <code>&lt;abinash_1anda&gt;</code> Did you run the nosetests before sending the PR<br/>
+<kbd>[19:00:20]</kbd> <code>&lt;navinchandak&gt;</code> Yes, for the modules which I had modified.<br/>
+<kbd>[19:00:33]</kbd> <em>abinash_1anda is now known as abinash_panda</em><br/>
+<kbd>[19:01:27]</kbd> <code>&lt;navinchandak&gt;</code> There are issues in XML_BeliefNetwork<br/>
+<kbd>[19:01:34]</kbd> <code>&lt;navinchandak&gt;</code> but that is not my code.<br/>
+<kbd>[19:01:58]</kbd> <code>&lt;navinchandak&gt;</code> (The tests do not run successfully for that test file.<br/>
+<kbd>[19:02:00]</kbd> <code>&lt;navinchandak&gt;</code> )<br/>
+<kbd>[19:02:09]</kbd> <code>&lt;abinash_panda&gt;</code> navinchandak: Okay.<br/>
+<kbd>[19:04:15]</kbd> <code>&lt;abinash_panda&gt;</code> Now, I am going to sleep. I would comment on the PR within a day or two.<br/>
+<kbd>[19:04:19]</kbd> <code>&lt;navinchandak&gt;</code> Okay fine.<br/>
+<kbd>[19:04:27]</kbd> <code>&lt;navinchandak&gt;</code> Sure. Thanks!<br/>
+<kbd>[19:04:31]</kbd> <code>&lt;abinash_panda&gt;</code> Currently, I am also working on my GSoC project :)<br/>
+<kbd>[19:04:46]</kbd> <code>&lt;navinchandak&gt;</code> oh. Which one?<br/>
+<kbd>[19:05:03]</kbd> <code>&lt;navinchandak&gt;</code> So you are a mentor and a GSOC student too?<br/>
+<kbd>[19:05:42]</kbd> <code>&lt;abinash_panda&gt;</code> No, I am not a mentor officially.<br/>
+<kbd>[19:05:59]</kbd> <code>&lt;navinchandak&gt;</code> Okay. I see.<br/>
+<kbd>[19:06:04]</kbd> <code>&lt;abinash_panda&gt;</code> Oficially, I am student working for **Shogun Machine Learning Toolbox**<br/>
+<kbd>[19:06:22]</kbd> <code>&lt;abinash_panda&gt;</code> pgmpy was our B.Tech Project.<br/>
+<kbd>[19:06:27]</kbd> <code>&lt;navinchandak&gt;</code> hmm. Shogun ML Toolbox did have some interesting stuff, I remember<br/>
+<kbd>[19:07:04]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah, it has the implementation of FactorGraphModel for PGMs. You can have a look at it.<br/>
+<kbd>[19:07:08]</kbd> <code>&lt;navinchandak&gt;</code> hmm.. So now, you guys are working on making it a full-fledged python library?<br/>
+<kbd>[19:07:21]</kbd> <code>&lt;navinchandak&gt;</code> Okay. I will take a look.<br/>
+<kbd>[19:07:24]</kbd> <code>&lt;abinash_panda&gt;</code> It would be better for us to have the bench-marks against it.<br/>
+<kbd>[19:07:32]</kbd> <code>&lt;navinchandak&gt;</code> Fine. Sure.<br/>
+<kbd>[19:07:40]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah, now we are trying to make it a full-flegded library ;)<br/>
+<kbd>[19:08:17]</kbd> <code>&lt;navinchandak&gt;</code> Great.<br/>
+<kbd>[19:08:30]</kbd> <code>&lt;abinash_panda&gt;</code> My project is on *Large Scale Multilabel Classification*.<br/>
+<kbd>[19:08:49]</kbd> <code>&lt;navinchandak&gt;</code> hmm.okay!<br/>
+<kbd>[19:09:28]</kbd> <code>&lt;navinchandak&gt;</code> How is jaspreet doing? Haven't seen him in quite a while.<br/>
+<kbd>[19:10:21]</kbd> <code>&lt;abinash_panda&gt;</code> No idea, I haven't also seen him.<br/>
+<kbd>[19:10:39]</kbd> <code>&lt;abinash_panda&gt;</code> I think he is contact with ankur (not sure ;))<br/>
+<kbd>[19:11:00]</kbd> <code>&lt;abinash_panda&gt;</code> BTW you are from orissa...right?<br/>
+<kbd>[19:11:17]</kbd> <code>&lt;navinchandak&gt;</code> okay.<br/>
+<kbd>[19:11:28]</kbd> <code>&lt;navinchandak&gt;</code> Yes. My parents live in Odisha.<br/>
+<kbd>[19:11:36]</kbd> <code>&lt;navinchandak&gt;</code> However, we are originally from Rajasthan.<br/>
+<kbd>[19:11:44]</kbd> <code>&lt;navinchandak&gt;</code> And I am studying in Mumbai.<br/>
+<kbd>[19:11:52]</kbd> <code>&lt;navinchandak&gt;</code> (IITB , i.e.)<br/>
+<kbd>[19:12:02]</kbd> <code>&lt;abinash_panda&gt;</code> Okay. Actually I also from orissa ;)<br/>
+<kbd>[19:12:13]</kbd> <code>&lt;abinash_panda&gt;</code> *I am also from orissa<br/>
+<kbd>[19:12:14]</kbd> <code>&lt;navinchandak&gt;</code> oh. nice. Which place?<br/>
+<kbd>[19:12:44]</kbd> <code>&lt;abinash_panda&gt;</code> a small township called Damanjodi (southern tip of orissa)<br/>
+<kbd>[19:13:03]</kbd> <code>&lt;navinchandak&gt;</code> hm. I have heard of Damanjodi.<br/>
+<kbd>[19:13:09]</kbd> <code>&lt;navinchandak&gt;</code> though, not much.<br/>
+<kbd>[19:14:04]</kbd> <code>&lt;abinash_panda&gt;</code> hmmm....:)<br/>
+<kbd>[19:14:24]</kbd> <code>&lt;abinash_panda&gt;</code> so...currently, in which year you are now?<br/>
+<kbd>[19:16:16]</kbd> <code>&lt;navinchandak&gt;</code> I will be going to my 4th year in the next sem.<br/>
+<kbd>[19:16:21]</kbd> <code>&lt;navinchandak&gt;</code> Just completed my third year.<br/>
+<kbd>[19:16:53]</kbd> <code>&lt;navinchandak&gt;</code> You finished your fourth year right?<br/>
+<kbd>[19:17:00]</kbd> <code>&lt;abinash_panda&gt;</code> Yeah.<br/>
+<kbd>[19:17:14]</kbd> <code>&lt;abinash_panda&gt;</code> Missing my college days<br/>
+<kbd>[19:17:36]</kbd> <code>&lt;navinchandak&gt;</code> Oh. So you graduated this sem?<br/>
+<kbd>[06:37:04]</kbd> <strong>[disconnected at Sun Jun 15 06:37:04 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

@@ -187,7 +187,7 @@ class LogBotFactory(protocol.ClientFactory):
         reactor.stop()
 
 def file_name_gen():
-        return "log"+time.strftime("%d_%m_%Y")+".html"
+        return "log"+time.strftime("%Y_%m_%d")+".html"
 
 def main():
     global repeat_run

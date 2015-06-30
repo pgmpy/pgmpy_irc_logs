@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 26-05-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 26-05-2015 </h3><br/><br/>
+                <br/>
+<kbd>[04:58:16]</kbd> <strong>[connected at Tue May 26 04:58:16 2015]</strong><br/>
+<kbd>[04:58:23]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[04:58:25]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Hi<br/>
+<kbd>[04:58:56]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: In XMLBIF, should i refactor the implemetation same as that of ProbModelXML<br/>
+<kbd>[04:59:37]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Give me second.. I will take a look at the current implementations<br/>
+<kbd>[05:01:32]</kbd> <code>&lt;ankurankan&gt;</code> No, I don't think that you will need to do that<br/>
+<kbd>[05:02:07]</kbd> <code>&lt;ankurankan&gt;</code> Since XMLBIF is not that of a complicated format, things can be implemented in a very clean way<br/>
+<kbd>[05:02:28]</kbd> <code>&lt;ankurankan&gt;</code> And I think the reader class of XMLBIF is good and should be working<br/>
+<kbd>[05:04:17]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan:  yes reader class is working .Please have a look at it .http://pastebin.com/TskUB3ZW<br/>
+<kbd>[05:04:25]</kbd> <code>&lt;vivekjain&gt;</code> http://pastebin.com/TskUB3ZW<br/>
+<kbd>[05:05:13]</kbd> <code>&lt;ankurankan&gt;</code> You will also need to add a function to each of the files that would return the generated model.<br/>
+<kbd>[05:06:30]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, It's okay to return the dictionary..<br/>
+<kbd>[05:06:53]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Yes, the generated model should be the same as that of ProbModelXML that's what i was asking.<br/>
+<kbd>[05:07:17]</kbd> <code>&lt;vivekjain&gt;</code> In PobmmodelXML we have a dictionary called self.probnet which contains the full generated model.<br/>
+<kbd>[05:07:56]</kbd> <code>&lt;vivekjain&gt;</code> and then we can easily get the variables and theier properties from this generated model.<br/>
+<kbd>[05:08:03]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, I don't think that it's implemented in ProbModelXML right now.<br/>
+<kbd>[05:08:58]</kbd> <code>&lt;ankurankan&gt;</code> Basically there should be some function which would return an instance of either MarkovModel or BayesianModel depending on the file<br/>
+<kbd>[05:11:11]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Are you getting me ?<br/>
+<kbd>[05:12:32]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: You mean using from pgmpy.models import BayesianModel i have to generate an instance of this class . ?<br/>
+<kbd>[05:12:41]</kbd> <code>&lt;ankurankan&gt;</code> Yes<br/>
+<kbd>[05:13:26]</kbd> <code>&lt;ankurankan&gt;</code> So, with your reader class you will read the whole file and store all the information in some internal structure.<br/>
+<kbd>[05:14:08]</kbd> <code>&lt;ankurankan&gt;</code> And then some other function/method (say get_model) would use this structure to create the Bayesian or Markov model instances<br/>
+<kbd>[05:16:39]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: ok i got that thanks.<br/>
+<kbd>[05:16:48]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Are you familiar with Bayesian and Markov models?<br/>
+<kbd>[05:18:00]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: No i am reading this to know how that works https://github.com/pgmpy/pgmpy/blob/dev/pgmpy/models/BayesianModel.py.<br/>
+<kbd>[05:18:25]</kbd> <code>&lt;vivekjain&gt;</code> XMLBIF is used only for Bayesian representation ?<br/>
+<kbd>[05:18:58]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. I will give you a quick intro to both of these..<br/>
+<kbd>[05:18:59]</kbd> <code>&lt;ankurankan&gt;</code> Yes<br/>
+<kbd>[05:19:38]</kbd> <code>&lt;ankurankan&gt;</code> A Bayesian model is a directed graph with each node of the graph having a probability table associated with it.<br/>
+<kbd>[05:20:24]</kbd> <code>&lt;ankurankan&gt;</code> So, for constructing a complete bayesian network you will need to know all the node names (also called as variable names), the edges in the graph and all the probability tables.<br/>
+<kbd>[05:21:46]</kbd> <code>&lt;ankurankan&gt;</code> Therefore you can see in XMLBIF Reader there are methods named get_variables (which would return the node names), get_edges (for returning edge list) and get_cpd (which would return the probability tables)<br/>
+<kbd>[05:23:28]</kbd> <code>&lt;ankurankan&gt;</code> Similarly in the case of Markov models you will need to know variable names, edge list and a table associated with each of the node. In the case of Markov models this table is known as Factor<br/>
+<kbd>[05:24:18]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Are you getting me?<br/>
+<kbd>[05:24:24]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: yes<br/>
+<kbd>[05:24:41]</kbd> <code>&lt;ankurankan&gt;</code> Was I able to give you a basic idea?<br/>
+<kbd>[05:26:28]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Yes, so i will have a method get_model in readerclass of XMLBIF and in that i will create an instance of BayesianModel and populate this instance using the internal strucutre i built using reader class. Am i correct?<br/>
+<kbd>[05:26:56]</kbd> <code>&lt;ankurankan&gt;</code> Yes<br/>
+<kbd>[05:28:49]</kbd> <code>&lt;ankurankan&gt;</code> For creating a bayesian network you will need to do something like this:<br/>
+<kbd>[05:28:58]</kbd> <code>&lt;ankurankan&gt;</code> model = BayesianModel(edges)<br/>
+<kbd>[05:29:05]</kbd> <code>&lt;ankurankan&gt;</code> model.add_cpds(cpd1, cpd2, ...)<br/>
+<kbd>[05:29:34]</kbd> <code>&lt;ankurankan&gt;</code> So, in case of XMLBIF, in the get_model method use get_edges to get the edge list.<br/>
+<kbd>[05:29:43]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: https://github.com/pgmpy/pgmpy/blob/dev/pgmpy/models/BayesianModel.py#L130 in this what is the format for cpd ?<br/>
+<kbd>[05:30:46]</kbd> <code>&lt;ankurankan&gt;</code> Then use get_cpd method to get all the infromation about the CPDs and then create TabularCPD instances from them<br/>
+<kbd>[05:30:47]</kbd> <code>&lt;ankurankan&gt;</code> Yes<br/>
+<kbd>[05:31:19]</kbd> <code>&lt;ankurankan&gt;</code> The add_cpd method accepts TabularCPD instances as argument<br/>
+<kbd>[05:32:22]</kbd> <code>&lt;ankurankan&gt;</code> The evidence and evidence_card in the TabularCPD are the parents of the node and the number of states of parent nodes<br/>
+<kbd>[05:33:46]</kbd> <code>&lt;ankurankan&gt;</code> Do you think it would help if I write the get_model method for XMLBIF? You will get an example<br/>
+<kbd>[05:33:58]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: ok, TabularCPD instance only takes 2d array of cpd instead of numpy array.<br/>
+<kbd>[05:34:32]</kbd> <code>&lt;ankurankan&gt;</code> You can give anything 2d list or a numpy array<br/>
+<kbd>[05:38:14]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Yes it will help me lot if you can write an example for XMLBIF. Also i was working on the writer class of XMLBIF should i modify the internal structure of reader class for that i.e in dictionary format.<br/>
+<kbd>[05:40:06]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, No.. I think the current representation is more simpler.. Because for creating the model we will need to access the variable name and number of states only..<br/>
+<kbd>[05:52:59]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Give me an hour or so and I will implement the get_model for XMLBIF and then you should easily be able to understand why.<br/>
+<kbd>[06:06:35]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, I have written the get_model method.. Have a look at it here: https://github.com/ankurankan/pgmpy/blob/feature/xmlbif/pgmpy/readwrite/XMLBIF.py..<br/>
+<kbd>[06:06:49]</kbd> <code>&lt;ankurankan&gt;</code> I have also made some changes in the code so have a look at that too..<br/>
+<kbd>[07:01:44]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: I have sent the pull request for XMLWriter. Currently it is only for variables. Please review<br/>
+<kbd>[07:01:57]</kbd> <code>&lt;ankurankan&gt;</code> vivekjain, Will do<br/>
+<kbd>[07:02:03]</kbd> <code>&lt;vivekjain&gt;</code> ankurankan: Thanks<br/>
+<kbd>[08:13:24]</kbd> <strong>[disconnected at Mon Jun  1 08:13:24 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

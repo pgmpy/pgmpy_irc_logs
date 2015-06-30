@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 05-09-2014
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 05-09-2014 </h3><br/><br/>
+                <br/>
+<kbd>[16:42:20]</kbd> <strong>[connected at Fri Sep  5 16:42:20 2014]</strong><br/>
+<kbd>[16:42:32]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:43:21]</kbd> <code>&lt;ankurankan&gt;</code> kundu,<br/>
+<kbd>[16:43:31]</kbd> <code>&lt;kundu&gt;</code> bolo<br/>
+<kbd>[16:44:01]</kbd> <code>&lt;ankurankan&gt;</code> What was the data thing that you wanted to discuss<br/>
+<kbd>[16:44:19]</kbd> <code>&lt;kundu&gt;</code> ek min ruk<br/>
+<kbd>[16:45:11]</kbd> <code>&lt;shashankg&gt;</code> kundu: the channel is logged. Let's keep the discussion a bit formal :p<br/>
+<kbd>[16:46:32]</kbd> <code>&lt;kundu&gt;</code> so as i was saying<br/>
+<kbd>[16:46:50]</kbd> <code>&lt;kundu&gt;</code> how are we going to interact with the data for tables<br/>
+<kbd>[16:47:39]</kbd> <code>&lt;kundu&gt;</code> like should i create a json temporary file or simply a variable to store the data<br/>
+<kbd>[16:48:53]</kbd> <code>&lt;kundu&gt;</code> anyone there<br/>
+<kbd>[16:49:04]</kbd> <code>&lt;ankurankan&gt;</code> yup,<br/>
+<kbd>[16:49:19]</kbd> <code>&lt;ankurankan&gt;</code> http://www.webreference.com/authoring/languages/html/HTML5-Client-Side/index.html<br/>
+<kbd>[16:49:23]</kbd> <code>&lt;ankurankan&gt;</code> Have a look at this.<br/>
+<kbd>[16:49:34]</kbd> <code>&lt;ankurankan&gt;</code> Since we will be having a large amount to data<br/>
+<kbd>[16:49:43]</kbd> <code>&lt;ankurankan&gt;</code> we should go with the database option I think<br/>
+<kbd>[16:50:12]</kbd> <code>&lt;shashankg&gt;</code> It will not be a  very large amount of data<br/>
+<kbd>[16:50:32]</kbd> <code>&lt;shashankg&gt;</code> nobody is going to make a large table<br/>
+<kbd>[16:50:56]</kbd> <code>&lt;ankurankan&gt;</code> Still we should be supporting it.<br/>
+<kbd>[16:51:10]</kbd> <code>&lt;ankurankan&gt;</code> And accessing the data would be much easier in the case of databases<br/>
+<kbd>[16:51:17]</kbd> <code>&lt;kundu&gt;</code> for now say it  is small but if people actually start to implement it for industry purposes it will be large<br/>
+<kbd>[16:51:31]</kbd> <code>&lt;ankurankan&gt;</code> Otherwise maintaining the variables would be a pain<br/>
+<kbd>[16:51:34]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[16:51:40]</kbd> <code>&lt;ankurankan&gt;</code> No one is going to user viz for industry<br/>
+<kbd>[16:51:51]</kbd> <code>&lt;shashankg&gt;</code> so how will we set up database for it?<br/>
+<kbd>[16:51:58]</kbd> <code>&lt;ankurankan&gt;</code> Mostly for educational purposes I think<br/>
+<kbd>[16:52:25]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, I don't know. Check out the last section of the link<br/>
+<kbd>[16:52:40]</kbd> <code>&lt;kundu&gt;</code> it can be incorporated in the library too somehow<br/>
+<kbd>[16:52:49]</kbd> <code>&lt;kundu&gt;</code> i mean pgmpy<br/>
+<kbd>[16:52:55]</kbd> <code>&lt;shashankg&gt;</code> the database will be  on server side. so we will still need to send the data to backend. Will it be sent after packing in json?<br/>
+<kbd>[16:53:46]</kbd> <code>&lt;kundu&gt;</code> lets just create a temporary json file in user system to store the data<br/>
+<kbd>[16:53:49]</kbd> <code>&lt;ankurankan&gt;</code> kundu, The real life data normally has 100s of nodes. Nobody is going to manually create and add values for all of those<br/>
+<kbd>[16:54:11]</kbd> <code>&lt;kundu&gt;</code> kk<br/>
+<kbd>[16:54:13]</kbd> <code>&lt;ankurankan&gt;</code> The link says client side storage<br/>
+<kbd>[16:54:40]</kbd> <code>&lt;shashankg&gt;</code> for that we will give the file uploading option. And the file will be parsed at backend<br/>
+<kbd>[16:55:06]</kbd> <code>&lt;ankurankan&gt;</code> So basically HTML5 is able to create database on the client side and use it.<br/>
+<kbd>[16:55:17]</kbd> <code>&lt;kundu&gt;</code> yes<br/>
+<kbd>[16:55:27]</kbd> <code>&lt;ankurankan&gt;</code> I think this would be the best way because for validations we will be needing to access the data<br/>
+<kbd>[16:55:46]</kbd> <code>&lt;ankurankan&gt;</code> And storing them in variables would just complicate the whole thing.<br/>
+<kbd>[16:55:55]</kbd> <code>&lt;ankurankan&gt;</code> So it's better to go with the database \<br/>
+<kbd>[16:56:01]</kbd> <code>&lt;ankurankan&gt;</code> What do you think?<br/>
+<kbd>[16:56:27]</kbd> <code>&lt;kundu&gt;</code> but i would need to look for some library where the same thing can be done using some nosql db<br/>
+<kbd>[16:56:53]</kbd> <code>&lt;ankurankan&gt;</code> kundu, Why?<br/>
+<kbd>[16:57:24]</kbd> <code>&lt;kundu&gt;</code> it will be easier to handle with the nodes and edges<br/>
+<kbd>[16:58:05]</kbd> <code>&lt;shashankg&gt;</code> html 5 database is supported only in safari<br/>
+<kbd>[16:58:09]</kbd> <code>&lt;ankurankan&gt;</code> I really have no idea if there even can be library for this.<br/>
+<kbd>[16:59:37]</kbd> <code>&lt;ankurankan&gt;</code> Every browser supports HTML5 and also it's mentioned in that link that client side storage is supported by Firefox, Safari and even Explorer<br/>
+<kbd>[17:00:14]</kbd> <code>&lt;shashankg&gt;</code> So far, I think Safari is the only browser to have implemented this feature<br/>
+<kbd>[17:00:36]</kbd> <code>&lt;ankurankan&gt;</code> Source??<br/>
+<kbd>[17:00:36]</kbd> <code>&lt;shashankg&gt;</code> database storage heading, 4th line<br/>
+<kbd>[17:00:59]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:01:44]</kbd> <code>&lt;ankurankan&gt;</code> http://www.html5rocks.com/en/features/storage<br/>
+<kbd>[17:03:38]</kbd> <code>&lt;kundu&gt;</code> it can be done with indexeddb which is a nosql db<br/>
+<kbd>[17:03:53]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:04:28]</kbd> <code>&lt;shashankg&gt;</code> can anyone tell me what is the difference between sql and no sql databases.<br/>
+<kbd>[17:04:38]</kbd> <code>&lt;shashankg&gt;</code> no sql don't have table structures?<br/>
+<kbd>[17:04:42]</kbd> <code>&lt;kundu&gt;</code> no<br/>
+<kbd>[17:04:44]</kbd> <code>&lt;ankurankan&gt;</code> no<br/>
+<kbd>[17:05:09]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, I don't know much about databases<br/>
+<kbd>[17:05:10]</kbd> <code>&lt;ankurankan&gt;</code> :P<br/>
+<kbd>[17:05:38]</kbd> <code>&lt;shashankg&gt;</code> kundu: do you know the difference?<br/>
+<kbd>[17:06:01]</kbd> <code>&lt;ankurankan&gt;</code> just google it<br/>
+<kbd>[17:06:26]</kbd> <code>&lt;kundu&gt;</code> nosql have unstructured data without any defined relation between the variables and their states<br/>
+<kbd>[17:07:33]</kbd> <code>&lt;kundu&gt;</code> whereas for sql databases, every variable has an established relation with every other variable with a defined value corresonding to that relation<br/>
+<kbd>[17:07:36]</kbd> <code>&lt;ankurankan&gt;</code> bouncer :P<br/>
+<kbd>[17:07:45]</kbd> <code>&lt;shashankg&gt;</code> :D<br/>
+<kbd>[17:08:28]</kbd> <code>&lt;ankurankan&gt;</code> Okay. So kundu you can handle this<br/>
+<kbd>[17:08:33]</kbd> <code>&lt;ankurankan&gt;</code> Right?<br/>
+<kbd>[17:09:13]</kbd> <code>&lt;kundu&gt;</code> but i need to know how are we going to implement the data model used in the graph with actual pgm model<br/>
+<kbd>[17:09:42]</kbd> <code>&lt;ankurankan&gt;</code> What???<br/>
+<kbd>[17:09:47]</kbd> <code>&lt;kundu&gt;</code> for now i can store the data in the database and create the table from there<br/>
+<kbd>[17:10:04]</kbd> <code>&lt;ankurankan&gt;</code> kundu, Just do that for now.<br/>
+<kbd>[17:10:11]</kbd> <code>&lt;kundu&gt;</code> kk<br/>
+<kbd>[17:10:15]</kbd> <code>&lt;ankurankan&gt;</code> I might be changing many things in pgmpy<br/>
+<kbd>[17:10:37]</kbd> <code>&lt;kundu&gt;</code> also give me the contacts of the students who were interested in the project earlier<br/>
+<kbd>[17:10:52]</kbd> <code>&lt;kundu&gt;</code> i need one or two guys<br/>
+<kbd>[17:11:09]</kbd> <code>&lt;ankurankan&gt;</code> Okay. About about the semester of code thing<br/>
+<kbd>[17:11:16]</kbd> <code>&lt;ankurankan&gt;</code> I think we should participate<br/>
+<kbd>[17:11:29]</kbd> <code>&lt;kundu&gt;</code> fine with me<br/>
+<kbd>[17:11:34]</kbd> <code>&lt;ankurankan&gt;</code> WIll have to search my inbox for the student contacts<br/>
+<kbd>[17:11:39]</kbd> <code>&lt;ankurankan&gt;</code> Will send it to you later<br/>
+<kbd>[17:11:55]</kbd> <code>&lt;ankurankan&gt;</code> But I couldn't find how to apply to the program<br/>
+<kbd>[17:12:05]</kbd> <code>&lt;shashankg&gt;</code> what is this semeseter of code?<br/>
+<kbd>[17:12:33]</kbd> <code>&lt;ankurankan&gt;</code> same as GSoC<br/>
+<kbd>[17:12:36]</kbd> <code>&lt;ankurankan&gt;</code> with no deadlines<br/>
+<kbd>[17:12:42]</kbd> <code>&lt;ankurankan&gt;</code> and no money :D<br/>
+<kbd>[17:12:47]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[17:13:00]</kbd> <code>&lt;ankurankan&gt;</code> http://semesterofcode.com/<br/>
+<kbd>[17:14:29]</kbd> <code>&lt;ankurankan&gt;</code> Anybody found how to apply?<br/>
+<kbd>[17:14:39]</kbd> <code>&lt;kundu&gt;</code> check your gmail inbox<br/>
+<kbd>[17:14:51]</kbd> <code>&lt;kundu&gt;</code> http://osswatch.jiscinvolve.org/wp/2014/08/06/vals-semester-of-code-open-for-project-idea-submissions/<br/>
+<kbd>[17:15:05]</kbd> <code>&lt;kundu&gt;</code> here the process to do that is given<br/>
+<kbd>[17:15:39]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. Great..<br/>
+<kbd>[17:16:04]</kbd> <code>&lt;ankurankan&gt;</code> Will apply tomorrow.. Just think of some ideas<br/>
+<kbd>[17:16:34]</kbd> <code>&lt;ankurankan&gt;</code> We will create an idea page tomorrow and apply. Ok?<br/>
+<kbd>[17:16:44]</kbd> <code>&lt;shashankg&gt;</code> ok.<br/>
+<kbd>[17:17:15]</kbd> <code>&lt;kundu&gt;</code> kk<br/>
+<kbd>[17:17:15]</kbd> <code>&lt;shashankg&gt;</code> I think we can use our gsoc ideas. viz idea and file format ideas<br/>
+<kbd>[17:17:57]</kbd> <code>&lt;ankurankan&gt;</code> Yeah but I myself am not very clear where viz is going<br/>
+<kbd>[17:17:58]</kbd> <code>&lt;ankurankan&gt;</code> :P<br/>
+<kbd>[17:18:16]</kbd> <code>&lt;shashankg&gt;</code> This time be sure to highlight the viz idea. Viz part didn't got any students in gosc because it wasn't tagged with java script uder psf<br/>
+<kbd>[17:18:19]</kbd> <code>&lt;shashankg&gt;</code> me too.<br/>
+<kbd>[17:18:22]</kbd> <code>&lt;ankurankan&gt;</code> Will try to get a clear picture and see if thing need to be updated on our idea's page<br/>
+<kbd>[17:19:03]</kbd> <code>&lt;shashankg&gt;</code> we can get a clear picture now<br/>
+<kbd>[17:19:08]</kbd> <code>&lt;ankurankan&gt;</code> Yeah. This is for high school students so we will have to only focus on viz<br/>
+<kbd>[17:19:36]</kbd> <code>&lt;ankurankan&gt;</code> Because high school students won't be able to work on PGM I think<br/>
+<kbd>[17:19:48]</kbd> <code>&lt;kundu&gt;</code> but still keep it open<br/>
+<kbd>[17:19:54]</kbd> <code>&lt;kundu&gt;</code> you might get applicants<br/>
+<kbd>[17:20:11]</kbd> <code>&lt;shashankg&gt;</code> PGM is a grad level course.<br/>
+<kbd>[17:20:24]</kbd> <code>&lt;ankurankan&gt;</code> Yeah it will just scare students off :P<br/>
+<kbd>[17:20:30]</kbd> <code>&lt;kundu&gt;</code> :P<br/>
+<kbd>[17:20:48]</kbd> <code>&lt;ankurankan&gt;</code> Even if someone shows interest in it.<br/>
+<kbd>[17:21:03]</kbd> <code>&lt;ankurankan&gt;</code> It would take him too much time to even start understanding it<br/>
+<kbd>[17:21:06]</kbd> <code>&lt;shashankg&gt;</code> Let's have 2-3 viz realated ideas<br/>
+<kbd>[17:21:24]</kbd> <code>&lt;ankurankan&gt;</code> Yeah I think we should only go with viz<br/>
+<kbd>[17:21:41]</kbd> <code>&lt;ankurankan&gt;</code> I will try to figure out a few small tasks that can be done<br/>
+<kbd>[17:21:49]</kbd> <code>&lt;ankurankan&gt;</code> We will also need proper mentors<br/>
+<kbd>[17:22:06]</kbd> <code>&lt;ankurankan&gt;</code> Because none of us know frontend stuff very properly<br/>
+<kbd>[17:22:21]</kbd> <code>&lt;shashankg&gt;</code> we need to discuss viz thoroughly.<br/>
+<kbd>[17:22:32]</kbd> <code>&lt;shashankg&gt;</code> No one knows where is it going<br/>
+<kbd>[17:22:32]</kbd> <code>&lt;ankurankan&gt;</code> Yeah<br/>
+<kbd>[17:22:49]</kbd> <code>&lt;kundu&gt;</code> :P<br/>
+<kbd>[17:23:04]</kbd> <code>&lt;ankurankan&gt;</code> I need some time to think<br/>
+<kbd>[17:23:09]</kbd> <code>&lt;kundu&gt;</code> http://semesterofcode.com/?p=6<br/>
+<kbd>[17:23:29]</kbd> <code>&lt;kundu&gt;</code> participating institutions are all universities<br/>
+<kbd>[17:23:55]</kbd> <code>&lt;shashankg&gt;</code> I am not sure whether I will be available tomorrow<br/>
+<kbd>[17:24:02]</kbd> <code>&lt;shashankg&gt;</code> so I want to discuss it now<br/>
+<kbd>[17:24:03]</kbd> <code>&lt;ankurankan&gt;</code> Let's have a meeting tomorrow and we will discuss how we want viz to be and will also update the idea's page<br/>
+<kbd>[17:24:14]</kbd> <code>&lt;ankurankan&gt;</code> Day after tomorrow<br/>
+<kbd>[17:24:24]</kbd> <code>&lt;kundu&gt;</code> kk<br/>
+<kbd>[17:24:27]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[17:24:30]</kbd> <code>&lt;shashankg&gt;</code> these are not participating institutions<br/>
+<kbd>[17:24:44]</kbd> <code>&lt;shashankg&gt;</code> they are organizing partners<br/>
+<kbd>[17:25:29]</kbd> <code>&lt;ankurankan&gt;</code> Why are we even discussing this :P<br/>
+<kbd>[17:25:43]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, Are you available on Sunday?<br/>
+<kbd>[17:25:44]</kbd> <code>&lt;shashankg&gt;</code> I was correcting you :p<br/>
+<kbd>[17:25:47]</kbd> <code>&lt;kundu&gt;</code> oh...okay srry :P<br/>
+<kbd>[17:26:11]</kbd> <code>&lt;shashankg&gt;</code> I can't tell you in advance.<br/>
+<kbd>[17:26:20]</kbd> <code>&lt;shashankg&gt;</code> can't we start the meeting a bit earlier.<br/>
+<kbd>[17:26:25]</kbd> <code>&lt;shashankg&gt;</code> 9.30?<br/>
+<kbd>[17:26:36]</kbd> <code>&lt;ankurankan&gt;</code> I came from office today at 10<br/>
+<kbd>[17:26:56]</kbd> <code>&lt;ankurankan&gt;</code> shashankg, When do you want to have the meeting?<br/>
+<kbd>[17:27:14]</kbd> <code>&lt;shashankg&gt;</code> ok then sunday 10<br/>
+<kbd>[17:27:40]</kbd> <code>&lt;kundu&gt;</code> fine<br/>
+<kbd>[17:27:40]</kbd> <code>&lt;ankurankan&gt;</code> I am available the whole day on sat and sun<br/>
+<kbd>[17:27:45]</kbd> <code>&lt;ankurankan&gt;</code> So any time works for me<br/>
+<kbd>[17:27:53]</kbd> <code>&lt;shashankg&gt;</code> Can we just discuss the basics of viz today and then discuss about ideas on sunday<br/>
+<kbd>[17:28:25]</kbd> <code>&lt;ankurankan&gt;</code> I really want to think it through once before discussing<br/>
+<kbd>[17:28:47]</kbd> <code>&lt;shashankg&gt;</code> ok then.<br/>
+<kbd>[17:28:52]</kbd> <code>&lt;shashankg&gt;</code> sunday 10 done.<br/>
+<kbd>[17:28:59]</kbd> <code>&lt;kundu&gt;</code> kk<br/>
+<kbd>[17:29:02]</kbd> <code>&lt;ankurankan&gt;</code> Okay sunday 10 pm<br/>
+<kbd>[17:29:09]</kbd> <code>&lt;ankurankan&gt;</code> I am creating a calendar event then<br/>
+<kbd>[17:29:27]</kbd> <code>&lt;kundu&gt;</code> kk<br/>
+<kbd>[17:29:38]</kbd> <code>&lt;shashankg&gt;</code> ok<br/>
+<kbd>[17:31:10]</kbd> <code>&lt;ankurankan&gt;</code> Anything else?<br/>
+<kbd>[17:31:21]</kbd> <code>&lt;shashankg&gt;</code> happy teachers day :P<br/>
+<kbd>[17:31:37]</kbd> <code>&lt;kundu&gt;</code> please mail me the contacts of the guys who were interested earlier in viz<br/>
+<kbd>[17:31:46]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. I will<br/>
+<kbd>[17:32:43]</kbd> <code>&lt;shashankg&gt;</code> Bye.<br/>
+<kbd>[17:32:50]</kbd> <code>&lt;ankurankan&gt;</code> Bye.. Gn..<br/>
+<kbd>[17:32:57]</kbd> <code>&lt;kundu&gt;</code> gudnght<br/>
+<kbd>[06:57:42]</kbd> <strong>[disconnected at Sun Sep  7 06:57:42 2014]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 08-06-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 08-06-2015 </h3><br/><br/>
+                <br/>
+<kbd>[16:25:33]</kbd> <strong>[connected at Mon Jun  8 16:25:33 2015]</strong><br/>
+<kbd>[16:25:40]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:29:26]</kbd> <code>&lt;abinash&gt;</code> hi palashahuja<br/>
+<kbd>[16:29:31]</kbd> <code>&lt;abinash&gt;</code> hi vivekjain<br/>
+<kbd>[16:29:44]</kbd> <code>&lt;vivekjain&gt;</code> abinash: hi<br/>
+<kbd>[16:29:50]</kbd> <code>&lt;abinash&gt;</code> guys how are things going on?<br/>
+<kbd>[16:30:59]</kbd> <code>&lt;vivekjain&gt;</code> abinash: I have send a PR which is pending review. It has implementation related to ProbModelXML reader class.<br/>
+<kbd>[16:31:21]</kbd> <code>&lt;palashahuja&gt;</code> abinash, good I guess<br/>
+<kbd>[16:32:11]</kbd> <code>&lt;abinash&gt;</code> vivekjain: I looked the PR and found some issues regarding the documentation.<br/>
+<kbd>[16:32:21]</kbd> <code>&lt;abinash&gt;</code> I have pointed those things. Please make the changes.<br/>
+<kbd>[16:32:30]</kbd> <code>&lt;pratyaksh&gt;</code> Hi everyone<br/>
+<kbd>[16:32:50]</kbd> <code>&lt;abinash&gt;</code> Hi pratyaksh<br/>
+<kbd>[16:32:55]</kbd> <code>&lt;pratyaksh&gt;</code> @abinash, did you also look at the latest changes in my PR?<br/>
+<kbd>[16:33:00]</kbd> <code>&lt;palashahuja&gt;</code> hi pratyaksh<br/>
+<kbd>[16:33:22]</kbd> <code>&lt;vivekjain&gt;</code> abinash: I have made the changes. I have added the documentation.<br/>
+<kbd>[16:34:00]</kbd> <code>&lt;pratyaksh&gt;</code> @abinash, does there need to be any documentation apart from the docstrings?<br/>
+<kbd>[16:34:52]</kbd> <code>&lt;abinash&gt;</code> vivekjain: Yeah. You have added the documentation but those are not meaningful. For example look at the documentation of method add_criterion().<br/>
+<kbd>[16:35:18]</kbd> <code>&lt;kislay&gt;</code> hi everyone.<br/>
+<kbd>[16:35:19]</kbd> <code>&lt;abinash&gt;</code> From the documentation it is not clear what a criterion dictionary looks like. The example should be self-explanatory.<br/>
+<kbd>[16:35:34]</kbd> <code>&lt;pratyaksh&gt;</code> hi kislay<br/>
+<kbd>[16:35:37]</kbd> <code>&lt;abinash&gt;</code> pratyaksh: Yeah. I had a look at your PR and had suggested you some changes.<br/>
+<kbd>[16:35:49]</kbd> <code>&lt;palashahuja&gt;</code> hi kislay<br/>
+<kbd>[16:35:59]</kbd> <code>&lt;abinash&gt;</code> I saw that you have corrected some of them. Please have a look at the changes that Ankur has mentioned.<br/>
+<kbd>[16:36:46]</kbd> <code>&lt;pratyaksh&gt;</code> yes, I need Ankur to have a look at one of my changes.. based on that I have to do all of them similarly<br/>
+<kbd>[16:37:17]</kbd> <code>&lt;palashahuja&gt;</code> abinash, did you read the mail that I had sent?<br/>
+<kbd>[16:38:42]</kbd> <code>&lt;abinash&gt;</code> palashahuja: Yeah. I read your mail. Ankur and I had a discussion on how the architecture should be (how the classes and variables should be stored). Ankur would be discussing with you tomorrow on this.<br/>
+<kbd>[16:38:58]</kbd> <code>&lt;abinash&gt;</code> As he is travelling he won't be able to join today.<br/>
+<kbd>[16:39:20]</kbd> <code>&lt;abinash&gt;</code> I think its better that you discuss with Ankur as we both don't want to confuse you.<br/>
+<kbd>[16:40:16]</kbd> <code>&lt;abinash&gt;</code> kislay: Whats your status?<br/>
+<kbd>[16:40:18]</kbd> <code>&lt;palashahuja&gt;</code> abinash, ok<br/>
+<kbd>[16:41:35]</kbd> <code>&lt;kislay&gt;</code> abinash: I have implemented till where we are solving the LP_relaxation. I am working on the code where we add the more clusters to tighten the relaxation.<br/>
+<kbd>[16:41:53]</kbd> <code>&lt;abinash&gt;</code> kislay: Okay. So by when we would be able to see a PR.<br/>
+<kbd>[16:42:40]</kbd> <code>&lt;abinash&gt;</code> vivekjain: What are you planning to do this week?<br/>
+<kbd>[16:42:55]</kbd> <code>&lt;abinash&gt;</code> The same question for pratyaksh, kislay and palash<br/>
+<kbd>[16:43:17]</kbd> <code>&lt;vivekjain&gt;</code> abinash: I will work on the writer class of ProbModelXMl.<br/>
+<kbd>[16:43:31]</kbd> <code>&lt;vivekjain&gt;</code> Will add Potential parsing.<br/>
+<kbd>[16:43:36]</kbd> <code>&lt;abinash&gt;</code> vivekjain: Okay.<br/>
+<kbd>[16:43:43]</kbd> <code>&lt;kislay&gt;</code> abinash: 2 days would be sufficient, I guess. I need to get the whole thing i.e solving + tightening together this week<br/>
+<kbd>[16:43:57]</kbd> <code>&lt;abinash&gt;</code> vivekjain: Any hurdles on this or anything blocking you?<br/>
+<kbd>[16:44:07]</kbd> <code>&lt;abinash&gt;</code> kislay: Cool. Waiting for it :)<br/>
+<kbd>[16:44:17]</kbd> <code>&lt;vivekjain&gt;</code> abinash: Not anything as of now.<br/>
+<kbd>[16:44:25]</kbd> <code>&lt;abinash&gt;</code> vivekjain: Cool.<br/>
+<kbd>[16:44:36]</kbd> <code>&lt;kislay&gt;</code> abinash: It took me some time as the code is just too snappy and the theory doesn't get in head in one go.<br/>
+<kbd>[16:44:39]</kbd> <code>&lt;pratyaksh&gt;</code> I'll stick to my proposed timeline. Before that, will fix all problems with the PR and get it merged<br/>
+<kbd>[16:44:51]</kbd> <code>&lt;kislay&gt;</code> abinash: but will try to fasten up.<br/>
+<kbd>[16:45:26]</kbd> <code>&lt;abinash&gt;</code> kislay: No worries. Take your time but make sure to submit it within next 2 days.<br/>
+<kbd>[16:45:26]</kbd> <code>&lt;pratyaksh&gt;</code> This week I have to implement a class for MCMC. I'll add one method - that will simulate a run<br/>
+<kbd>[16:45:34]</kbd> <code>&lt;kislay&gt;</code> abinash: cool.<br/>
+<kbd>[16:46:34]</kbd> <code>&lt;pratyaksh&gt;</code> Later on I have have to add methods that compute various statistics based on which we are going to decide if chain has converged to it's stationary distribution<br/>
+<kbd>[16:46:56]</kbd> <code>&lt;abinash&gt;</code> pratyaksh: Cool. Anything blocking you?<br/>
+<kbd>[16:47:13]</kbd> <code>&lt;abinash&gt;</code> pratyaksh: One more thing, did you try to benchmark your code?<br/>
+<kbd>[16:47:58]</kbd> <code>&lt;pratyaksh&gt;</code> Not really. I'll try to send the PR asap. Actually there tends to be decent amount of work correcting issues with the PR everytime<br/>
+<kbd>[16:48:24]</kbd> <code>&lt;pratyaksh&gt;</code> Would want to this week's work to be completed on time<br/>
+<kbd>[16:49:05]</kbd> <code>&lt;abinash&gt;</code> Once your PR gets merged, please do a benchmark on the performance and memory consumption.<br/>
+<kbd>[16:49:32]</kbd> <code>&lt;abinash&gt;</code> Later on based on the benchmark results we can Cythonize the code wherever needed.<br/>
+<kbd>[16:49:42]</kbd> <code>&lt;pratyaksh&gt;</code> @abinash, I was actually trying that. So how do I measure memory consumed?<br/>
+<kbd>[16:49:56]</kbd> <code>&lt;pratyaksh&gt;</code> %timeit is fine for time<br/>
+<kbd>[16:50:28]</kbd> <code>&lt;abinash&gt;</code> pratyaksh: I basically use https://pypi.python.org/pypi/memory_profiler for memory profiling.<br/>
+<kbd>[16:51:00]</kbd> <code>&lt;pratyaksh&gt;</code> oh looks interesting, thanks<br/>
+<kbd>[16:51:23]</kbd> <code>&lt;abinash&gt;</code> Guys please make sure to profile your code (both for time and memory). And look if there is any discrepancy in memory consumption or not.<br/>
+<kbd>[16:51:37]</kbd> <code>&lt;pratyaksh&gt;</code> I was looking at the sizes of pickle.dump to figure out size of objects<br/>
+<kbd>[16:53:19]</kbd> <code>&lt;abinash&gt;</code> Okay. The best part of the memory_profiler module is that it breaks up and shows memory is consumed by each function. That will help you to find bottleneck and correct them.<br/>
+<kbd>[16:53:49]</kbd> <code>&lt;abinash&gt;</code> palashahuja: What are you planning to do this week?<br/>
+<kbd>[16:54:27]</kbd> <code>&lt;palashahuja&gt;</code> I am planning to do hidden markov model hmm based on this .. the hmm will import dbn<br/>
+<kbd>[16:55:01]</kbd> <code>&lt;palashahuja&gt;</code> abinash, how should I proceed with inference ?<br/>
+<kbd>[16:55:17]</kbd> <code>&lt;abinash&gt;</code> palashahuja: Cool. But before starting to work on HMM, it would be better if you discuss with Ankur regarding the implementation of DBN.<br/>
+<kbd>[16:55:50]</kbd> <code>&lt;palashahuja&gt;</code> abinash, should there be a different module as such?<br/>
+<kbd>[16:56:39]</kbd> <code>&lt;abinash&gt;</code> palashahuja: No there shouldn't be any different module for them.<br/>
+<kbd>[16:58:25]</kbd> <code>&lt;abinash&gt;</code> Guys anything else you want to discuss?<br/>
+<kbd>[16:58:36]</kbd> <code>&lt;abinash&gt;</code> palashahuja, pratyaksh and kislay<br/>
+<kbd>[16:58:46]</kbd> <code>&lt;kislay&gt;</code> nopes.<br/>
+<kbd>[16:58:50]</kbd> <code>&lt;abinash&gt;</code> and vivekjain<br/>
+<kbd>[16:59:04]</kbd> <code>&lt;palashahuja&gt;</code> abinash, the inference is method is quite different for dbn<br/>
+<kbd>[16:59:10]</kbd> <code>&lt;vivekjain&gt;</code> abinash: no<br/>
+<kbd>[16:59:36]</kbd> <code>&lt;abinash&gt;</code> palashahuja: Yeah, the way inference works is different, but that doesn't mean that we would have a different module for it.<br/>
+<kbd>[17:00:18]</kbd> <code>&lt;pratyaksh&gt;</code> @abinash, anything else for today<br/>
+<kbd>[17:00:26]</kbd> <code>&lt;pratyaksh&gt;</code> I have to leave for something actually<br/>
+<kbd>[17:00:27]</kbd> <code>&lt;palashahuja&gt;</code> abinash, I will send you the doc that has the relevant details, it is quite heavy ...<br/>
+<kbd>[17:00:50]</kbd> <code>&lt;abinash&gt;</code> palashahuja: You may have to implement different type of base class for it but all them should be in inference module only just like the way the DBN is a part of models module.<br/>
+<kbd>[17:01:21]</kbd> <code>&lt;palashahuja&gt;</code> abinash, ok<br/>
+<kbd>[17:01:39]</kbd> <code>&lt;abinash&gt;</code> We didn't have another module for DynamicBayesianNetwork. Right?<br/>
+<kbd>[17:01:51]</kbd> <code>&lt;palashahuja&gt;</code> abinash, right ..<br/>
+<kbd>[17:02:43]</kbd> <code>&lt;abinash&gt;</code> Cool.<br/>
+<kbd>[17:03:12]</kbd> <code>&lt;abinash&gt;</code> So I think we can close the discussion. Right?<br/>
+<kbd>[17:03:50]</kbd> <code>&lt;palashahuja&gt;</code> abinash, ok<br/>
+<kbd>[17:04:06]</kbd> <code>&lt;abinash&gt;</code> Cool. Good night everyone.<br/>
+<kbd>[16:34:23]</kbd> <strong>[disconnected at Mon Jun 15 16:34:23 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

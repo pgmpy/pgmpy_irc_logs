@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 15-06-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 15-06-2015 </h3><br/><br/>
+                <br/>
+<kbd>[16:34:24]</kbd> <strong>[connected at Mon Jun 15 16:34:24 2015]</strong><br/>
+<kbd>[16:34:30]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:35:32]</kbd> <code>&lt;palashahuja&gt;</code> hey<br/>
+<kbd>[16:36:18]</kbd> <code>&lt;pratyaksh&gt;</code> how is it going with the PR?<br/>
+<kbd>[16:45:39]</kbd> <code>&lt;kislay&gt;</code> hi everyone<br/>
+<kbd>[16:49:10]</kbd> <code>&lt;ankurankan&gt;</code> Hi everyone<br/>
+<kbd>[16:49:16]</kbd> <code>&lt;ankurankan&gt;</code> Sorry I got a bit late<br/>
+<kbd>[16:49:21]</kbd> <code>&lt;kislay&gt;</code> hi ankurankan<br/>
+<kbd>[16:49:39]</kbd> <code>&lt;pratyaksh&gt;</code> hi ankur, kislay<br/>
+<kbd>[16:49:58]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Let's start with you<br/>
+<kbd>[16:50:14]</kbd> <code>&lt;palashahuja&gt;</code> hey<br/>
+<kbd>[16:50:19]</kbd> <code>&lt;ankurankan&gt;</code> I haven't yet got time to properly look at your PR but I think its almost done.<br/>
+<kbd>[16:50:44]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh,  So, what will you be working on this coming week?<br/>
+<kbd>[16:50:51]</kbd> <code>&lt;pratyaksh&gt;</code> my task for last week was to implement a class for markov chain<br/>
+<kbd>[16:51:07]</kbd> <code>&lt;pratyaksh&gt;</code> i'm done with that. am yet to add the tests<br/>
+<kbd>[16:51:41]</kbd> <code>&lt;pratyaksh&gt;</code> i'd really like if the current PR is merged asap<br/>
+<kbd>[16:51:46]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Okay, please send the PR ASAP even if you haven't written the tests<br/>
+<kbd>[16:52:00]</kbd> <code>&lt;pratyaksh&gt;</code> fine i will<br/>
+<kbd>[16:52:02]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, I will try to do it tomorrow morning<br/>
+<kbd>[16:52:22]</kbd> <code>&lt;pratyaksh&gt;</code> great<br/>
+<kbd>[16:52:40]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, What will you be working on this coming week other than the tests<br/>
+<kbd>[16:52:41]</kbd> <code>&lt;ankurankan&gt;</code> ?<br/>
+<kbd>[16:52:56]</kbd> <code>&lt;pratyaksh&gt;</code> for this week, i'll implement computation of statistics for the markov chain<br/>
+<kbd>[16:53:11]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Can you please elaborate a bit<br/>
+<kbd>[16:53:14]</kbd> <code>&lt;pratyaksh&gt;</code> to help the user decide if the distribution is converged<br/>
+<kbd>[16:54:03]</kbd> <code>&lt;pratyaksh&gt;</code> i'll basically follow the statistics they compute in the PGM book<br/>
+<kbd>[16:55:03]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Okay.. Cool<br/>
+<kbd>[16:55:15]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, hey<br/>
+<kbd>[16:55:21]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, What do you plan on working this coming week?<br/>
+<kbd>[16:55:54]</kbd> <code>&lt;palashahuja&gt;</code> I am finished with viterbi algo implementation in hmm currently,<br/>
+<kbd>[16:55:57]</kbd> <code>&lt;pratyaksh&gt;</code> so, in the book (and the videos), they plot graphs to see convergence - do you suggest I do the same? i don't see any other clear way<br/>
+<kbd>[16:57:11]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Give me till tomorrow morning.. I will see if there is any other better way to do it.<br/>
+<kbd>[16:58:04]</kbd> <code>&lt;pratyaksh&gt;</code> i think it's not included in the book. but definitely in the coursera course<br/>
+<kbd>[16:58:27]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Also you will need to make a few changes to your current PR. Your sample_discrete is still not vectorized, so please try to do that..<br/>
+<kbd>[16:59:07]</kbd> <code>&lt;pratyaksh&gt;</code> oh fine<br/>
+<kbd>[16:59:27]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, are there any other changes to the pr?<br/>
+<kbd>[16:59:30]</kbd> <code>&lt;pratyaksh&gt;</code> I'll update it by tomorrow<br/>
+<kbd>[16:59:36]</kbd> <code>&lt;pratyaksh&gt;</code> ^morning<br/>
+<kbd>[17:00:05]</kbd> <code>&lt;ankurankan&gt;</code> pratyaksh, Work on that for now till I see what can be done about the convergence<br/>
+<kbd>[17:00:31]</kbd> <code>&lt;pratyaksh&gt;</code> ok great<br/>
+<kbd>[17:00:51]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Yes I think the code can be improved at a few places..<br/>
+<kbd>[17:01:31]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, please let me know about the changes because hmm depends on this.<br/>
+<kbd>[17:02:49]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, And why are you working on HMMs right now? You should be working on inference algorithms for DBN according to your proposal<br/>
+<kbd>[17:03:23]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Also I think it would be better to completely wrap off DBN before moving to implementation of HMMs<br/>
+<kbd>[17:03:42]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, hmm is also necessary too. I am planning the junction tree algorithm for inference side by side.<br/>
+<kbd>[17:04:32]</kbd> <code>&lt;ankurankan&gt;</code> planning as in?<br/>
+<kbd>[17:04:54]</kbd> <code>&lt;ankurankan&gt;</code> I know HMM is necessary but we should have a complete implementation of DBNs first<br/>
+<kbd>[17:05:08]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, I was checking the implementation the algo that is there in matlab..<br/>
+<kbd>[17:06:15]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan,ok<br/>
+<kbd>[17:07:10]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, I would strongly suggest you to work on the inference algorithms before moving to HMM<br/>
+<kbd>[17:07:17]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, ok<br/>
+<kbd>[17:07:25]</kbd> <code>&lt;ankurankan&gt;</code> Once DBN would be complete HMM wouldn't take much time<br/>
+<kbd>[17:08:13]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, I am really looking forward to merging the current PR..<br/>
+<kbd>[17:08:38]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, it isn´t much really..<br/>
+<kbd>[17:08:52]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Sorry for the delay.. I will try to do it tomorrow morning.<br/>
+<kbd>[17:10:10]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, I have a confusion for inference that´s why I shifted onto hmm´s.<br/>
+<kbd>[17:10:41]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Please send me a mail for whatever confusion you are having<br/>
+<kbd>[17:10:54]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan,ok<br/>
+<kbd>[17:11:28]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, What is the criteria for passing mid-term evals?<br/>
+<kbd>[17:11:49]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Don't worry about that.. There is no criteria<br/>
+<kbd>[17:12:39]</kbd> <code>&lt;palashahuja&gt;</code> ankurankan, So on what basis is the student judged?<br/>
+<kbd>[17:13:16]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, How much work has he done, quality of code, etc<br/>
+<kbd>[17:13:39]</kbd> <code>&lt;ankurankan&gt;</code> kislay, What do you plan on working next week?<br/>
+<kbd>[17:14:33]</kbd> <code>&lt;kislay&gt;</code> I have to get the architecture right of the current code.<br/>
+<kbd>[17:14:56]</kbd> <code>&lt;kislay&gt;</code> will be having a meeting with him at 11 pm.<br/>
+<kbd>[17:14:57]</kbd> <code>&lt;ankurankan&gt;</code> kislay, So, you have discussed it with abinash and jaidev?<br/>
+<kbd>[17:15:59]</kbd> <code>&lt;kislay&gt;</code> I had some doubts recently with the code and the paper which I think I have sorted out.<br/>
+<kbd>[17:16:24]</kbd> <code>&lt;kislay&gt;</code> Abinash wanted me to get the documentation right. I made notes on what I could understnad and relate<br/>
+<kbd>[17:16:28]</kbd> <code>&lt;kislay&gt;</code> here: http://kislaynotes.droppages.com/<br/>
+<kbd>[17:17:07]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Okay.. I haven't been following your project, so will be difficult for me to get everything<br/>
+<kbd>[17:17:26]</kbd> <code>&lt;kislay&gt;</code> But I was hoping if I have someone to tell, how to proceed on the implementation part.<br/>
+<kbd>[17:17:46]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Okay, you are in constant touch with abinash and jaidev. Right?<br/>
+<kbd>[17:18:01]</kbd> <code>&lt;kislay&gt;</code> Do you know anyone who has worked on an Message passing algo before. I needed some rigorous things to ask<br/>
+<kbd>[17:18:28]</kbd> <code>&lt;kislay&gt;</code> umm..yeah abinash is mostly available.<br/>
+<kbd>[17:19:55]</kbd> <code>&lt;ankurankan&gt;</code> abinash has worked on message passing<br/>
+<kbd>[17:20:18]</kbd> <code>&lt;kislay&gt;</code> oh.<br/>
+<kbd>[17:20:38]</kbd> <code>&lt;kislay&gt;</code> okay, will have a discussion then.<br/>
+<kbd>[17:21:54]</kbd> <code>&lt;ankurankan&gt;</code> kislay, And from now on please try to keep me in loop with all the discussions you guys are having<br/>
+<kbd>[17:22:10]</kbd> <code>&lt;kislay&gt;</code> sure!<br/>
+<kbd>[17:22:12]</kbd> <code>&lt;ankurankan&gt;</code> I will also try to follow your project closely from now on<br/>
+<kbd>[17:22:34]</kbd> <code>&lt;kislay&gt;</code> yeah! That would be cool. I wiil surely inform you with my devlopments.<br/>
+<kbd>[17:23:01]</kbd> <code>&lt;ankurankan&gt;</code> Anything else for today ?<br/>
+<kbd>[17:23:26]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, pratyaksh I am sorry for the delay in merging the PRs.. I will make sure that it is merged by tomorrow<br/>
+<kbd>[17:23:39]</kbd> <code>&lt;palashahuja&gt;</code> ok<br/>
+<kbd>[17:24:26]</kbd> <code>&lt;ankurankan&gt;</code> So, I think that's it for today..<br/>
+<kbd>[17:24:29]</kbd> <code>&lt;ankurankan&gt;</code> Bye..<br/>
+<kbd>[17:24:35]</kbd> <code>&lt;kislay&gt;</code> bye<br/>
+<kbd>[17:24:46]</kbd> <code>&lt;pratyaksh&gt;</code> Bye<br/>
+<kbd>[17:25:25]</kbd> <code>&lt;palashahuja&gt;</code> Bye..<br/>
+<kbd>[11:22:41]</kbd> <strong>[disconnected at Tue Jun 16 11:22:41 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

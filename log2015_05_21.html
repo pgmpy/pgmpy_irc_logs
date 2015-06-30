@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 21-05-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 21-05-2015 </h3><br/><br/>
+                <br/>
+<kbd>[10:11:07]</kbd> <strong>[connected at Thu May 21 10:11:07 2015]</strong><br/>
+<kbd>[10:11:14]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[10:11:19]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Hi<br/>
+<kbd>[10:11:26]</kbd> <code>&lt;kislay&gt;</code> Ah!<br/>
+<kbd>[10:11:35]</kbd> <code>&lt;kislay&gt;</code> I really needed someone to talk<br/>
+<kbd>[10:11:45]</kbd> <code>&lt;kislay&gt;</code> Abinash is very busy these days<br/>
+<kbd>[10:12:10]</kbd> <code>&lt;ankurankan&gt;</code> yeah tell me<br/>
+<kbd>[10:12:16]</kbd> <code>&lt;kislay&gt;</code> and Jaidev, I haven't got a reply for an intro mail I sent him<br/>
+<kbd>[10:12:29]</kbd> <code>&lt;kislay&gt;</code> hmm.... what are functions that OPenGM uses<br/>
+<kbd>[10:12:34]</kbd> <code>&lt;kislay&gt;</code> in a factor graph models<br/>
+<kbd>[10:12:50]</kbd> <code>&lt;kislay&gt;</code> what does a function does actually?<br/>
+<kbd>[10:14:31]</kbd> <code>&lt;kislay&gt;</code> For the context, in the OpenGM manual it is specified that  they have 4 things needed to represent a model. like : 1. The binary operation (adder, multiplication ...etc etc)<br/>
+<kbd>[10:14:45]</kbd> <code>&lt;kislay&gt;</code> 2. the function<br/>
+<kbd>[10:15:07]</kbd> <code>&lt;kislay&gt;</code> 3. the label spaces<br/>
+<kbd>[10:15:16]</kbd> <code>&lt;kislay&gt;</code> and 1 more...<br/>
+<kbd>[10:15:31]</kbd> <code>&lt;kislay&gt;</code> I am not able to understand what is the use of a function...<br/>
+<kbd>[10:15:36]</kbd> <code>&lt;ankurankan&gt;</code> Umm.. I have worked with that.. Could you please send me a mail about the problem that you are having and I will try to get back to you as soon as possible?<br/>
+<kbd>[10:15:45]</kbd> <code>&lt;kislay&gt;</code> oh<br/>
+<kbd>[10:16:04]</kbd> <code>&lt;ankurankan&gt;</code> *haven't<br/>
+<kbd>[10:16:07]</kbd> <code>&lt;kislay&gt;</code> okay<br/>
+<kbd>[10:16:07]</kbd> <code>&lt;kislay&gt;</code> sure<br/>
+<kbd>[10:16:51]</kbd> <code>&lt;ankurankan&gt;</code> I haven't worked with OpenGM so will need some time to figure things out.<br/>
+<kbd>[10:17:06]</kbd> <code>&lt;kislay&gt;</code> RIght now I am trying to get the approximate algos work on my lappy using OpenGM.<br/>
+<kbd>[10:17:12]</kbd> <code>&lt;kislay&gt;</code> Is this approach cool.<br/>
+<kbd>[10:17:41]</kbd> <code>&lt;ankurankan&gt;</code> Yeah.. It's always good to have a look at implementations in other libraries.. Gives a lot of ideas<br/>
+<kbd>[10:17:48]</kbd> <code>&lt;kislay&gt;</code> I was hoping to understand the I/O and nifty things that I will have to take care whilst carrying out our implementation<br/>
+<kbd>[10:17:56]</kbd> <code>&lt;kislay&gt;</code> ok<br/>
+<kbd>[10:18:02]</kbd> <code>&lt;kislay&gt;</code> WIll do this.<br/>
+<kbd>[10:18:09]</kbd> <code>&lt;kislay&gt;</code> have you seen my blog post<br/>
+<kbd>[10:18:40]</kbd> <code>&lt;ankurankan&gt;</code> No. Can you send me the link?<br/>
+<kbd>[10:18:44]</kbd> <code>&lt;kislay&gt;</code> https://kislayvision.wordpress.com/2015/05/17/gsoc-2015/<br/>
+<kbd>[10:19:01]</kbd> <code>&lt;kislay&gt;</code> check if I am making my point clear or not<br/>
+<kbd>[10:19:09]</kbd> <code>&lt;kislay&gt;</code> anywhere you feel I am vague, just point<br/>
+<kbd>[10:19:51]</kbd> <code>&lt;ankurankan&gt;</code> And BTW Jhonathan (https://github.com/jhonatanoliveira/pgmpy) has done a very basic implementation of reading from BIF format.. See if it helps you for now.<br/>
+<kbd>[10:20:11]</kbd> <code>&lt;kislay&gt;</code> ok<br/>
+<kbd>[10:20:15]</kbd> <code>&lt;kislay&gt;</code> will see<br/>
+<kbd>[10:20:36]</kbd> <code>&lt;kislay&gt;</code> this implementation of Jonathan is for inputting factor graphs ?<br/>
+<kbd>[10:21:42]</kbd> <code>&lt;ankurankan&gt;</code> No.. It's just for Bayesian Networks<br/>
+<kbd>[10:21:52]</kbd> <code>&lt;kislay&gt;</code> ok<br/>
+<kbd>[10:22:05]</kbd> <code>&lt;ankurankan&gt;</code> I quickly went through your blog post and it looks good<br/>
+<kbd>[10:22:31]</kbd> <code>&lt;kislay&gt;</code> we don't have anything to read factor graphs right now, right?<br/>
+<kbd>[10:22:41]</kbd> <code>&lt;ankurankan&gt;</code> No.. Not right now.<br/>
+<kbd>[10:22:47]</kbd> <code>&lt;kislay&gt;</code> okay<br/>
+<kbd>[10:22:55]</kbd> <code>&lt;ankurankan&gt;</code> Which format do you want to read from?<br/>
+<kbd>[10:23:14]</kbd> <code>&lt;kislay&gt;</code> I don't know. i was hoping to ask this.<br/>
+<kbd>[10:23:40]</kbd> <code>&lt;kislay&gt;</code> you have anything in mind..<br/>
+<kbd>[10:24:28]</kbd> <code>&lt;ankurankan&gt;</code> I haven't really worked much with factor graphs. I will figure out which format is mostly used and try to do a quick implementation if possible.<br/>
+<kbd>[10:24:40]</kbd> <code>&lt;ankurankan&gt;</code> You have any idea which format is most widely used?<br/>
+<kbd>[10:24:59]</kbd> <code>&lt;kislay&gt;</code> uai is used by OpenGM. That is all I know.<br/>
+<kbd>[10:25:22]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. I will look into it and see if I can implement it.<br/>
+<kbd>[10:25:23]</kbd> <code>&lt;kislay&gt;</code> OpenGM taking a bit time. (quite rigorous on maths it is)<br/>
+<kbd>[10:26:02]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[10:26:13]</kbd> <code>&lt;kislay&gt;</code> you can hook me up for that work.<br/>
+<kbd>[10:26:22]</kbd> <code>&lt;kislay&gt;</code> since it is related to my project<br/>
+<kbd>[10:26:30]</kbd> <code>&lt;kislay&gt;</code> I am up.<br/>
+<kbd>[10:27:08]</kbd> <code>&lt;ankurankan&gt;</code> BTW in your blog post you can link back to pgmpy so that later people reading you post would be able to come to pgmpy and use your implementations<br/>
+<kbd>[10:27:17]</kbd> <code>&lt;kislay&gt;</code> yeah.<br/>
+<kbd>[10:27:19]</kbd> <code>&lt;kislay&gt;</code> will do<br/>
+<kbd>[10:28:08]</kbd> <code>&lt;ankurankan&gt;</code> I will see how difficult the implementation would be  and let you know accordingly. I don't want you to be spending much time on things<br/>
+<kbd>[10:30:23]</kbd> <code>&lt;kislay&gt;</code> okay<br/>
+<kbd>[10:30:24]</kbd> <code>&lt;kislay&gt;</code> sure<br/>
+<kbd>[10:31:15]</kbd> <code>&lt;kislay&gt;</code> I have added the link in the post<br/>
+<kbd>[10:31:54]</kbd> <code>&lt;kislay&gt;</code> okay thanks. I will mail you the problem then<br/>
+<kbd>[07:39:27]</kbd> <strong>[disconnected at Fri May 22 07:39:27 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

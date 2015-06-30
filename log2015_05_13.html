@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 13-05-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 13-05-2015 </h3><br/><br/>
+                <br/>
+<kbd>[15:57:47]</kbd> <strong>[connected at Wed May 13 15:57:47 2015]</strong><br/>
+<kbd>[15:57:53]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[16:01:56]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Hi<br/>
+<kbd>[16:13:37]</kbd> <code>&lt;palashahuja&gt;</code> So my implementation doubt is that when you are entering the nodes for the static bayesian network, you need a different kind of cpd<br/>
+<kbd>[16:13:47]</kbd> <code>&lt;palashahuja&gt;</code> inside the dbn<br/>
+<kbd>[16:14:00]</kbd> <code>&lt;palashahuja&gt;</code> (dynamic bayesian network)<br/>
+<kbd>[16:14:21]</kbd> <code>&lt;palashahuja&gt;</code> that is able to connect two nodes from different states....<br/>
+<kbd>[16:14:43]</kbd> <code>&lt;palashahuja&gt;</code> I have tried to explain that in my project proposal as well..<br/>
+<kbd>[16:16:14]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. You mean the problem of defining CPDs over same variable names?<br/>
+<kbd>[16:16:46]</kbd> <code>&lt;palashahuja&gt;</code> yup...<br/>
+<kbd>[16:16:59]</kbd> <code>&lt;palashahuja&gt;</code> they need to be distinguished over different states..<br/>
+<kbd>[16:17:06]</kbd> <code>&lt;ankurankan&gt;</code> Yes.<br/>
+<kbd>[16:17:30]</kbd> <code>&lt;ankurankan&gt;</code> You have thought of any ideas for doing this?<br/>
+<kbd>[16:18:11]</kbd> <code>&lt;palashahuja&gt;</code> I have thought of implementing a different cpt class for this, as this will be needed elsewhere too.<br/>
+<kbd>[16:18:20]</kbd> <code>&lt;palashahuja&gt;</code> for example naive bayes model<br/>
+<kbd>[16:18:57]</kbd> <code>&lt;ankurankan&gt;</code> Can you explain what are you thinking of?<br/>
+<kbd>[16:20:01]</kbd> <code>&lt;palashahuja&gt;</code> I am thinking of a class variable that could allow to take random state names inside a cpd instead of the usual notation.<br/>
+<kbd>[16:23:43]</kbd> <code>&lt;ankurankan&gt;</code> Why do you want random state names? We want to able to define cpds of the form of P(var' | var) where var' and var would be in different time slices.<br/>
+<kbd>[16:24:19]</kbd> <code>&lt;ankurankan&gt;</code> But since we are using the same variable names is all the time slices we won't be able to use var' and var. Correct me if I am wrong<br/>
+<kbd>[16:24:49]</kbd> <code>&lt;palashahuja&gt;</code> that's true<br/>
+<kbd>[16:25:05]</kbd> <code>&lt;palashahuja&gt;</code> but how are you going to show the cpd to the user..<br/>
+<kbd>[16:25:30]</kbd> <code>&lt;palashahuja&gt;</code> the reason why I am saying random because the dependency may lie to other variables also<br/>
+<kbd>[16:25:40]</kbd> <code>&lt;palashahuja&gt;</code> not necessarily var and var'<br/>
+<kbd>[16:25:54]</kbd> <code>&lt;palashahuja&gt;</code> there could be another variable involved....<br/>
+<kbd>[16:26:22]</kbd> <code>&lt;palashahuja&gt;</code> such as var1 and var' or var and var1'<br/>
+<kbd>[16:26:39]</kbd> <code>&lt;ankurankan&gt;</code> Yeah.. But the states for a given variable would be same in all the time slices. Right?<br/>
+<kbd>[16:26:56]</kbd> <code>&lt;palashahuja&gt;</code> the state names yes ..<br/>
+<kbd>[16:27:04]</kbd> <code>&lt;ankurankan&gt;</code> Not the observed state but the state name<br/>
+<kbd>[16:27:06]</kbd> <code>&lt;ankurankan&gt;</code> Yes.<br/>
+<kbd>[16:27:24]</kbd> <code>&lt;ankurankan&gt;</code> So why would we want to change the current state names?<br/>
+<kbd>[16:27:53]</kbd> <code>&lt;palashahuja&gt;</code> No not really ...<br/>
+<kbd>[16:28:19]</kbd> <code>&lt;ankurankan&gt;</code> Currently the states are represented as varname_{some_int}. Right?<br/>
+<kbd>[16:28:24]</kbd> <code>&lt;palashahuja&gt;</code> yes ..<br/>
+<kbd>[16:28:45]</kbd> <code>&lt;palashahuja&gt;</code> So some_int become the state instance...<br/>
+<kbd>[16:29:38]</kbd> <code>&lt;palashahuja&gt;</code> So what should I do now for the implementation ?<br/>
+<kbd>[16:30:15]</kbd> <code>&lt;ankurankan&gt;</code> I think the current way of state names should work for you<br/>
+<kbd>[16:30:27]</kbd> <code>&lt;ankurankan&gt;</code> The problem is with the variable names<br/>
+<kbd>[16:30:40]</kbd> <code>&lt;palashahuja&gt;</code> yes<br/>
+<kbd>[16:31:47]</kbd> <code>&lt;ankurankan&gt;</code> Anyways can you please share a doc with the details of idea that you are having about state name. Maybe I am not getting the point that you want to make. So, if possible please create a doc with details and examples and share it with me<br/>
+<kbd>[16:32:25]</kbd> <code>&lt;palashahuja&gt;</code> Sure I will send that to you...<br/>
+<kbd>[16:32:31]</kbd> <code>&lt;ankurankan&gt;</code> For dealing with variable names either you will have to define a new type of CPD or use some hard coded sign for variables in different time slices<br/>
+<kbd>[16:34:00]</kbd> <code>&lt;ankurankan&gt;</code> I would suggest you to spend some time on these two options and see what are the pros and cons of both and then we can decide what we want to go with<br/>
+<kbd>[16:34:01]</kbd> <code>&lt;ankurankan&gt;</code> What do you think?<br/>
+<kbd>[16:35:46]</kbd> <code>&lt;palashahuja&gt;</code> fine..<br/>
+<kbd>[16:37:42]</kbd> <code>&lt;palashahuja&gt;</code> the problem with tabular cpd, that it moves in a  cyclic manner<br/>
+<kbd>[16:37:53]</kbd> <code>&lt;palashahuja&gt;</code> representing all the possible states.<br/>
+<kbd>[16:38:18]</kbd> <code>&lt;palashahuja&gt;</code> in this case we do not want that<br/>
+<kbd>[16:38:39]</kbd> <code>&lt;ankurankan&gt;</code> Why?<br/>
+<kbd>[16:39:03]</kbd> <code>&lt;palashahuja&gt;</code> because that is redundant<br/>
+<kbd>[16:39:45]</kbd> <code>&lt;ankurankan&gt;</code> Can you give me an example<br/>
+<kbd>[16:40:16]</kbd> <code>&lt;palashahuja&gt;</code> for example, in the case that I mailed we do not want to represent the dependency between d1 and s1*<br/>
+<kbd>[16:43:20]</kbd> <code>&lt;ankurankan&gt;</code> Can you please give a clear picture of what you have in your mind right now in the doc? I am really not able to understand you at present.<br/>
+<kbd>[16:43:53]</kbd> <code>&lt;ankurankan&gt;</code> And let's have a discussion once I have gone through that..<br/>
+<kbd>[16:44:37]</kbd> <code>&lt;palashahuja&gt;</code> I will mail you another example...<br/>
+<kbd>[16:47:07]</kbd> <code>&lt;palashahuja&gt;</code> basically what I am trying to say is that there should be a table consisting of the dependencies between the two time slices<br/>
+<kbd>[16:47:52]</kbd> <code>&lt;palashahuja&gt;</code> so in the example that I mailed, it should only consist of the dependencies....<br/>
+<kbd>[16:48:02]</kbd> <code>&lt;palashahuja&gt;</code> it -- the table<br/>
+<kbd>[16:48:45]</kbd> <code>&lt;ankurankan&gt;</code> There would be multiple tables for representing the dependencies between two time slices not one.<br/>
+<kbd>[16:49:53]</kbd> <code>&lt;palashahuja&gt;</code> why?<br/>
+<kbd>[16:50:03]</kbd> <code>&lt;ankurankan&gt;</code> This is why I am telling you to dump whatever you have in mind in a doc and then it would be a lot more easier for me to explain things and will save time for both of us.<br/>
+<kbd>[16:50:34]</kbd> <code>&lt;palashahuja&gt;</code> fine I will send a doc<br/>
+<kbd>[16:50:41]</kbd> <code>&lt;ankurankan&gt;</code> Because we will be having tables for a variable given its parents<br/>
+<kbd>[16:51:07]</kbd> <code>&lt;palashahuja&gt;</code> could you please explain what you have in mind ?<br/>
+<kbd>[16:51:24]</kbd> <code>&lt;ankurankan&gt;</code> So between two time slices it is possible that multiple variables would be dependent on variables in the previous time slice<br/>
+<kbd>[16:51:46]</kbd> <code>&lt;ankurankan&gt;</code> And therefore for each of such variables we would be having a table representing its dependencies<br/>
+<kbd>[16:53:32]</kbd> <code>&lt;ankurankan&gt;</code> So for the example that you have sent, we will have the tables P(hidden_1 |  hidden_0, x_0) and P(x_1  | x_0) representing the inter time slice dependencies<br/>
+<kbd>[16:54:32]</kbd> <code>&lt;ankurankan&gt;</code> We always define a CPD on a single variable. So all the variables that have edges from previous time slices will have a separate table<br/>
+<kbd>[18:49:40]</kbd> <em>pramod_ is now known as palashahuja</em><br/>
+<kbd>[15:54:55]</kbd> <strong>[disconnected at Mon May 18 15:54:55 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>
