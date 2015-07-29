@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+                <html lang='en'>
+                <head>
+                        <title>
+                        pgmpy Log of 15-07-2015
+                        </title>
+                        <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css' media='screen' />
+                </head> 
+                <body>
+                <div class='container'>
+                <h2>Log of the <code>#pgmpy</code> IRC Channel</h2><br/>
+                <h3>All the times shown here presently are in Indian Standard Time(IST) +0530Hrs<h3/>
+                <h3>Date : 15-07-2015 </h3><br/><br/>
+                <br/>
+<kbd>[17:22:59]</kbd> <strong>[connected at Wed Jul 15 17:22:59 2015]</strong><br/>
+<kbd>[17:23:05]</kbd> <strong>[I have joined #pgmpy]</strong><br/>
+<kbd>[17:23:06]</kbd> <code>&lt;palashahuja&gt;</code> hi..<br/>
+<kbd>[17:23:17]</kbd> <code>&lt;ankurankan&gt;</code> How's your project going<br/>
+<kbd>[17:24:28]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, How's your project going?<br/>
+<kbd>[17:25:37]</kbd> <code>&lt;palashahuja&gt;</code> I am still working out with junction tree inference.. I will try sending the PR asap.. Sorry for the delay...<br/>
+<kbd>[17:26:14]</kbd> <code>&lt;ankurankan&gt;</code> No problem.. Was I supposed to look into something ?<br/>
+<kbd>[17:26:35]</kbd> <code>&lt;palashahuja&gt;</code> Yes, inference with variable elimination ...<br/>
+<kbd>[17:26:48]</kbd> <code>&lt;palashahuja&gt;</code> I have already sent the PR...<br/>
+<kbd>[17:27:06]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:27:07]</kbd> <code>&lt;palashahuja&gt;</code> You were suggesting a shorter method...<br/>
+<kbd>[17:27:18]</kbd> <code>&lt;ankurankan&gt;</code> Oh now I remember :P<br/>
+<kbd>[17:27:28]</kbd> <code>&lt;ankurankan&gt;</code> Sorry, it completely got off my mind<br/>
+<kbd>[17:28:29]</kbd> <code>&lt;ankurankan&gt;</code> Sorry, it completely got off my mind<br/>
+<kbd>[17:28:49]</kbd> <code>&lt;ankurankan&gt;</code> And the problem that you were having with junction tree, it's fixed now?<br/>
+<kbd>[17:29:14]</kbd> <code>&lt;palashahuja&gt;</code> The problem is fixed .. but I am still trying to figure out some details..<br/>
+<kbd>[17:29:35]</kbd> <code>&lt;ankurankan&gt;</code> Okay.. Let me know if you need help on that<br/>
+<kbd>[17:34:18]</kbd> <code>&lt;palashahuja&gt;</code> okay I will let you know ..<br/>
+<kbd>[17:35:09]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Hi<br/>
+<kbd>[17:35:14]</kbd> <code>&lt;kislay&gt;</code> Hi ankurankan<br/>
+<kbd>[17:35:25]</kbd> <code>&lt;ankurankan&gt;</code> How's your project going?<br/>
+<kbd>[17:35:48]</kbd> <code>&lt;kislay&gt;</code> I am enjoying it now!<br/>
+<kbd>[17:35:52]</kbd> <code>&lt;kislay&gt;</code> Its good.<br/>
+<kbd>[17:35:55]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, BTW should I expect junction tree to be complete in this week ?<br/>
+<kbd>[17:36:00]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Great !!<br/>
+<kbd>[17:36:23]</kbd> <code>&lt;kislay&gt;</code> THough I have to rework everything as my code was not at all upto the mark<br/>
+<kbd>[17:36:56]</kbd> <code>&lt;kislay&gt;</code> but since I made the code "work", I am able to pay attention to other niche things.<br/>
+<kbd>[17:37:00]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Yeah..  I saw your PR , you will need to improve a lot<br/>
+<kbd>[17:37:01]</kbd> <code>&lt;kislay&gt;</code> now<br/>
+<kbd>[17:37:05]</kbd> <code>&lt;ankurankan&gt;</code> Cool<br/>
+<kbd>[17:38:01]</kbd> <code>&lt;kislay&gt;</code> This time it would be good. I was completely engulfed in getting the paper impelemented that I didn't paid any attention to write good code.<br/>
+<kbd>[17:38:24]</kbd> <code>&lt;kislay&gt;</code> One thing, I need a sum method for factors!<br/>
+<kbd>[17:38:34]</kbd> <code>&lt;ankurankan&gt;</code> kislay, What kind of sum?<br/>
+<kbd>[17:38:37]</kbd> <code>&lt;kislay&gt;</code> that is addition and subtraction.<br/>
+<kbd>[17:38:40]</kbd> <code>&lt;palashahuja&gt;</code> Yes, by the end of this week<br/>
+<kbd>[17:39:00]</kbd> <code>&lt;ankurankan&gt;</code> palashahuja, Cool<br/>
+<kbd>[17:39:10]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Can you give me an example?<br/>
+<kbd>[17:39:14]</kbd> <code>&lt;kislay&gt;</code> Umm.. say we have say two factors(messages basically)<br/>
+<kbd>[17:39:34]</kbd> <code>&lt;kislay&gt;</code> F1 and F2<br/>
+<kbd>[17:39:56]</kbd> <code>&lt;kislay&gt;</code> F1 is made of 2 variables<br/>
+<kbd>[17:40:05]</kbd> <code>&lt;kislay&gt;</code> "a" and "b"<br/>
+<kbd>[17:40:26]</kbd> <code>&lt;kislay&gt;</code> similarly F2 is made of "a" and "b"<br/>
+<kbd>[17:40:43]</kbd> <code>&lt;kislay&gt;</code> I need some sort of F1+F2<br/>
+<kbd>[17:41:05]</kbd> <code>&lt;kislay&gt;</code> where the values are added wrt to the variables<br/>
+<kbd>[17:41:05]</kbd> <code>&lt;palashahuja&gt;</code> kislay, are the cardinalities same for both the factors?<br/>
+<kbd>[17:41:05]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Okay so basically add the values of the same state.. Right?<br/>
+<kbd>[17:41:31]</kbd> <code>&lt;kislay&gt;</code> palashahuja, ankurankan : yes...and no<br/>
+<kbd>[17:41:49]</kbd> <code>&lt;kislay&gt;</code> there is one exception...kind of adjustment<br/>
+<kbd>[17:42:04]</kbd> <code>&lt;kislay&gt;</code> say F2 is made of only "b"<br/>
+<kbd>[17:42:16]</kbd> <code>&lt;kislay&gt;</code> then also F1+F2 should work<br/>
+<kbd>[17:42:24]</kbd> <code>&lt;kislay&gt;</code> that is F2 is to be expanded and added<br/>
+<kbd>[17:42:38]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Okay.. So kind of factor divide with sum instead of division ?<br/>
+<kbd>[17:42:48]</kbd> <code>&lt;kislay&gt;</code> yup!!!<br/>
+<kbd>[17:43:46]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Cool.. Right now I am completely rewriting the Factor class.. And it's almost done so give me couple of days and I will add these methods too<br/>
+<kbd>[17:44:11]</kbd> <code>&lt;kislay&gt;</code> by that time, can i use a simple one for my PR.<br/>
+<kbd>[17:44:34]</kbd> <code>&lt;kislay&gt;</code> I need to get my code reviewed fast by Abinash.<br/>
+<kbd>[17:44:34]</kbd> <code>&lt;ankurankan&gt;</code> kislay, Is it blocking your progress ?<br/>
+<kbd>[17:44:51]</kbd> <code>&lt;ankurankan&gt;</code> kislay, If blocking, then go ahead<br/>
+<kbd>[17:44:59]</kbd> <code>&lt;kislay&gt;</code> okay!<br/>
+<kbd>[17:45:11]</kbd> <code>&lt;ankurankan&gt;</code> And we can change it later once the new Factor class is done<br/>
+<kbd>[17:45:17]</kbd> <code>&lt;kislay&gt;</code> yes.<br/>
+<kbd>[17:45:21]</kbd> <code>&lt;kislay&gt;</code> That would be fine.<br/>
+<kbd>[17:46:04]</kbd> <code>&lt;ankurankan&gt;</code> Okay..<br/>
+<kbd>[17:46:21]</kbd> <code>&lt;ankurankan&gt;</code> Doesn't look like anybody else would be joining the meeting today.<br/>
+<kbd>[17:46:36]</kbd> <code>&lt;ankurankan&gt;</code> Anything else for today?<br/>
+<kbd>[17:46:49]</kbd> <code>&lt;kislay&gt;</code> Nopes.<br/>
+<kbd>[17:46:52]</kbd> <code>&lt;palashahuja&gt;</code> Nope<br/>
+<kbd>[17:47:08]</kbd> <code>&lt;ankurankan&gt;</code> Cool..<br/>
+<kbd>[17:47:13]</kbd> <code>&lt;ankurankan&gt;</code> Bye.. Gn..<br/>
+<kbd>[16:30:46]</kbd> <strong>[disconnected at Mon Jul 20 16:30:46 2015]</strong><br/>
+</div>
+               <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+               <script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'>
+               </script>
+               </body>
+               </html><br/>

@@ -3123,4 +3123,144 @@ ConnectionResetError: [Errno 104] Connection reset by peer
 2015-06-21 01:20:47+0000 [-] Main loop terminated.
 2015-06-21 01:20:47+0000 [-] Log opened.
 2015-06-21 01:20:47+0000 [-] Starting factory <__main__.LogBotFactory instance at 0x7f7dbb05e3f8>
-2015-06-21 01:20:47+0000 [U
+2015-06-21 01:20:47+0000 [U2015-06-30 03:12:17+0000 [-] Log opened.
+2015-06-30 03:12:17+0000 [-] Starting factory <__main__.LogBotFactory instance at 0x7fa32d7a4488>
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 230, in <module>
+    test()
+  File "/usr/lib/python2.7/SimpleHTTPServer.py", line 226, in test
+    BaseHTTPServer.test(HandlerClass, ServerClass)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 595, in test
+    httpd = ServerClass(server_address, HandlerClass)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+182.64.39.139 - - [30/Jun/2015 12:14:47] "GET / HTTP/1.1" 200 -
+182.64.39.139 - - [30/Jun/2015 12:14:48] code 404, message File not found
+182.64.39.139 - - [30/Jun/2015 12:14:48] "GET /favicon.ico HTTP/1.1" 404 -
+182.64.39.139 - - [30/Jun/2015 12:14:52] "GET /log2015_06_30.html HTTP/1.1" 200 -
+182.64.39.139 - - [30/Jun/2015 12:14:53] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+71.6.135.131 - - [01/Jul/2015 01:13:09] "GET / HTTP/1.1" 200 -
+71.6.135.131 - - [01/Jul/2015 01:13:09] code 404, message File not found
+71.6.135.131 - - [01/Jul/2015 01:13:09] "GET /robots.txt HTTP/1.1" 404 -
+58.213.123.107 - - [01/Jul/2015 10:01:09] code 404, message File not found
+58.213.123.107 - - [01/Jul/2015 10:01:09] "GET /manager/html HTTP/1.1" 404 -
+89.248.167.157 - - [02/Jul/2015 01:45:21] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x9a\x01\x00\x00\x96\x03\x03U\x95\x06\xad\xdf\x076\xbd\xf3D\x95\x14\xdd\x95\x9a\x10\x03\x81\x1b\xf6\xc9\x11r-\x1d\x83\xae\x8d\xd6\xdd-Q\x00\x00*\xc0+\xc0#\xc0,\xc0$\xc0')
+89.248.167.157 - - [02/Jul/2015 01:45:21] " ö  ñUï≠ﬂ6ΩÛDï›ïöÅˆ…r-ÉÆç÷›-Q  *¿+¿#¿,¿$¿	¿" 400 -
+89.248.167.157 - - [02/Jul/2015 01:45:21] code 404, message File not found
+89.248.167.157 - - [02/Jul/2015 01:45:21] "GET //vtigercrm/vtigerservice.php HTTP/1.1" 404 -
+213.193.110.42 - - [03/Jul/2015 10:22:40] "GET / HTTP/1.1" 200 -
+213.193.110.42 - - [03/Jul/2015 10:22:40] code 404, message File not found
+213.193.110.42 - - [03/Jul/2015 10:22:40] "GET /favicon.ico HTTP/1.1" 404 -
+213.193.110.42 - - [03/Jul/2015 10:22:48] "GET /log2015_06_30.html HTTP/1.1" 200 -
+213.193.110.42 - - [03/Jul/2015 10:22:49] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+213.193.110.42 - - [03/Jul/2015 10:22:53] "GET /log2015_06_21.html HTTP/1.1" 200 -
+58.213.123.107 - - [08/Jul/2015 06:11:36] code 404, message File not found
+58.213.123.107 - - [08/Jul/2015 06:11:36] "GET /manager/html HTTP/1.1" 404 -
+183.60.48.25 - - [09/Jul/2015 00:15:26] code 404, message File not found
+183.60.48.25 - - [09/Jul/2015 00:15:26] "GET http://www.baidu.com/ HTTP/1.1" 404 -
+182.64.175.221 - - [10/Jul/2015 01:04:06] "GET / HTTP/1.1" 200 -
+182.64.175.221 - - [10/Jul/2015 01:04:07] code 404, message File not found
+182.64.175.221 - - [10/Jul/2015 01:04:07] "GET /favicon.ico HTTP/1.1" 404 -
+50.7.207.42 - - [10/Jul/2015 05:31:19] "GET / HTTP/1.1" 200 -
+2015-07-13 16:48:27+0000 [-] Main loop terminated.
+2015-07-13 16:48:27+0000 [-] Log opened.
+2015-07-13 16:48:27+0000 [-] Starting factory <__main__.LogBotFactory instance at 0x7f9b7a86d170>
+83.170.73.249 - - [13/Jul/2015 16:48:28] code 404, message File not found
+83.170.73.249 - - [13/Jul/2015 16:48:28] "GET http://vlad-tepes.bofh.it/freenode-proxy-checker.txt HTTP/1.0" 404 -
+83.170.73.249 - - [13/Jul/2015 16:48:28] code 501, message Unsupported method ('CONNECT')
+83.170.73.249 - - [13/Jul/2015 16:48:28] "CONNECT 213.92.8.7:31204 HTTP/1.0" 501 -
+83.170.73.249 - - [13/Jul/2015 16:48:28] code 501, message Unsupported method ('POST')
+83.170.73.249 - - [13/Jul/2015 16:48:28] "POST http://vlad-tepes.bofh.it/freenode-proxy-checker.txt HTTP/1.0" 501 -
+83.170.73.249 - - [13/Jul/2015 16:48:28] code 501, message Unsupported method ('CONNECT')
+83.170.73.249 - - [13/Jul/2015 16:48:28] "CONNECT 213.92.8.7:31204 HTTP/1.0" 501 -
+213.193.110.42 - - [13/Jul/2015 17:20:22] "GET / HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 17:20:23] code 404, message File not found
+213.193.110.42 - - [13/Jul/2015 17:20:23] "GET /favicon.ico HTTP/1.1" 404 -
+213.193.110.42 - - [13/Jul/2015 17:20:26] "GET /log2015_07_13.html HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 17:20:27] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:08] "GET /log2015_07_13.html HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:08] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:27] "GET /log2015_07_13.html HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:28] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:29] "GET /log2015_07_13.html HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:29] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+213.193.110.42 - - [13/Jul/2015 18:03:31] code 404, message File not found
+213.193.110.42 - - [13/Jul/2015 18:03:31] "GET /favicon.ico HTTP/1.1" 404 -
+66.240.236.119 - - [14/Jul/2015 09:17:57] "GET / HTTP/1.1" 200 -
+66.240.236.119 - - [14/Jul/2015 09:17:57] code 404, message File not found
+66.240.236.119 - - [14/Jul/2015 09:17:57] "GET /robots.txt HTTP/1.1" 404 -
+66.240.236.119 - - [14/Jul/2015 09:17:57] code 404, message File not found
+66.240.236.119 - - [14/Jul/2015 09:17:57] "GET /sitemap.xml HTTP/1.1" 404 -
+2015-07-15 17:22:59+0000 [-] Main loop terminated.
+2015-07-15 17:22:59+0000 [-] Log opened.
+2015-07-15 17:22:59+0000 [-] Starting factory <__main__.LogBotFactory instance at 0x7f9aaae54170>
+83.170.73.249 - - [15/Jul/2015 17:23:00] code 404, message File not found
+83.170.73.249 - - [15/Jul/2015 17:23:00] "GET http://vlad-tepes.bofh.it/freenode-proxy-checker.txt HTTP/1.0" 404 -
+83.170.73.249 - - [15/Jul/2015 17:23:00] code 501, message Unsupported method ('CONNECT')
+83.170.73.249 - - [15/Jul/2015 17:23:00] "CONNECT 213.92.8.7:31204 HTTP/1.0" 501 -
+83.170.73.249 - - [15/Jul/2015 17:23:00] code 501, message Unsupported method ('CONNECT')
+83.170.73.249 - - [15/Jul/2015 17:23:00] "CONNECT 213.92.8.7:31204 HTTP/1.0" 501 -
+83.170.73.249 - - [15/Jul/2015 17:23:00] code 501, message Unsupported method ('POST')
+83.170.73.249 - - [15/Jul/2015 17:23:00] "POST http://vlad-tepes.bofh.it/freenode-proxy-checker.txt HTTP/1.0" 501 -
+117.199.30.116 - - [16/Jul/2015 09:25:27] "GET /log2015_06_19.html HTTP/1.1" 200 -
+117.199.30.116 - - [16/Jul/2015 09:25:28] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+117.199.30.116 - - [16/Jul/2015 09:25:31] code 404, message File not found
+117.199.30.116 - - [16/Jul/2015 09:25:31] "GET /favicon.ico HTTP/1.1" 404 -
+117.199.30.116 - - [16/Jul/2015 09:25:32] code 404, message File not found
+117.199.30.116 - - [16/Jul/2015 09:25:32] "GET /favicon.ico HTTP/1.1" 404 -
+117.199.30.116 - - [16/Jul/2015 09:25:36] "GET / HTTP/1.1" 200 -
+117.199.30.116 - - [16/Jul/2015 09:25:44] "GET /log2015_06_21.html HTTP/1.1" 200 -
+117.199.30.116 - - [16/Jul/2015 09:25:45] "GET /log2015_06_30.html HTTP/1.1" 200 -
+117.199.30.116 - - [16/Jul/2015 09:25:45] "GET /log2015_07_13.html HTTP/1.1" 200 -
+117.199.30.116 - - [16/Jul/2015 09:25:45] "GET /log2015_07_15.html HTTP/1.1" 200 -
+182.69.89.175 - - [16/Jul/2015 20:21:26] "GET / HTTP/1.1" 200 -
+182.69.89.175 - - [16/Jul/2015 20:21:27] code 404, message File not found
+182.69.89.175 - - [16/Jul/2015 20:21:27] "GET /favicon.ico HTTP/1.1" 404 -
+182.69.89.175 - - [16/Jul/2015 20:21:33] "GET /log2015_07_15.html HTTP/1.1" 200 -
+182.69.89.175 - - [16/Jul/2015 20:21:34] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+182.69.89.175 - - [16/Jul/2015 20:22:13] "GET /log2015_07_13.html HTTP/1.1" 200 -
+66.240.192.138 - - [17/Jul/2015 16:16:47] "GET / HTTP/1.1" 200 -
+66.240.192.138 - - [17/Jul/2015 16:16:47] code 404, message File not found
+66.240.192.138 - - [17/Jul/2015 16:16:47] "GET /robots.txt HTTP/1.1" 404 -
+66.240.192.138 - - [17/Jul/2015 16:16:47] code 404, message File not found
+66.240.192.138 - - [17/Jul/2015 16:16:47] "GET /sitemap.xml HTTP/1.1" 404 -
+188.138.9.50 - - [17/Jul/2015 20:06:54] "GET / HTTP/1.1" 200 -
+188.138.9.50 - - [17/Jul/2015 20:06:55] code 404, message File not found
+188.138.9.50 - - [17/Jul/2015 20:06:55] "GET /robots.txt HTTP/1.1" 404 -
+188.138.9.50 - - [17/Jul/2015 20:06:55] code 404, message File not found
+188.138.9.50 - - [17/Jul/2015 20:06:55] "GET /sitemap.xml HTTP/1.1" 404 -
+182.64.173.117 - - [18/Jul/2015 23:49:30] "GET / HTTP/1.1" 200 -
+182.64.173.117 - - [18/Jul/2015 23:49:30] code 404, message File not found
+182.64.173.117 - - [18/Jul/2015 23:49:30] "GET /favicon.ico HTTP/1.1" 404 -
+95.28.46.8 - - [19/Jul/2015 13:38:11] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+95.28.46.8 - - [19/Jul/2015 13:38:11] "    c                           " 400 -
+2015-07-20 16:30:46+0000 [-] Main loop terminated.
+2015-07-20 16:30:46+0000 [-] Log opened.
+2015-07-20 16:30:46+0000 [-] Starting factory <__main__.LogBotFactory instance at 0x7f67a47ae170>
+83.170.73.249 - - [20/Jul/2015 16:30:47] code 501, message Unsupported method ('POST')
+83.170.73.249 - - [20/Jul/2015 16:30:47] "POST http://vlad-tepes.bofh.it/freenode-proxy-checker.txt HTTP/1.0" 501 -
+83.170.73.249 - - [20/Jul/2015 16:30:47] code 404, message File not found
+83.170.73.249 - - [20/Jul/2015 16:30:47] "GET http://vlad-tepes.bofh.it/freenode-proxy-checker.txt HTTP/1.0" 404 -
+83.170.73.249 - - [20/Jul/2015 16:30:47] code 501, message Unsupported method ('CONNECT')
+83.170.73.249 - - [20/Jul/2015 16:30:47] "CONNECT 213.92.8.7:31204 HTTP/1.0" 501 -
+83.170.73.249 - - [20/Jul/2015 16:30:47] code 501, message Unsupported method ('CONNECT')
+83.170.73.249 - - [20/Jul/2015 16:30:47] "CONNECT 213.92.8.7:31204 HTTP/1.0" 501 -
+117.239.204.226 - - [22/Jul/2015 03:25:50] "GET / HTTP/1.1" 200 -
+112.133.247.66 - - [22/Jul/2015 03:25:50] code 404, message File not found
+112.133.247.66 - - [22/Jul/2015 03:25:50] "GET /favicon.ico HTTP/1.1" 404 -
+123.63.47.173 - - [22/Jul/2015 03:25:54] "GET /log2015_07_20.html HTTP/1.1" 200 -
+14.139.121.55 - - [22/Jul/2015 03:25:54] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+46.165.220.215 - - [23/Jul/2015 02:42:01] code 400, message Bad request syntax ('\x16\x03\x01\x00\xf4\x01\x00\x00\xf0\x03\x03U\xb0B\xb2\xed\x8f\x1dH=\x97\xb1\xff\x04\xa2\x84:\xab9\x9f.\xebh\x93\x95\xd2\xf7\xcd\x1fc\xd5\\\xa1\x00\x00\x84\xc00\xc0,\xc0(\xc0$\xc0\x14\xc0')
+46.165.220.215 - - [23/Jul/2015 02:42:01] " Ù  U∞B≤ÌèH=ó±ˇ¢Ñ:´9ü.Îhìï“˜Õc’\°  Ñ¿0¿,¿(¿$¿¿" 400 -
+183.131.78.201 - - [26/Jul/2015 01:48:43] "GET / HTTP/1.1" 200 -
